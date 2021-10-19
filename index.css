@@ -12,6 +12,7 @@ input {
   width: 100%;
   margin: 1rem;
   padding-left: 1rem;
+  border: 1px grey solid;
 }
 .shortOne {
   width: 45vw;
@@ -23,6 +24,9 @@ input {
 }
 .checkbox input {
   width: 10%;
+}
+.checkbox input:hover {
+  cursor: pointer;
 }
 
 form {
@@ -48,6 +52,7 @@ button {
   height: 3rem;
   width: 45%;
   margin: 1rem;
+  border: none;
 }
 button:hover {
   cursor: pointer;
@@ -56,7 +61,6 @@ button:hover {
 input,
 button {
   border-radius: 5px;
-  border: 1px grey solid;
   font-size: 1rem;
 }
 
