@@ -1,0 +1,98 @@
+section {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+input {
+  height: 2.5rem;
+  width: 100%;
+  margin: 1rem;
+  padding-left: 1rem;
+}
+.shortOne {
+  width: 45vw;
+}
+.checkbox {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+.checkbox input {
+  width: 10%;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.agreementDiv {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.agreementDiv p {
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+button {
+  height: 3rem;
+  width: 45%;
+  margin: 1rem;
+}
+button:hover {
+  cursor: pointer;
+}
+
+input,
+button {
+  border-radius: 5px;
+  border: 1px grey solid;
+  font-size: 1rem;
+}
+
+.registerText {
+  display: flex;
+  width: 4rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #1597e5;
+  color: #f9f9f9;
+  border-radius: 2px;
+}
+
+.registerText:hover {
+  cursor: pointer;
+}
+
+.termCondition {
+  color: #005f99;
+  text-decoration: none;
+  margin: 0 0.25rem;
+}
+
+.termCondition:hover {
+  text-decoration: underline;
+}
+
+.blue {
+  background-color: #77acf1;
+}
+
+.green {
+  background-color: #9ede73;
+}
+
+.blue,
+.green {
+  color: #f4f9f9;
+}
