@@ -1,0 +1,94 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.col-1-4 {
+  width: 25%;
+}
+
+.col-3-4 {
+  width: 75%;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+}
+
+.signUp {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.shortInput,
+.longInput {
+  width: 14.5rem;
+  height: 2.5rem;
+  padding-left: .5rem;
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, .25);
+  border-radius: 5px;
+}
+
+.longInput {
+  width: 31rem;
+}
+
+.shortInput:focus,
+.longInput:focus {
+  outline-color: #9ccbf1;
+}
+
+.agree {
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.agreementText {
+  margin: 0;
+  font-size: .825rem;
+  font-weight: 300;
+}
+
+.register {
+  color: white;
+  border: 1px solid #428bca;
+  border-radius: 5px;
+  background-color: #428bca;
+  padding: 1px 5px;
+}
+
+.terms {
+  color: #428bca;
+}
+
+.registerButton,
+.signInButton {
+  width: 15.25rem;
+  height: 2.5rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.registerButton {
+  background-color: #428bca;
+}
+
+.signInButton {
+  background-color: #5cb85c;
+}
