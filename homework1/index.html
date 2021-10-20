@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Antra SEP FRE-training | Sign Up Form</title>
+  </head>
+  <body>
+    <form>
+      <div class="container">
+        <h1>Sign Up</h1>
+
+        <div class="name-container">
+          <input
+            type="text"
+            placeholder="First Name"
+            name="firstname"
+            required
+          />
+          <input type="text" placeholder="Last Name" name="lastname" required />
+        </div>
+
+        <input type="tel" placeholder="Mobile No." name="phone" required />
+        <input type="email" placeholder="Email Address" name="email" required />
+
+        <div class="password-container">
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            name="confirmedPassword"
+            required
+          />
+        </div>
+
+        <div class="terms-container">
+          <label class="checkbox-container">
+            <input type="checkbox" checked="checked" name="iagree" required />
+            <b>I Agree</b>
+          </label>
+          <p>
+            By clicking <span class="register"><b>Register</b></span
+            >, you agree to the <a href="#">Terms and Conditions</a> set out by
+            this site, including our Cookie Use.
+          </p>
+        </div>
+
+        <div class="btn-container">
+          <button type="submit" class="signupbtn">Register</button>
+          <button type="button" class="signinbtn">Sign In</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
