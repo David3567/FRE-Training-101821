@@ -5,43 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="form-container">
       <div class="form-header">
         <h2>Sign Up</h2>
       </div>
-      <form>
-        <div class="form-row">
+      <form class="form-field">
+        <div class="input-row">
           <input type="text" placeholder="First Name" />
+
           <input type="text" placeholder="Last Name" />
         </div>
-        <div class="form-row">
+        <div class="input-row">
           <input type="number" placeholder="Mobile No." />
         </div>
-        <div class="form-row">
+        <div class="input-row">
           <input type="email" placeholder="Email Address" />
         </div>
-        <div class="form-row">
+        <div class="input-row">
           <input type="password" placeholder="Password" />
           <input type="password" placeholder="Confirm Password" />
         </div>
-        <div class="form-row">
-          <div class="checkbox">
+        <div class="checkbox-row">
+          <div class="checkbox-col-1">
             <input type="checkbox" />
             <span><b>I Agree</b></span>
           </div>
-          <div class="term">
-            <p>
-              By clicking <span>Register</span>, you agree to the
+          <div class="checkbox-col-2">
+            <span class="term"
+              >By clicking <span class="term-highlight">Register</span>, you agree to the
               <a href="#">Term and Conditions</a> set out by this site,
-              including our Cookie Use.
-            </p>
+              including our Cookie Use.</span
+            >
           </div>
         </div>
-        <div class="form-row">
-          <button type="submit">Register</button>
-          <button type="submit">Sign in</button>
+        <div class="btn-row">
+          <button class="btn btn-register" type="submit">Register</button>
+          <button class="btn btn-sign-in" type="submit">Sign in</button>
         </div>
       </form>
     </div>
