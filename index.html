@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Hello Lin</p>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<div class="signup">
+			<h1>Sign Up</h1>
+			<form>
+				<div class="flex">
+					<input type="text" placeholder="First Name" />
+					<input type="text" placeholder="Last Name" />
+				</div>
+
+				<div>
+					<input type="text" placeholder="Mobile No." />
+				</div>
+
+				<div>
+					<input type="text" placeholder="Email Address" />
+				</div>
+
+				<div class="flex">
+					<input type="text" placeholder="Password" />
+					<input type="text" placeholder="Confirm Password" />
+				</div>
+
+				<div class="flex">
+					<div id='agree'><input type="checkbox" /> <strong>I Agree</strong></div>
+
+					<div>By clicking <span id='register_icon'>Register</span>, You agree to the <a id='terms' href='#'>Terms and Conditions</a> set out by this site, including our Cookie Use.</div>
+				</div>
+
+				<div class="flex">
+					<input type="submit" id="register" value="Register" />
+					<input type="submit" id="signin" value="Sign In" />
+				</div>
+			</form>
+		</div>
+	</body>
 </html>

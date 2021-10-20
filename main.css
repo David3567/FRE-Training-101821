@@ -1,0 +1,58 @@
+.signup {
+	max-width: 700px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+}
+form div {
+	margin-bottom: 12px;
+}
+
+form div input[type='text'],
+form div input[type='submit'] {
+	width: 100%;
+	height: 42px;
+	box-sizing: border-box;
+	padding: 4px;
+	background: #ffffff;
+	border: 1px solid #d9d9d9;
+	border-radius: 6px;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+}
+
+form div input[type='submit'] {
+	color: white;
+	font-size: 16px;
+}
+
+#register {
+	background-color: #428bca;
+}
+#signin {
+	background-color: #5cb95c;
+}
+
+#agree {
+	min-width: 100px;
+}
+#register_icon {
+	color: white;
+	display: inline-block;
+	background-color: #428bca;
+	font-size: 14px;
+	padding: 1px 6px;
+	border-radius: 4px;
+}
+
+#terms {
+	color: rgb(59, 145, 202);
+	text-decoration: none;
+}
