@@ -1,0 +1,55 @@
+:root {
+    --height-box: 200px;
+    --width-box: 200px;
+
+    --color-box-green: yellowgreen;
+    --color-box-orange: orange;
+    --color-box-blue: blue;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "WindSong", cursive;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.box1 {
+    position: fixed;
+
+    height: var(--height-box);
+    width: var(--width-box);
+    border: 10px solid black;
+    padding: 10px;
+    background-color: var(--color-box-orange);
+}
+
+.box2 {
+    position: relative;
+    background-color: aqua;
+    height: 2000px;
+    width: 50%;
+    font-size: 30px;
+}
+
+.box3,
+.box4 {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: red;
+    font-size: 2rem;
+}
+
+.box3 {
+    left: 120px;
+    top: 20px;
+    position: absolute;
+    background-color: green;
+}
