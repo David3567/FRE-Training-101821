@@ -1,0 +1,72 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    margin-top: 20px;
+    width: 60%;
+    min-width: 300px;
+}
+h1 {
+    text-align: center;
+}
+form {
+    width: 100%;
+    margin: 30px auto 0 auto;
+}
+.row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-gap: 20px 30px;
+    margin-bottom: 20px;
+
+}
+input, button {
+    width: 100%;
+    border-radius: 4px;
+    border: 1.2px solid #c4cae0;
+    height: 40px;
+    font-weight: bold;
+}
+input::placeholder {
+    padding-left: 10px;
+}
+#check-col {
+    display: flex;
+    align-items: center;
+}
+.sp_input {
+    width:5%;
+    height: 15px;
+}
+label {
+    font-weight: bold;
+}
+button:hover {
+    cursor: pointer;
+}
+.btn2 {
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: #00b248;
+}
+.btn1 {
+    color: #fff;
+    background-color: #03a9f4;
+}
+span {
+    color: #fff;
+    background-color:#03a9f4;
+    padding: 3px 4px 3px 4px;
+    margin: 1px;
+    border-radius: 4px;
+}
