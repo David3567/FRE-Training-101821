@@ -60,7 +60,6 @@
 }
 
 .buttons {
-
     position: absolute;
     bottom: 0%;
 }
@@ -85,4 +84,14 @@
     font-size: 14px;
     color: white;
     font-weight: bold;
+}
+
+input{
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+input:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
 }
