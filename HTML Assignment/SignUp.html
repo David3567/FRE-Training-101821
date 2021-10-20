@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="sign_up.css">
+    <link rel="stylesheet" href="SignUp.css">
 </head>
 <body>
     <!-- <h2>Sign Up</h2>
@@ -25,10 +25,10 @@
         <button type="submit"><strong>Register</strong></button>
         <button type="submit"><strong>Sign In</strong></button>
     </form> -->
-    
-    <div class="signup-page">
-        <h2 class="title">Sign Up</h2>
-        <div class="name-input">
+
+    <div class="container">
+        <div class="title">Sign Up</div>
+        <div class="input-group">
             <input type="text" placeholder="First Name" name="">
             <input type="text" placeholder="Last Name" name="">
         </div>
@@ -38,25 +38,25 @@
         <div class="input">
             <input type="email" placeholder="Email Address" name="">
         </div>
-        <div class="password-input">
+        <div class="input-group">
             <input type="password" placeholder="Password" name="">
             <input type="password" placeholder="Confirm Password" name="">
         </div>
-        <div class="checkbox">
-            <div>
+        <div class="checkbox-group">
+            <div class="checkbox">
                 <input type="checkbox" name="" value="">
                 <label>I Agree</label>
             </div>
-            <div>
-                By clicking <span><button>Register</button></span>, 
+            <p>
+                By clicking <span class="register-text">Register</span>, 
                 you agree to the 
-                <a href="https://www.google.com/">Terms and Conditions</a> 
+                <a href="https://www.google.com/" class="term">Terms and Conditions</a> 
                 setout by this site, including ourCookie Use.
-            </div>
+            </p>
         </div>
-        <div class="button-submit">
-            <button type="submit" class="registerbtn"><strong>Register</strong></button>
-            <button type="submit" class="signinbtn"><strong>Sign In</strong></button>
+        <div class="button-group">
+            <button type="submit" class="register-button"><strong>Register</strong></button>
+            <button type="submit" class="signin-button"><strong>Sign In</strong></button>
         </div>
     </div>
 </body>
