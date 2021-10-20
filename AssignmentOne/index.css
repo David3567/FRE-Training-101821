@@ -1,6 +1,8 @@
 .signUp{
+    display: flex;
     color: black;
     font-family:Verdana;
+    justify-content: center;
 }
 
 body{
@@ -18,11 +20,16 @@ body{
     display: grid;
     grid-auto-flow: row;
     grid-auto-flow: column;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(6, auto);
-    grid-gap: 1em;
-    width: 40em;
-    height: 20em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 0.5em;
+    min-width: 0;
+    min-height: 0;
+}
+
+.inputs{
+    max-height: 40px;
+    font-size: 20px;
 }
 
 #fname{
