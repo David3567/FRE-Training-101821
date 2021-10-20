@@ -1,0 +1,88 @@
+.signup_form {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    margin: auto;
+    padding: 10px;
+}
+
+.form_header {
+    text-align: center;
+}
+
+.first_name {
+    width: 220px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.last_name {
+    width: 220px;
+    padding: 5px;
+}
+
+.mobile_number {
+    width: 478px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.email {
+    width: 478px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.password {
+    width: 220px;
+    padding: 5px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.confirm_password {
+    width: 220px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+.checkbox {
+    margin-top: 20px;
+}
+
+.signup_agree {
+    padding: 5px;
+}
+
+.terms {
+    width: 400px;
+    float: right;
+}
+
+.buttons {
+
+    position: absolute;
+    bottom: 0%;
+}
+
+.register {
+    padding: 10px;
+    width: 240px;
+    margin-right: 20px;
+    border: none;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+.sign_in {
+    padding: 10px;
+    width: 240px;
+    border: none;
+    background-color:limegreen;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
