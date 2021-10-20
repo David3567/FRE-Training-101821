@@ -1,9 +1,10 @@
 .signup_form {
     position: relative;
     width: 500px;
-    height: 350px;
+    height: 370px;
     margin: auto;
     padding: 10px;
+    border: 2px solid black;
 }
 
 .form_header {
@@ -96,4 +97,20 @@ input:focus {
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
+}
+
+.register_ref {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: cornflowerblue;
+    font-weight: bold;
+}
+
+.terms_color {
+    color: #0000EE;
 }
