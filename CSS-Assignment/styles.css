@@ -1,0 +1,83 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-1-3 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.justify-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar {
+  background-color: #000;
+}
+
+.nav-links {
+  margin-left: 7rem;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 300;
+  text-decoration: none;
+  margin: 1.5rem 1rem;
+}
+
+.grey-section {
+  background-color: #c6bfbf;
+  padding-bottom: 1rem;
+}
+
+.best-services {
+  margin-top: 1rem;
+  margin-left: 5rem;
+}
+
+.grey-section-text {
+  margin-left: 5rem;
+  padding-right: 5rem;
+}
+
+.white-section {
+  margin-bottom: 10.5rem;
+}
+
+.white-section-text {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.green-footer {
+  background-color: #0b4d14;
+}
+
+.footer-links-left {
+  margin-left: 5rem;
+}
+
+.footer-links-right {
+ margin-right: 5rem;
+}
+
+.footer-link {
+  color: white;
+  text-decoration: none;
+  margin: 1rem 1rem;
+}
