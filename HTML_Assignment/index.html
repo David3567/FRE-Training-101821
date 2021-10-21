@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HTML Assignment</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body>
+		<div class="form-container">
+			<h2 class="header">Sign Up</h2>
+			<form action="submit">
+				<div class="name">
+					<input type="text" name="fname" placeholder="First Name" />
+					<input type="text" name="lname" placeholder="Last Name" />
+				</div>
+				<div class="contact">
+					<input type="tel" name="phone" placeholder="Mobile No." />
+					<input type="email" name="email" placeholder="Email Address" />
+				</div>
+				<div class="password">
+					<input type="password" name="pw" id="pw" placeholder="Password" />
+					<input
+						type="password"
+						name="repeat-pw"
+						id="repeat-pw"
+						placeholder="Confirm Password"
+					/>
+				</div>
+				<div class="agree-check">
+					<div class="check">
+						<input class="checkbox" type="checkbox" name="check" />
+						<label class="check-label" for="check">I Agree</label>
+					</div>
+					<div class="terms">
+						<p>
+							By clicking <span>Register</span>, you agree to the
+							<a href="#">Terms and Conditions</a> set out by this site,
+							including our Cookie use.
+						</p>
+					</div>
+				</div>
+				<div class="buttons">
+					<button id="register" type="submit">Register</button>
+					<button id="signin" type="button">Sign In</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,137 @@
+/* Global Styles */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+input {
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+input:focus {
+	outline: none !important;
+	border-color: #3f96f3;
+	box-shadow: 0 0 4px #3f96f3;
+}
+
+/* Styling the whole form */
+
+.form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+}
+
+.header {
+	font-size: 2.5rem;
+}
+
+/* First and Last Name */
+
+.name {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.name input {
+	width: 45%;
+	margin: 0.5rem auto;
+	padding: 0.5rem;
+}
+
+/* Contact Info */
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.contact input {
+	width: 95%;
+	margin: 0.5rem;
+	padding: 0.5rem;
+}
+
+/* Password */
+
+.password {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.password input {
+	width: 45%;
+	margin: 0.5rem auto;
+	padding: 0.5rem;
+}
+
+/* Checkbox and Terms */
+
+.agree-check {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+
+.checkbox {
+	cursor: pointer;
+}
+
+.check-label {
+	font-weight: bolder;
+}
+
+.terms {
+	font-size: 0.75rem;
+	max-width: 60%;
+	line-height: 1.5;
+}
+
+.terms span {
+	color: white;
+	background: rgb(58, 121, 242);
+	padding: 3px;
+	border-radius: 5px;
+}
+
+.terms a {
+	text-decoration: none;
+}
+
+.buttons {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/* Button Styling  */
+
+.buttons button {
+	padding: 0.5rem 6rem;
+	margin: 0.5rem 0;
+	color: white;
+	border: none;
+	font-size: 1rem;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#register {
+	background: rgb(58, 121, 242);
+}
+
+#signin {
+	background: rgb(1, 192, 72);
+}
