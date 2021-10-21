@@ -18,15 +18,16 @@ input {
   width: 45vw;
 }
 .checkbox {
-  width: 20%;
+  width: 10%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+}
+.checkbox:hover {
+  cursor: pointer;
 }
 .checkbox input {
-  width: 10%;
-}
-.checkbox input:hover {
-  cursor: pointer;
+  width: 20%;
 }
 
 form {
