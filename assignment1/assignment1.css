@@ -1,0 +1,72 @@
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1{
+  text-align: center;
+  
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p{
+  display: inline;
+}
+
+#row-five{
+  display: flex;
+  
+}
+
+#row-five > .paragraph{
+  width: 50%;
+  margin-left: 2em;
+
+}
+
+.agree-class{
+  width: 50%;
+
+}
+#agree-check{
+  width: auto;
+}
+
+input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 0.5em;
+  border-radius: 4px;
+}
+input::-webkit-input-placeholder {
+  font-size: 15px;
+
+}
+
+input[type=button]{
+  width: 23em;
+  background-color: blue;
+  border-radius: 5px;
+  color:white;
+  font-size: medium;
+}
+
+#register{
+  background-color: aqua;
+  padding: 0.2em;
+  border-radius: 4px;
+  color: aliceblue;
+}
+
+#terms{
+  color: blue;
+}
+
+#green{
+  background-color: green;
+}
