@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>HTML_Assignment</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Sign Up</h1>
+      <div id="innerWrapper">
+        <div>
+          <input type="text" id="fname" name="fname" placeholder="First Name" />
+          <input type="text" id="lname" name="lname" placeholder="Last Name" />
+        </div>
+        <div>
+          <input type="text" id="phone" name="phone" placeholder="Mobile No." />
+        </div>
+        <div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+          />
+        </div>
+
+        <div>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+          />
+        </div>
+      </div>
+      <div id="notice">
+        <div id="left">
+          <input type="checkbox" id="agree" name="agree" value="I Agree" />
+          <label for="agree">I Agree</label>
+        </div>
+        <div id="right">
+          <span id="agreeContent">
+            By clicking <span id="smallRegister">Register</span>, you agree to
+            the <a href="#" id="terms">Terms and Conditions</a> set out by this
+            site, including our Cookie Use.
+          </span>
+        </div>
+      </div>
+      <div id="innerWrapper">
+        <button id="register">Register</button>
+        <button id="signin">Sign In</button>
+      </div>
+    </div>
+  </body>
+</html>
