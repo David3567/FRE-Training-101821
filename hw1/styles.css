@@ -1,0 +1,209 @@
+/* Large */
+body {
+  display: flex;
+  margin: 1rem;
+  padding: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Medium screens */
+/* @media all and (max-width: 800px) {
+} */
+
+/* Small screens */
+@media all and (max-width: 500px) {
+  body {
+    padding: 0rem;
+    margin: 0rem;
+  }
+  .two-cols {
+    flex-direction: column;
+  }
+  .terms {
+    flex-direction: column;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+form {
+  background: #fff;
+  padding: 2em;
+  max-width: 100%;
+  margin: 50px auto 0;
+  box-shadow: 0 0 1em #222;
+  border-radius: 2px;
+}
+
+form h2 {
+  margin: 0 0 50px 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  color: #666666;
+  border-bottom: solid 1px #c2f4d0;
+}
+form div {
+  margin: 0 0 1em 0;
+  position: relative;
+}
+form input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+  margin: 0;
+}
+form input[type="text"],
+form input[type="password"] {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  font-size: 1.6em;
+  padding: 0.8em 0.5em;
+  border-radius: 2px;
+}
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  background: #fff;
+}
+form input[type="submit"] {
+  background: rgba(148, 186, 101, 0.7);
+  box-shadow: 0 3px 0 0 rgba(123, 163, 73, 0.7);
+  border-radius: 17px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5em;
+  line-height: 0.9em;
+  margin: 2em 0 0;
+  outline: none;
+  padding: 0.8em 0;
+  text-shadow: 0 1px #68b25b;
+}
+form input[type="submit"].register {
+  background: rgba(42, 119, 227, 0.7);
+}
+form input[type="submit"]:hover {
+  background: #94af65;
+  text-shadow: 0 1px 3px rgba(70, 93, 41, 0.7);
+}
+form label {
+  position: absolute;
+  left: 8px;
+  top: 12px;
+  color: #999;
+  font-size: 16px;
+  display: inline-block;
+  padding: 4px 10px;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0);
+  -moz-transition: color 0.3s, top 0.3s, background-color 0.8s;
+  -o-transition: color 0.3s, top 0.3s, background-color 0.8s;
+  -webkit-transition: color 0.3s, top 0.3s, background-color 0.8s;
+  transition: color 0.3s, top 0.3s, background-color 0.8s;
+}
+form label.floatLabel {
+  top: -11px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+/* Checkbox Styles */
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: rgba(148, 186, 101, 0.7);
+}
+.option-input:checked::before {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: "✖";
+  display: inline-block;
+  font-size: 26.6666666667px;
+  text-align: center;
+  line-height: 40px;
+}
+.option-input:checked::after {
+  background: #40e0d0;
+  content: "";
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+/* Buttons and stuff */
+.buttons {
+  display: flex;
+}
+
+.buttons input {
+  margin-right: 3em;
+}
+
+.two-cols {
+  display: flex;
+  width: 90%;
+}
+
+.spacer {
+  width: 2rem;
+}
+
+.terms {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* Terms and Conds */
+.text {
+  align-self: flex-end;
+  overflow-wrap: break-word;
+  inline-size: 400px;
+  line-height: 1.4rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.span1 {
+  background-color: rgb(105, 167, 255);
+  border-radius: 6px;
+  height: 70px;
+  color: white;
+  padding: 2px 5px;
+}
+.span2 {
+  color: rgb(139, 183, 244);
+}
