@@ -1,0 +1,93 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    background-color: #000;
+    color: white;
+    height: 50px;
+    align-items: center;
+    width: 100%;
+    padding: 0 230px;
+    position: absolute;
+    top: 0;
+}
+
+.menuItems{
+    padding: 10px;
+    
+}
+
+.menuItems a{
+    color: white;
+    text-decoration: none;
+}
+
+.body1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 66px;
+    height: 150px;
+    background-color: #c6bfbf;
+    padding: 0 10%;
+}
+
+.body2{
+    display: flex;
+    padding: 0 10%;
+    column-gap: 100px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #0b4d14;
+    padding: 0 230px;
+}
+
+.leftFooter{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.leftFooter a{
+    color: white;
+    text-decoration: none;
+}
+
+.rightFooter{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 1150px;
+}
+
+.rightFooter a{
+    color: white;
+    text-decoration: none;
+}
+
+.leftFooterItems{
+    margin-right: 20px;
+}
+
+.rightFooterItems{
+    margin-right: 20px;
+}
