@@ -1,0 +1,101 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+}
+.name{
+    display: flex;
+    flex-flow: row wrap;
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    justify-content: space-between;
+}
+#firstName, #lastName{
+    width: 49%;
+}
+
+h3{
+    text-align: center;
+    padding: 12px;
+}
+input[type= text]{
+    width: 100%;
+    padding: 8px 16px;
+    margin: 6px 0;
+    box-sizing: border-box;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    color: lightgray;
+}
+
+.pwd{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+#password, #confirmPwd{
+    width: 49%;
+}
+
+.terms{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    margin: 6px;
+}
+
+label{
+    width: 30%;
+    padding-left: 6px;
+}
+
+p{
+    width: 65%;
+}
+
+.submit{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+
+input[type= button]{
+    border: none;
+    color: white;
+    padding: 8px 60px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    width: 48%;
+}
+
+span{
+    font-size: 0.8em;
+    border: none;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 2px;
+    background-color: rgb(0, 119, 255);
+}
+
+#register{
+    background-color: rgb(0, 119, 255);
+}
+
+#signIn{
+    background-color: rgb(75, 177, 92);
+}
