@@ -1,0 +1,135 @@
+* {
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif
+}
+body {
+   background: #f0f0f0;
+}
+
+h1 {
+   text-align: center;
+   color: black;
+}
+form {
+   
+   width: 600px;
+   height: 400px;
+   margin: auto;
+   padding: 10px;
+   text-align: center;
+   justify-content: center;
+}
+
+#fname{
+   width: 35%;
+   margin-right: 1.5%;
+}
+
+#lname{
+   width: 35%;
+   margin-left: 1.5%;
+}
+
+#mobile{
+   width: 74%;
+}
+
+#email{
+   width: 74%;
+}
+
+#password{
+   width: 35%;
+   margin-right: 1.5%;
+}
+
+#cpassword{
+   width: 35%;
+   margin-left: 1.5%;
+}
+
+#checkbox{
+   margin-left: 60px;
+}
+
+#agreeText{
+   margin-right: 100px;
+   font-weight: bold;
+}
+
+.terms{
+   display: grid;
+   grid-template-columns: repeat(2, 300px);
+}
+
+.check{
+   display: grid;
+   grid-column: 1/2;
+   grid-row: 1/2;
+}
+#term {
+   font-size: 13px;
+   display: gird;
+   grid-column: 2/3;
+   grid-row: 1/2;
+   text-align: left;
+}
+
+#termRegister{
+   font-size: 11px;
+   border: none;
+   border-radius: 3px;
+   color: white;
+   font-weight: bold;
+   background-color: rgb(95, 145, 238);
+}
+
+#termsHighlight{
+   color: rgb(95, 145, 238);
+}
+.input {
+   font-weight: bold;
+   margin-bottom: 10px;
+   border-radius: 5px;
+   border-width: 1px;
+   border-color: #dad3d3;
+   padding: 10px;
+}
+
+.input:focus {
+   outline: none;
+   border-color: rgba(81, 203, 238, 1);
+   border-width: 1px;
+   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+#register{
+   background-color: rgb(81, 154, 238);
+   width: 35%;
+   border-radius: 5px;
+   font-size: 15px;
+   color: white;
+   border: none;
+   padding: 10px;
+   margin-right: 3%;
+}
+
+#signIn {
+   background-color:rgb(50, 206, 50);
+   width: 35%;
+   border-radius: 5px;
+   border: none;
+   font-size: 15px;
+   color: white;
+   border: none;
+   padding: 10px;
+}
+
+#signIn:hover{
+   background-color:rgb(43, 170, 43);
+}
+
+#register:hover{
+   background-color: rgb(67, 130, 201);
+}
+
