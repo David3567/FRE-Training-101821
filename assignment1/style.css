@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    
+}
+
+.signUp {
+    margin:auto;
+    width: 80%;
+    text-align: center;
+
+}
+
+.container {
+    max-width: 800px;
+    width:100%;
+    margin: auto;
+    padding: 0;
+ 
+}
+
+.form-row {
+    
+    margin: 1px 1px;
+}
+
+
+
+.container .form-row input[type=text], .container .form-row input[type=password] {
+    border-radius: 5px;
+    border:2px solid rgb(221, 222, 223);
+    margin: 0.5% 1%;
+    padding: 8px 0;
+    width: 40%;
+    outline: none;
+}
+
+.container .form-row  input[type=password]:focus{
+    border:2px solid rgb(92, 187, 241);
+}
+
+.container .form-row input[type=text]:focus{
+    border:2px solid rgb(92, 187, 241);
+}
+
+
+.container .form-whole-row input[type=text], .container .form-whole-row input[type=email] {
+    border-radius: 5px;
+    border:2px solid rgb(221, 222, 223);
+    margin: 0.5% 1%;
+    padding: 8px 0;
+    width: 83%;
+    outline: none;
+}
+
+
+
+.container .form-whole-row input[type=text]:focus {
+    border: 2px solid rgb(92, 187, 241);;
+}
+
+.container .form-whole-row input[type=email]:focus {
+    border: 2px solid rgb(92, 187, 241);;
+}
+
+
+.btm .register-btm {
+    border:aliceblue;
+    border-radius: 5px;
+    background-color:dodgerblue ;
+    color:aliceblue;
+    opacity: 1;
+    margin: 0.5% 1%;
+    padding: 8px 0;
+    width: 40%;
+}
+
+.btm .signUp-btm {
+    border:aliceblue;
+    border-radius: 5px;
+    background-color:forestgreen;
+    color:aliceblue;
+    opacity: 1;
+    margin: 0.5% 1%;
+    padding: 8px 0;
+    width: 40%;
+}
+
+.btm .register-btm:hover,.btm .signUp-btm:hover {
+    opacity:0.8;
+  }
+
+
+h1 {
+    text-align: center;
+}
+
+.term a {
+    color:deepskyblue;
+    text-decoration: none;
+}
