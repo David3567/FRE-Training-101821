@@ -2,9 +2,6 @@
    box-sizing: border-box;
    font-family: Arial, Helvetica, sans-serif
 }
-body {
-   background: #f0f0f0;
-}
 
 h1 {
    text-align: center;
@@ -53,7 +50,7 @@ form {
 }
 
 #agreeText{
-   margin-right: 100px;
+   margin-right: 95px;
    font-weight: bold;
 }
 
