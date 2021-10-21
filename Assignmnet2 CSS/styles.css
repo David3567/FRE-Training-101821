@@ -1,0 +1,29 @@
+body {
+    height: 100vh;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.jumbotron {
+    background-color: #c6bfbf;
+}
+
+footer {
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+}
+
+.marginHorizontal {
+    margin: 0 15%;
+}
+
+.row.marginHorizontal .col {
+    padding: 0;
+    margin-right: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
