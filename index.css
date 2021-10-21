@@ -1,0 +1,78 @@
+#parentDiv{
+    margin:auto;
+    width: 50%;
+    padding: 20px;
+}
+h1,div{
+   text-align: center; 
+}
+div{
+    padding-top: 20px;
+}
+input{
+    height: 35px;
+    border:1px solid rgb(168, 166, 166);
+    border-radius: 7px;
+    
+}
+button{
+    height: 40px;
+    width: 200px;
+    color: white;
+    background-color:rgba(15, 96, 201, 0.603);
+    border: none;
+    border-radius: 7px;
+    margin:20px;
+}
+
+.left1{
+    margin-right: 10px;
+}
+.right1{
+    margin-left: 10px;
+}
+
+input, select, textarea {
+    color: grey;
+    }
+
+.pinkButton{
+    background-color: rgb(94, 207, 141);
+    }
+
+   
+.span1{
+    color:white;
+    border-radius: 3px;
+    background-color:rgba(15, 96, 201, 0.603);
+    font-size: small;
+
+    }
+    .span2{
+        color: rgb(92, 137, 233);
+    }
+    .text{
+       
+        font-size: small;
+      
+    }
+    .agreeKey{
+        font-weight: bold;
+
+    }
+    .padding{
+        padding-right: 100px;
+       
+    }
+    .inputbox{
+        position: absolute;
+        left: 310px;
+        top:362px;
+    }
+
+    input:focus{
+        outline: none;
+        border:1px solid  #4ea3e9;;
+    box-shadow: 0 0 10px #4ea3e9;
+    }
+  
