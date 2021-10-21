@@ -43,15 +43,6 @@
     padding: 25px;
 }
 
-.know_more {
-    color: #0000EE;
-    text-decoration: underline;
-}
-
-.know_more:hover {
-    cursor: pointer;
-}
-
 .body {
     background-color: white;
     height: 100%;
