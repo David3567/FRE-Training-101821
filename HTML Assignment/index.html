@@ -1,0 +1,41 @@
+<head>
+  <!-- styling -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- website title -->
+  <title>Assignment: HTML</title>
+
+  <!-- pre-cache custom font for usage -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+</head>
+
+<!-- main content -->
+<body>
+  <div id="content">
+    <h1>Sign Up</h1>
+    <div id="name">
+      <input type="text" id="fname" placeholder="First Name" />
+      <input type="text" id="lname" placeholder="Last Name" />
+    </div>
+    <div id="num-email">
+      <input type="tel" id="number" placeholder="Mobile No." pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}'></input>
+      <input type="email" id="email" placeholder="Email Address" ></input>
+    </div>
+    <div id="password-line">
+      <input type="password" id="password" placeholder="Password"></input>
+      <input type="password" id="confirm-password" placeholder="Confirm Password"></input>
+    </div>
+    <div id="tos-line">
+      <div id="checkbox-section">
+        <input type="checkbox" id="checkbox" name="agree"></input>
+        <label for="agree">I Agree</label>
+      </div>
+      <p>By clicking register, you agree to the <a href="#" id="tos">Terms and Conditions</a> set out by this site, including our Cookie Use.</p>
+    </div>
+  </div>
+  <div id="buttons">
+    <button id="register">Register</button>
+    <button id="signin">Sign In</button>
+  </div>
+</body>

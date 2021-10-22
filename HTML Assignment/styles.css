@@ -1,0 +1,107 @@
+/* css reset for your styling convenience */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* default styles to apply to entire site */
+body {
+  padding: 2%;
+  background-color: #0D1117;
+  font-family: 'Balsamiq Sans';
+  color: aliceblue;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* actual styling begins here */
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+#name {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+#fname, #lname, #password, #confirm-password {
+  width: 50%;
+  padding: 2%;
+  border-radius: 10px;
+  margin: 0.5%;
+}
+
+#number, #email {
+  padding: 2%;
+  border-radius: 10px;
+  margin: 0.5%;
+}
+
+#num-email {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+}
+
+#password-line {
+  display: flex;
+  width: 50%;
+}
+
+#tos-line {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  margin: 0.5%;
+}
+
+p {
+  width: 75%;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+}
+
+#register {
+  background-color:teal;
+  padding: 1% 6%;
+  margin-right: 1%;
+  border-radius: 10px;
+}
+
+#signin {
+  background-color: lightgreen;
+  padding: 1% 6%;
+  margin-left: 1%;
+  border-radius: 10px;
+}
