@@ -27,7 +27,8 @@ body {
 
 
 
-.container .form-row input[type=text], .container .form-row input[type=password] {
+.container .form-row input[type=text], 
+.container .form-row input[type=password] {
     border-radius: 5px;
     border:2px solid rgb(221, 222, 223);
     margin: 0.5% 1%;
@@ -36,16 +37,9 @@ body {
     outline: none;
 }
 
-.container .form-row  input[type=password]:focus{
-    border:2px solid rgb(92, 187, 241);
-}
-
-.container .form-row input[type=text]:focus{
-    border:2px solid rgb(92, 187, 241);
-}
-
-
-.container .form-whole-row input[type=text], .container .form-whole-row input[type=email] {
+.container .form-whole-row input[type=tel], 
+.container .form-whole-row input[type=email] 
+{
     border-radius: 5px;
     border:2px solid rgb(221, 222, 223);
     margin: 0.5% 1%;
@@ -56,13 +50,16 @@ body {
 
 
 
-.container .form-whole-row input[type=text]:focus {
+
+.container .form-whole-row input[type=tel]:focus, 
+.container .form-whole-row input[type=email]:focus, 
+.container .form-row  input[type=password]:focus, 
+.container .form-row input[type=text]:focus
+
+{
     border: 2px solid rgb(92, 187, 241);;
 }
 
-.container .form-whole-row input[type=email]:focus {
-    border: 2px solid rgb(92, 187, 241);;
-}
 
 
 .btm .register-btm {

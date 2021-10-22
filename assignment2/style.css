@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+}
+
+/*postion*/
+#page-container {
+    position: relative;
+
+}
+
+#footer {
+    position: fixed;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+body {
+    font-family: Arial;
+}
+
+.container ul, .content-item ul, .footer ul, .footer-bar ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+
+
+a {
+    text-decoration: none;
+    color:aliceblue;
+}
+
+.nav-bar {
+   
+    background-color: black ;
+    overflow: hidden;
+}
+
+.container {
+    align-items: center;
+    display: grid;
+    width: 100%;
+    height: 50px;
+    padding-left: 10%;
+    margin-bottom: 30px;
+
+
+}
+
+.footer-bar {
+    background-color: #0b4d14;
+    overflow: hidden;
+}
+
+ .footer {
+    align-items: center;
+    display: grid;
+    width: 100%;
+    height: 50px;
+    padding-left: 10% ;
+    padding-right: 10%;
+}
+
+
+
+
+ul li a {
+    padding: 15px;
+}
+
+ul li p {
+    padding: 20px;
+}
+
+
+ul li a:hover {
+    color: aqua;
+}
+
+ul li a.selected {
+    background-color: darkgrey;
+    
+}
+
+
+
+.service {
+    background-color:#c6bfbf;
+    padding: 3% 10%;
+}
+
+.service .info p a {
+    color: deepskyblue;
+    text-decoration: underline;
+}
+
+.content-container {
+   
+   margin-top: 10px;
+   margin-left: 8%;
+   margin-right: 8%;
+    
+}
+
+
+
+.footer-bar ul.footer-items 
+{
+    display: flex;
+    align-items:center; 
+    justify-content:space-evenly;
+    width: 100%;
+}
+
+.footer-bar ul.footer-items li 
+{
+    padding: 10px;
+}
