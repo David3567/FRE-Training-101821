@@ -1,6 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&family=Roboto&display=swap");
 /* font-family: 'Open Sans', sans-serif;
 font-family: 'Roboto', sans-serif; */
+/* font-family: 'Merriweather', serif; */
 
 /* css reset */
 
@@ -17,4 +18,67 @@ font-family: 'Roboto', sans-serif; */
   display: flex;
   justify-content: space-between;
   margin: 80px 120px;
+  align-items: center;
+}
+.navbar-container h1 {
+  font-family: "Merriweather", serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.navbar-container a,
+.navbar-container i {
+  color: grey;
+  font-size: 14px;
+}
+/* main body styling */
+.blog-container {
+  display: flex;
+  margin: 0 120px 0 120px;
+}
+.blog-card {
+  width: 350px;
+  height: 200px;
+  margin-bottom: 30px;
+  padding: 20px 20px 0 20px;
+  border: 1px solid rgb(226, 226, 226);
+  box-shadow: 3px 2px 4px rgba(182, 182, 182, 0.8);
+}
+.blog-card .blog-card--header h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.blog-card .blog-card--header h1 {
+  font-family: "Merriweather", serif;
+}
+.blog-card p,
+.blog-card a {
+  font-size: 12px;
+}
+.blog-card .blog-card--header .blog-date {
+  color: grey;
+  margin-bottom: 8px;
+}
+.blog-card .blog-card--description a {
+  color: rgb(8, 154, 252);
+}
+.blog-card .blog-card--description p {
+  height: 60px;
+}
+.left-side-blogs,
+.right-side-blogs {
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: flex-start; */
+}
+.left-side-blogs {
+  margin-right: 40px;
+}
+
+.left-side-blogs .blog-card--header h3 {
+  color: rgb(26, 124, 252);
+}
+.right-side-blogs .blog-card--header h3 {
+  color: rgb(1, 211, 54);
 }
