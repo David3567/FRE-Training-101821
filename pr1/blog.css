@@ -160,6 +160,14 @@ footer p {
   color: #2c3745;
 }
 
+.item-date {
+  color: #7b7992;
+  margin-bottom: 15px;
+  margin-left: 3px;
+  display: block;
+  font-weight: 500;
+}
+
 @media only screen and (max-width: 768px) {
   .item .icon {
     position: relative;
