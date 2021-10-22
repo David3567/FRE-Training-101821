@@ -17,7 +17,7 @@ font-family: 'Roboto', sans-serif; */
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  margin: 80px 120px;
+  margin: 80px 120px 30px 120px;
   align-items: center;
 }
 .navbar-container h1 {
@@ -35,6 +35,7 @@ font-family: 'Roboto', sans-serif; */
 .blog-container {
   display: flex;
   margin: 0 120px 0 120px;
+  justify-content: center;
 }
 .blog-card {
   width: 350px;
@@ -87,10 +88,11 @@ font-family: 'Roboto', sans-serif; */
 }
 
 /* footer styling */
-footer {
+.blog-footer {
   text-align: center;
   padding: 30px;
   background-color: rgb(236, 236, 236);
+  border-top: 1px solid rgb(214, 214, 214);
 }
 footer p,
 footer a {
@@ -101,4 +103,20 @@ footer p {
 }
 .blog-footer a {
   color: rgb(8, 154, 252);
+}
+
+/* responsive */
+
+@media (max-width: 745px) {
+  .navbar-container {
+    margin: 80px 60px 30px 60px;
+  }
+  .blog-container {
+    flex-direction: column;
+    margin: 0 60px 0 60px;
+  }
+  .left-side-blogs,
+  .right-side-blogs {
+    justify-content: center;
+  }
 }
