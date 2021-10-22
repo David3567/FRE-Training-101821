@@ -33,11 +33,15 @@ main {
     margin: 10px 10% 100px 10%;
     justify-content: center;
 }
-card {
+.card {
     margin: 10px;
     flex: 1 500px;
     max-width: 750px;
     border: 5px solid #eeeeee;
+}
+.card:hover {
+    border: 1px solid #eeeeee;
+    transform: scale(1.03);
 }
 .inner_card {
     padding: 20px;
@@ -63,10 +67,11 @@ footer {
     background-color: #e3f2fd;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    left: 10%;
+    min-width: 80%;
     text-align: center;
     padding: 20px;
 }
 footer p {
-    margin-bottom: 5px;;
+    margin-bottom: 5px;
 }
