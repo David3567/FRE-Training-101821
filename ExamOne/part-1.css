@@ -178,13 +178,14 @@ table {
 }
 
 .blog-article {
-  height: 17rem;
+  height: 15rem;
   width: 43%;
   margin: 1rem 0;
   border: 5px silver solid;
   transition: 1s ease-in-out;
   display: flex;
   flex-direction: column;
+  border-radius: 2px;
   padding: 2rem 1.5rem;
 }
 .blog-article a {
@@ -217,7 +218,7 @@ time {
   display: flex;
   height: 3rem;
   font-size: 1.15rem;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
 }
 
 .world-category h3 {
