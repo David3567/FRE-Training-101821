@@ -112,11 +112,28 @@ footer p {
     margin: 80px 60px 30px 60px;
   }
   .blog-container {
-    flex-direction: column;
+    /* flex-direction: column; */
     margin: 0 60px 0 60px;
   }
   .left-side-blogs,
   .right-side-blogs {
-    justify-content: center;
+    /* justify-content: center; */
   }
+  .blog-card {
+    width: 290px;
+  }
+}
+@media (max-width: 670px) {
+.blog-container {
+    flex-direction: column;
+}
+.blog-card {
+    width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+    .blog-card {
+        width: 350px;
+      }
 }
