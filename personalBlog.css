@@ -3,13 +3,23 @@ section{
     width: 15rem;
     height: 10rem;
     border: 1px solid green;
-    white-space: normal;
     margin: 0px;
 }
-section > h3, p,a{
-    
+section > h3{
+    /* line-height: 0rem; */
+    margin: 0%;
     margin-left: 1rem;
 }
-/* section > p{
-    margin-left: 1rem;
-} */
+section > p{
+    margin: .5rem 1rem;
+}
+section > a{
+    margin: .5rem 1rem;
+}
+section > span{
+    margin: .5rem 1rem;
+    color: rgb(189, 189, 189);
+}
+.leftTitle{
+    color: rgb(23, 124, 255);
+}
