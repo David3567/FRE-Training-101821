@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.blogHeader {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  justify-content: space-between;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  border-bottom: 1px solid gray;
+}
+
+.subscribe {
+  color: gray;
+}
+
+.headerTitle{
+  text-decoration: underline;
+}
+
+.search {
+  width: 2vw;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 17vw;
+  padding-right: 17vw;
+  padding-bottom: 5vh;
+  gap: 1rem;
+  margin-bottom: 13vh;
+  margin-top: 1vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  height: auto;
+  background-color: white;
+  padding: 1rem;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+.blogWorld {
+  color: rgb(78, 78, 212);
+  padding-bottom: 1vh;
+}
+
+.blogDesign {
+  color: green;
+  padding-bottom: 1vh;
+}
+
+.blogTitle,
+.blogDate,
+.blogDesc {
+  padding-bottom: 1vh;
+}
+
+.blogDate {
+  font-family: monospace;
+  color: gray;
+}
+
+.blogDesc {
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.blogContinue {
+  padding-top: 4vh;
+}
+
+.homeFooter {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: lightgray;
+  height: 15vh;
+  margin-top: 10%;
+}
+
+.bootstrap{
+  padding-left: 0.3vw;
+}
+
+.footerDesc {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 50%;
+}
+
+.footerLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
