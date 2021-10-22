@@ -112,8 +112,56 @@ section a {
   font-size: 0.8rem;
 }
 
+/* detailed blog page */
+#detailed-main #primary {
+  display: flex;
+  justify-content: center;
+}
+
+#detailed-main h5 {
+  color: darkgray;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.8rem;
+  margin-bottom: 5%;
+}
+
+#detailed-main p, code, ul, ol {
+  margin-bottom: 5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul, ol {
+  margin-left: 10%;
+}
+
+code {
+  border: 1px solid darkgray;
+}
+
+#detailed-main h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 /* not much needed here; looks pretty decent even on very small screens */
 @media only screen and (max-width: 1200px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
   main {
     flex-direction: column;
   }
