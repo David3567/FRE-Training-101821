@@ -3,8 +3,6 @@
 	width: 100%;
 	background-color: black;
 	color: white;
-	height: 50px;
-	line-height: 50px;
 }
 
 .header ul {
@@ -14,10 +12,7 @@
 }
 
 .header li {
+	height: 50px;
+	line-height: 50px;
 	display: inline;
-}
-
-.header li a {
-	margin: 0;
-	padding: 0 10px;
 }
