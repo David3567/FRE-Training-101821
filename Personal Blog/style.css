@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
+    padding: 16px;
+}
+
+/* Header CSS */
+header .container-navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* background-color: antiquewhite; */
+    padding: 24px;
+
+}
+
+header .container-navbar ul li a {
+    color: white;    
+}
+
+.subscribe a {
+    position: relative;
+    left: 120px;
+    color: rgb(160, 157, 157);
+}
+
+.title a {
+    font-size: 30px;
+    position: relative;
+    bottom: 10px;
+    color:rgb(55, 53, 53);
+}
+
+.search-box a {
+    position: relative;
+    right: 90px;
+    color: rgb(160, 157, 157);
+}
+
+/* Section CSS */
+.blogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 16px;
+
+}
+
+.left-side {
+    border: thin solid rgb(230, 230, 230);
+    width: 40%;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.right-side {
+    border: thick solid rgb(230, 230, 230);
+    width: 40%;
+    margin-bottom: 15px;
+}
+
+.left-side .blog-classify {
+    font-size: 14px;
+    color: rgb(24, 136, 241);
+    font-weight:bold;
+    margin: 20px 0px 5px 20px;
+}
+
+.right-side .blog-classify {
+    font-size: 14px;
+    color: rgb(44, 203, 129);
+    font-weight: bold;
+    margin: 20px 0px 5px 20px;
+}
+
+.blog-title {
+    font-size: 20px;
+    color: rgb(0, 9, 15);
+    font-family: Noto Sans,sans-serif;
+    font-weight:bold;
+    margin-left:20px;
+}
+
+.blog-time {
+    font-size: 14px;
+    color: grey;
+    margin: 5px 0px 10px 20px;
+}
+
+.blog-description {
+    font-size: 12px;
+    color: rgb(39, 38, 38);
+    margin: 0px 0px 30px 20px;
+    word-spacing: 1.2px;
+    font-family: Georgia,
+    'Times New Roman',
+    Times,
+    serif;
+}
+
+.blog-continue-reading a {
+    font-size: 16px;
+    color: rgba(80, 80, 238, 0.808);
+    text-decoration: underline;
+    margin: 0px 0px 0px 20px;
+}
+
+.right-side .blog-continue-reading a {
+    position: relative;
+    bottom: 20px;
+}
+
+/* Footer CSS */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:150px;
+    width: 85%;
+    position: relative;
+    left: 8.5%;
+    background-color: rgba(252, 236, 252, 0.692);
+}
+
+footer p a {
+    color: rgb(32, 79, 235);
+}
+
+footer #see-design-system {
+    color: rgb(32, 79, 235);
+    text-decoration:underline;
+    margin-top: 20px;
+}
