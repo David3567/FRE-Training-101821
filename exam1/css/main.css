@@ -1,0 +1,38 @@
+.blog {
+	min-width: 300px;
+	border: 2px solid #ccc;
+	flex: 40%;
+	padding: 20px;
+	position: relative;
+	height: 200px;
+}
+
+.blog:hover {
+	border: 1px solid #ccc;
+}
+
+.blog__category {
+	margin-bottom: 5px;
+}
+
+.blog__category--blue {
+	color: rgb(104, 159, 231);
+}
+
+.blog__category--green {
+	color: green;
+}
+
+.blog__date {
+	color: #ccc;
+}
+
+.blog__content {
+	margin-top: 5px;
+	margin-bottom: 20px;
+}
+
+.a--continue {
+	position: absolute;
+	bottom: 12px;
+}
