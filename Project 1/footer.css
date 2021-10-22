@@ -1,0 +1,20 @@
+footer {
+  background-color: rgb(246, 246, 246);
+  color: darkgray;
+  padding: 40px 0 20px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 2px solid rgb(235, 235, 235);
+  margin-top: 20px;
+}
+
+.footer__bootstrap__div {
+  margin-bottom: 20px;
+}
