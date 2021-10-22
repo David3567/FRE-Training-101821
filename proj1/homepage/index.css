@@ -1,0 +1,90 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* typography */
+a {
+  color: #2986cc;
+}
+
+h1,
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+}
+/* typography */
+
+/* top navbar */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+nav > a {
+  color: #888;
+}
+
+.nav-title {
+  color: #444;
+  font-size: 150%;
+}
+
+.header-nav {
+  background: #fff;
+}
+/* top navbar */
+
+/* footer styling */
+footer {
+  background: #c6bfbf;
+  color: #666;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+footer > p {
+  margin-bottom: 10px;
+}
+/* footer styling */
+
+/* blog cards */
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+}
+/* blog cards */
+
+/* card styling */
+.post-card {
+  /* Add shadows to create the "card" effect */
+  border-radius: 5px;
+  border: solid #ddd;
+  box-sizing: border-box;
+  flex: 0 1 45%;
+  margin: 1em 1em;
+}
+
+.card-container {
+  padding: 40px;
+}
+
+p.tag {
+  color: #2986cc;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p.date {
+  color: #888;
+  margin-bottom: 10px;
+}
+
+p.summary {
+  margin-bottom: 50px;
+}
+/* card styling */
