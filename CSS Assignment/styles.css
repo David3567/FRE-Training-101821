@@ -22,6 +22,11 @@ footer a {
   font-size: 14px;
   padding-right: 30px;
 }
+nav ul,
+footer ul {
+  display: flex;
+  list-style-type: none;
+}
 /* header styling */
 
 .header {
