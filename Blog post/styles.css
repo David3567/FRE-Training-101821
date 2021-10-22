@@ -124,16 +124,11 @@ footer p {
   }
 }
 @media (max-width: 670px) {
-.blog-container {
+  .blog-container {
     flex-direction: column;
-}
-.blog-card {
+  }
+  .blog-card {
     width: 350px;
   }
 }
 
-@media (max-width: 480px) {
-    .blog-card {
-        width: 350px;
-      }
-}
