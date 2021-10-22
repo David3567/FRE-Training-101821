@@ -6,6 +6,7 @@ body{
     margin: 4% 0;
 }
 
+/* Navigation */
 nav{
     display: flex;
     flex-direction: row;
@@ -31,6 +32,7 @@ nav > #title{
     font-weight: bold;
 }
 
+/* Blog Posts Container */
 .box_container{
     display: grid;
     margin: 0 29.5%;
@@ -48,11 +50,6 @@ nav > #title{
     border: 1px solid rgba(0, 0, 0, 0.192);
     border-radius: 5px;
     margin-bottom: 10px;
-}
-
-.box_container > div:hover{
-    border: 2px solid rgba(0, 0, 0, 0.192);
-    margin: -2px;
 }
 
 .world{
@@ -87,7 +84,12 @@ nav > #title{
     font-size: 14px;
 }
 
+.box_container > div:hover{
+    border: 2px solid rgba(0, 0, 0, 0.192);
+    margin: -2px;
+}
 
+/* Footer */
 footer{
     background-color: #f0f0f0;
     text-align: center;
