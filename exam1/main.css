@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 90%;
+	max-width: 700px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header {
+	position: relative;
+	margin: 10px 0;
+}
+
+.header__subscribe {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	color: rgb(153, 152, 152);
+}
+
+.header__title {
+	text-align: center;
+}
+.header__search {
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+main {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.blog {
+	border: 2px solid #ccc;
+	flex: 40%;
+	padding: 20px;
+}
+.blog article {
+	margin-bottom: 20px;
+}
+
+.blog__category {
+}
+.blog__title {
+}
+
+.blog__date {
+	color: #ccc;
+}
+
+.blog__category--world {
+	color: blue;
+}
+.blog__category--design {
+	color: green;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	color: #ccc;
+	text-align: center;
+	background-color: rgba(238, 237, 237, 0.836);
+	padding: 10px;
+}
+
+a {
+	color: #428bca;
+}
