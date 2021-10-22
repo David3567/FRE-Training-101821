@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    /* border: 1px solid black; */
 }
 
 .container {
@@ -40,7 +39,6 @@
 .contentWorld, .contentDesign {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     justify-content: space-between;
     width: 45%;
     border: 1px solid gray;
@@ -61,6 +59,7 @@ h5 {
 
 .contentWorld h5, a {
     color: rgb(0, 108, 248);
+    padding-top: 30px;
 }
 
 .contentDesign h5 {
