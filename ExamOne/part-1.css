@@ -227,3 +227,25 @@ time {
 .design-category h3 {
   color: #6ecb63;
 }
+
+footer {
+  width: 90%;
+  margin: auto;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  background-color: silver;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: #1597e5;
+}
+
+footer span {
+  margin-bottom: 1rem;
+}
