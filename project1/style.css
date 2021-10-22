@@ -1,0 +1,174 @@
+:root {
+  --green: #0f8837;
+  --black: #000;
+  --light-black: rgb(70, 70, 70);
+  --gray: #e4e4e4;
+  --dark-gray: rgb(124, 124, 124);
+  --white: rgb(255, 255, 255);
+  --sky-blue: rgb(3, 147, 214);
+  --blue: rgb(0, 145, 202);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100%;
+  background-color: var(--white);
+  margin-top: 3rem;
+  margin-bottom: 6rem;
+  padding: 0 1rem;
+}
+
+h1,
+h2 {
+  font-family: 'Times New Roman', serif;
+}
+
+h1 {
+  text-decoration: underline;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+button {
+  text-decoration: underline;
+  border: none;
+  color: var(--dark-gray);
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+a {
+  color: var(--sky-blue);
+  font-size: 0.8rem;
+}
+
+span {
+  color: var(--sky-blue);
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3rem;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  padding: 1rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray);
+  padding: 0 1rem;
+}
+
+.footer__info {
+  font-size: 0.8rem;
+  color: var(--dark-gray);
+}
+
+.section {
+  margin-bottom: 1rem;
+}
+
+.card {
+  border: 5px solid var(--gray);
+  border-radius: 0.2rem;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.card:hover {
+  border: 2px solid var(--gray);
+}
+
+.card__world,
+.card__design {
+  margin-bottom: 1rem;
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+.card__world {
+  color: var(--blue);
+}
+
+.card__design {
+  color: var(--green);
+}
+
+.card__date {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+}
+
+.card__desc {
+  margin-bottom: 3rem;
+  font-size: 0.8rem;
+  color: var(--light-black);
+}
+
+@media screen and (min-width: 768px) {
+  .section-container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+  }
+
+  .card {
+    margin: 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  main {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-container {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
