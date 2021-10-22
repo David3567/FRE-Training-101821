@@ -1,0 +1,16 @@
+.header {
+	position: relative;
+	width: 100%;
+	background-color: black;
+	color: white;
+}
+
+.header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header li {
+	display: inline;
+}

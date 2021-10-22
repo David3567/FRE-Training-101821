@@ -1,0 +1,9 @@
+.intro {
+	background-color: #c6bfbf;
+}
+
+.articles-wrapper {
+	display: flex;
+	justify-content: center;
+	flex: 1;
+}

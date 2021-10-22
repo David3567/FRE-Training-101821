@@ -1,0 +1,25 @@
+.footer {
+	background-color: #0b4d14;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	max-width: 900px;
+}
+
+.footer ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer li {
+	display: inline;
+}
+
+li a {
+	display: inline-block;
+	padding: 8px;
+	color: white;
+	text-decoration: none;
+}
