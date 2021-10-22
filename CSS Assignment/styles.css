@@ -16,7 +16,8 @@ nav {
   display: flex;
   margin-left: 12%;
 }
-.navbar a {
+.navbar a,
+footer a {
   color: white;
   font-size: 14px;
   padding-right: 30px;
@@ -51,3 +52,10 @@ nav {
 }
 
 /* footer styling */
+
+footer {
+  display: flex;
+  background-color: #0b4d14;
+  padding: 16px 12% 16px 12%;
+  justify-content: space-between;
+}
