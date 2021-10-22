@@ -1,0 +1,45 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  font-family: 'Archivo Black', sans-serif;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 70px;
+  margin-top: 50px;
+  padding-right: 35px;
+}
+
+footer {
+  background-color: rgb(235, 229, 229);
+  height: 120px;
+  text-align: center;
+}
+.footer-container {
+  position: relative;
+  top: 30px;
+}
+span {
+  color: rgb(35, 35, 209);
+}
+.sub,
+h1,
+.fa {
+  display: inline-block;
+}
+.sub {
+  float: left;
+  padding-top: 60px;
+}
+.fa {
+  float: right;
+  padding-top: 60px;
+}
+.intro {
+  width: 75%;
+  text-align: center;
+  margin: auto;
+}
