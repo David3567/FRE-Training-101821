@@ -1,0 +1,16 @@
+footer {
+    height: 12vh;
+    background-color: lightgray;
+    text-align: center;
+    padding: 1%;
+}
+
+@media (max-width: 600px) {
+    footer {
+        height: 12vh;
+        background-color: lightgray;
+        text-align: center;
+        padding: 1%;
+    }
+}
+
