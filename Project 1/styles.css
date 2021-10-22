@@ -5,9 +5,11 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  color: rgb(93, 178, 230);
+}
+
 header {
-  background-color: #000;
-  color: white;
   height: 60px;
   display: flex;
   align-items: center;
@@ -19,19 +21,28 @@ header {
   justify-content: space-between;
 }
 
-.header-brand {
-  font-size: 30px;
-  font-style: italic;
+.header-link {
+  color: rgb(183, 183, 183);
+}
+
+.header-title {
+  font-size: 40px;
+  font-weight: 600;
+  color: rgb(77, 77, 77);
+  text-decoration: underline;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .header-search {
-  color: white;
+  color: rgb(183, 183, 183);
   font-size: 20px;
+  width: 60px;
+  text-align: end;
 }
 
 main {
   margin-top: 60px;
-  padding: 0 5%;
+  padding: 20px 5%;
 }
 
 .title-section {
@@ -52,7 +63,7 @@ main {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .card-category-world {
@@ -61,13 +72,15 @@ main {
 }
 
 .card-category-design {
-  color: rgb(60, 205, 60);
+  color: rgb(52, 184, 52);
   font-weight: 700;
 }
 
 .card-title {
   margin-top: 15px;
   font-size: 30px;
+  font-weight: 700;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .card-date {
@@ -76,17 +89,24 @@ main {
 
 .card-description {
   flex-grow: 1;
+  color: rgb(87, 87, 87);
 }
 
 footer {
-  background-color: rgb(239, 239, 239);
+  background-color: rgb(246, 246, 246);
   color: darkgray;
-  height: 60px;
+  padding: 50px 0 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
+  border-top: 2px solid rgb(235, 235, 235);
+}
+
+.footer-bootstrap-div {
+  margin-bottom: 20px;
 }
