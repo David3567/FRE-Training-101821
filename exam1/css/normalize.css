@@ -16,6 +16,9 @@ a {
 	color: #428bca;
 }
 
+p {
+	font-size: 15px;
+}
 h1,
 h2 {
 	font-family: Times, Serif;
