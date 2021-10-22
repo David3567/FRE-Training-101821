@@ -1,0 +1,49 @@
+@import "blog-cards.css";
+@import "footer.css";
+@import "header.css";
+
+/* Global Styles */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	--header1: calc(3rem + 1vw);
+	--header2: calc(1.5rem + 1vw);
+	--text: calc(1rem + 0.5vw);
+	--gray-text: #7e7b7b;
+	--blue-text: rgb(68, 143, 248);
+	--green-text: rgb(33, 199, 63);
+}
+
+h1 {
+	font-size: var(--header1);
+}
+
+h2 {
+	font-size: var(--header2);
+}
+
+p,
+a,
+span,
+h5 {
+	font-size: var(--text);
+}
+
+span {
+	font-weight: bolder;
+}
+
+body {
+	width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+	html {
+		font-size: 45%;
+	}
+}

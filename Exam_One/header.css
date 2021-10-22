@@ -1,0 +1,23 @@
+/* Header styling */
+.main-header {
+	min-height: 15vh;
+	padding-bottom: 2rem;
+}
+
+.main-header h1 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+.navbar {
+	padding: 4rem 4rem 0 4rem;
+}
+
+.navbar a {
+	color: var(--gray-text);
+}
+.navbar ul {
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+}

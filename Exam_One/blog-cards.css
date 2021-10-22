@@ -1,0 +1,45 @@
+/*Styling the blog container */
+
+.blog-card {
+	border: 5px solid rgba(219, 219, 219, 0.85);
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.blog-container {
+	margin: 1rem;
+}
+
+.blog-posts {
+	min-height: 70vh;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(20rem, 1fr));
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 3rem;
+	width: 80%;
+	margin: auto;
+}
+
+.blog-link {
+	color: rgb(9, 151, 240);
+	position: absolute;
+	bottom: 5%;
+}
+
+.blog-card:hover {
+	border: 2px solid rgba(219, 219, 219, 0.85);
+}
+
+.blog-date {
+	color: var(--gray-text);
+	font-size: 1.4rem;
+}
+
+.world {
+	color: var(--blue-text);
+}
+
+.design {
+	color: var(--green-text);
+}
