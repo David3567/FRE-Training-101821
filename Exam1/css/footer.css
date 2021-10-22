@@ -1,0 +1,17 @@
+footer{
+    text-align: center;
+    color: gray;
+    font-size: smaller;
+    background-color: rgba(175, 173, 173, 0.137);
+    margin-left: 70px;
+    margin-right: 70px;
+    height: 60px;
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid rgba(192, 189, 189, 0.493);
+}
+footer  p a{
+    color: rgb(83, 178, 241);
+   
+}

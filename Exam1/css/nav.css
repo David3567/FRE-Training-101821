@@ -1,0 +1,26 @@
+
+.nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navSubscribe{
+    color: gray;
+    padding-left: 50px;
+    font-size: smaller;
+
+}
+.fas{
+    padding-right: 50px;
+    color: gray;
+}
+
+.navTitle{
+    color: black;
+    font-size: xx-large;
+    font-weight: bold;
+}
