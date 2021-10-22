@@ -3,6 +3,8 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .container {

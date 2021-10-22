@@ -3,7 +3,7 @@
 main {
     display: grid;
     grid-template-columns: repeat(2, calc((100% - 20px) / 2));
-    grid-template-rows: repeat(3, 250px [col-start]);
+    grid-template-rows: repeat(3, 300px [col-start]);
     column-gap: 20px;
     row-gap: 15px;
     justify-content: center;
@@ -36,4 +36,30 @@ main {
 
 .description {
     line-height: 25px;
+}
+
+@media screen and (max-width: 680px) {
+    .card section {
+        overflow: hidden;
+    }
+
+    .description {
+        max-height: 100px;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .card > section > p:nth-child(1) {
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    .card > section > p:nth-child(4) {
+        font-size: 15px;
+        line-height: 20px;
+    }
 }

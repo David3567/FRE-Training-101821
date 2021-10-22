@@ -48,6 +48,27 @@ li {
     margin-left: 20px;
 }
 
-.list a {
+.list a, button {
     margin: 3px 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    text-align: start;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 680px) {
+    .wrapper {
+        grid-template-columns: 60% 40%;
+    column-gap: 30px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .wrapper {
+        grid-template-columns: 55% 45%;
+        column-gap: 20px;
+    }
 }
