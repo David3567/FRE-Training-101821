@@ -79,6 +79,7 @@ h1 {
 .link {
     position: relative;
     bottom: 0;
+    color: rgb(0, 174, 255);
 }
 
 .cat1{
@@ -87,4 +88,8 @@ h1 {
 
 .cat2 {
     color: chartreuse;
+}
+
+#blog-date{
+    color: grey;
 }
