@@ -1,0 +1,39 @@
+@import url('styles.css');
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, calc((100% - 20px) / 2));
+    grid-template-rows: repeat(3, 250px [col-start]);
+    column-gap: 20px;
+    row-gap: 15px;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card p, .card h2 {
+    margin: 13px 0;
+}
+
+.card > section > h2:nth-child(2) {
+    margin-bottom: 3px;
+}
+
+.card > section > p:nth-child(3) {
+    margin-top: 0;
+}
+
+.tag {
+    font-weight: bold;
+}
+
+.description {
+    line-height: 25px;
+}
