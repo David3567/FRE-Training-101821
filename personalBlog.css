@@ -1,12 +1,20 @@
 header{
-    display: inline-block;
+    text-align: center;
+    margin: 1rem 1rem;
+}
+header > a{
+    float: left;
+} 
+header > p{
+    float: right;
 }
 section{
     background-color: rgb(255, 230, 0);
-    width: 15rem;
+    width: 20rem;
     height: 10rem;
     border: 1px solid green;
     margin: 1rem;
+    margin-left: 25%;
 }
 section > h3{
     /* line-height: 0rem; */
@@ -33,10 +41,15 @@ section > span{
     display: flex;
     flex-direction: row;
     width: 100%;
+    justify-content: center;
   }
 .column{
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
+    justify-content: center;
+}
+footer{
+    text-align: center;
 }
