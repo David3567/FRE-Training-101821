@@ -1,0 +1,64 @@
+/* main body styling */
+.blog-container {
+    display: flex;
+    margin: 0 120px 0 120px;
+    justify-content: center;
+  }
+  .blog-card {
+    width: 350px;
+    height: 200px;
+    margin-bottom: 30px;
+    padding: 20px 20px 0 20px;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 6px;
+    box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  .blog-card:hover {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+  }
+  .blog-card .card-content:hover {
+    transform: scale(1.03);
+  }
+  .blog-card .blog-card--header h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .blog-card .blog-card--header a {
+    text-decoration: none;
+  }
+  .blog-card .blog-card--header h1 {
+    font-family: "Merriweather", serif;
+    font-size: 24px;
+    color: black;
+  }
+  .blog-card p,
+  .blog-card a {
+    font-size: 12px;
+  }
+  .blog-card .blog-card--header .blog-date {
+    color: grey;
+    margin-bottom: 8px;
+  }
+  .blog-card .blog-card--description a {
+    color: rgb(8, 154, 252);
+  }
+  .blog-card .blog-card--description p {
+    height: 60px;
+  }
+  .left-side-blogs,
+  .right-side-blogs {
+    display: flex;
+    flex-direction: column;
+  
+    /* justify-content: flex-start; */
+  }
+  .left-side-blogs {
+    margin-right: 40px;
+  }
+  
+  .left-side-blogs .blog-card--header h3 {
+    color: rgb(26, 124, 252);
+  }
+  .right-side-blogs .blog-card--header h3 {
+    color: rgb(1, 211, 54);
+  }

@@ -1,0 +1,42 @@
+/* navbar styling */
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 80px 120px 25px 120px;
+  align-items: center;
+  border: none;
+  box-shadow: 3px 2px 8px rgba(114, 113, 113, 0.2);
+}
+.navbar-container h1 {
+  font-family: "Merriweather", serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.navbar-container a,
+.navbar-container i {
+  color: grey;
+}
+.navbar-container a {
+  font-size: 14px;
+}
+.navbar-container i {
+  font-size: 20px;
+  /* transform: translateX(-27px); */
+  cursor: pointer;
+}
+.navbar-container .search-field input {
+  width: 240px;
+  height: 25px;
+  border: 1px solid rgb(196, 195, 195);
+  border-radius: 10px;
+  padding: 15px 20px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+}
+.navbar-container .search-field input:focus {
+  box-shadow: 0 0 5px hsl(209, 93%, 89%);
+}
