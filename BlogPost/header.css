@@ -1,0 +1,24 @@
+.blogHeader {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  justify-content: space-around;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  border-bottom: 1px solid gray;
+}
+
+.subscribe {
+  color: gray;
+  margin-left: 5vw;
+}
+
+.headerTitle {
+  text-decoration: underline;
+}
+
+.search {
+  margin-right: 5vw;
+  width: 2vw;
+}

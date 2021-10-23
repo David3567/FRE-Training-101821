@@ -1,31 +1,10 @@
+@import "header.css";
+@import "aside.css";
+@import "footer.css";
+
 * {
   padding: 0;
   margin: 0;
-}
-
-.blogHeader {
-  display: flex;
-  flex-direction: row;
-  padding-left: 10vw;
-  padding-right: 10vw;
-  justify-content: space-around;
-  padding-top: 3vh;
-  padding-bottom: 3vh;
-  border-bottom: 1px solid gray;
-}
-
-.subscribe {
-  color: gray;
-  margin-left: 5vw;
-}
-
-.headerTitle {
-  text-decoration: underline;
-}
-
-.search {
-  margin-right: 5vw;
-  width: 2vw;
 }
 
 main {
@@ -115,57 +94,4 @@ main {
 .buttonNewer:hover {
   color: white;
   background-color: gray;
-}
-
-.about {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-  /* flex-wrap: wrap; */
-  margin-right: 40em;
-  margin-top: 2vh;
-  background-color: lightgray;
-  width: 50%;
-}
-
-.links {
-  display: flex;
-  flex-direction: column;
-  grid-column: 2/3;
-  grid-row: 2/3;
-  padding: 15px;
-  flex-wrap: wrap;
-}
-
-.socials {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  grid-column: 2/3;
-  grid-row: 2/3;
-  margin-top: 4vh;
-}
-
-.blogFooter {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: lightgray;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-}
-
-.bootstrap {
-  padding-left: 0.3vw;
-}
-
-.footerDesc {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40%;
 }

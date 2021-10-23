@@ -1,0 +1,21 @@
+.blogFooter {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: lightgray;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.bootstrap {
+  padding-left: 0.3vw;
+}
+
+.footerDesc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+}
