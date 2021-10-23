@@ -4,15 +4,23 @@ footer {
   padding: 40px 0 20px;
   height: 80px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   border-top: 2px solid rgb(235, 235, 235);
   margin-top: 20px;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  width: 90%;
+  padding: 0 5%;
 }
 
 .footer__bootstrap__div {

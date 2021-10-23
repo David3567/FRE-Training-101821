@@ -1,5 +1,16 @@
 main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   margin: 60px 0 150px;
+}
+
+.posts__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  width: 90%;
   padding: 20px 5%;
 }
 
