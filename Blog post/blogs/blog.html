@@ -12,21 +12,51 @@
     <link rel="stylesheet" href="../styles/blog-page/main.css" />
   </head>
   <body>
-    <nav class="navbar">
-        <div class="navbar-container">
-          <a class="subscribe" href="#">Subscribe</a>
-          <h1>Blog Title</h1>
-          <div class="search-field">
-            <form>
-              <input type="text" placeholder="Search" />
-              <i class="fas fa-search"></i>
-            </form>
-          </div>
+    <!-- Header Section -->
+    <header class="navbar">
+      <div class="navbar-container">
+        <a class="subscribe" href="#">Subscribe</a>
+        <h1>Blog Title</h1>
+        <div class="search-field">
+          <form>
+            <input type="text" placeholder="Search" />
+            <i class="fas fa-search"></i>
+          </form>
         </div>
-      </nav>
-      <footer class="blog-footer">
-        <p>Blog template built for <a href="#">Bootstrap</a></p>
-        <a href="#">See Design System</a>
-      </footer>
+      </div>
+    </header>
+    <!-- Main body section-->
+    <section class="blog-post--container">
+      <div class="blog-post--content">
+        <div class="blog-post--header">
+          <h1>Sample blog post</h1>
+          <p>January 1, 2014 by <a href="#">Mark</a></p>
+        </div>
+        <article>
+          <p class="blog-post--description">
+            This blog post shows a few different types of content that's
+            supported and styled with Bootstrap. Basic typography, images, and
+            code are all supported.
+          </p>
+        </article>
+      </div>
+      <div class="blog-post--links">
+        <div class="blog-post--links__about">
+          <h3>About</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            doloribus accusantium, reiciendis id impedit vero minima in illum
+            voluptatem accusamus.
+          </p>
+        </div>
+        <div class="blog-post--links__archives"></div>
+        <div class="blog-post--links__social"></div>
+      </div>
+    </section>
+    <!-- footer Section -->
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="#">Bootstrap</a></p>
+      <a href="#">See Design System</a>
+    </footer>
   </body>
 </html>

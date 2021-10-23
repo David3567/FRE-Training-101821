@@ -1,0 +1,14 @@
+/* Main body Styling */
+
+.blog-post--container {
+  display: flex;
+  margin: 0 120px 0 120px;
+  justify-content: center;
+}
+.blog-post--content {
+  width: 70%;
+  margin-right: 40px;
+}
+.blog-post--links {
+  width: 30%;
+}
