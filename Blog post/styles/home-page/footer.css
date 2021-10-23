@@ -3,7 +3,8 @@
   text-align: center;
   width: 100%;
   padding: 30px;
-  bottom: 0px;
+  margin-bottom: 0;
+  bottom: 0;
   background-color: rgb(236, 236, 236);
   border-top: 1px solid rgb(214, 214, 214);
 }
@@ -16,36 +17,4 @@ footer p {
 }
 .blog-footer a {
   color: rgb(8, 154, 252);
-}
-
-/* responsive */
-
-@media (max-width: 745px) {
-  .navbar-container {
-    padding: 80px 40px 20px 40px;
-  }
-  .navbar-container .search-field input {
-    width: 200px;
-  }
-  .blog-container {
-    /* flex-direction: column; */
-    margin: 0 60px 0 60px;
-  }
-  .blog-card {
-    width: 290px;
-  }
-}
-@media (max-width: 670px) {
-  .blog-container {
-    flex-direction: column;
-  }
-  .navbar-container .search-field input {
-    display: none;
-  }
-  .navbar-container i {
-    font-size: 16px;
-  }
-  .blog-card {
-    width: 380px;
-  }
 }

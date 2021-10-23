@@ -3,13 +3,12 @@
 font-family: 'Roboto', sans-serif; */
 /* font-family: 'Merriweather', serif; */
 
-@import url("header.css");
+@import url("../home-page/header.css");
 @import url("body.css");
-@import url("footer.css");
+@import url("../home-page/footer.css");
 @import url("responsive.css");
 
-/* css reset */
-
+/* CSS reset */
 * {
   margin: 0;
   padding: 0;
