@@ -6,9 +6,10 @@
   justify-content: center;
 }
 .blog-post--content {
-  width: 70%;
-  margin-right: 40px;
+  width: 65%;
+  margin-right: 60px;
+  text-align: justify;
 }
 .blog-post--links {
-  width: 30%;
+  width: 35%;
 }
