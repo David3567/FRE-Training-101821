@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    /* background-color: lightblue; */
+}
+
+
+@media (max-width: 600px) {    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5%;
+        /* background-color: lightblue; */
+    }
+}
+ 
