@@ -2,11 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style-type: none;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ---------------------------CSS in index.html-------------------------*/
+/* ---------------------------CSS in index.html, beginning----------------------*/
 body {
     /* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
     display: flex;
@@ -14,7 +13,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 60px auto 0px auto;
-
 }
 
 
@@ -28,6 +26,7 @@ header ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    list-style-type: none;
 }
 
 .subscribe {
@@ -76,7 +75,7 @@ header ul {
 .left-side .blog-classify {
     font-size: 14px;
     color: rgb(24, 136, 241);
-    font-weight:bold;
+    font-weight: bold;
     margin: 0px 0px 10px 0px;
 }
 
@@ -90,8 +89,8 @@ header ul {
 .blog-title {
     font-size: 20px;
     color: rgb(0, 9, 15);
-    font-family: Noto Sans,sans-serif;
-    font-weight:bold;
+    font-family: Noto Sans, sans-serif;
+    font-weight: bold;
 }
 
 .blog-time {
@@ -141,7 +140,7 @@ footer p a {
 
 footer #see-design-system {
     color: rgb(32, 79, 235);
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
-/* ---------------------------End-----------------------------------*/
+/* ---------------------------CSS in index.html, End---------------------------*/

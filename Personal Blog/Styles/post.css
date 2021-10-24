@@ -1,0 +1,123 @@
+/* -------------------------CSS in post.html, beginning-------------------------*/
+.post-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 5%;
+    width: 75%;
+    margin: 20px auto;
+}
+
+/* Left Section CSS */
+.left-section {
+    line-height: 25px;
+}
+
+.left-section * {
+    margin-bottom: 10px;
+}
+
+.left-section h1 {
+    font-size: 30px;
+}
+
+.left-section h2 {
+    font-size: 28px;
+}
+
+.left-section h3 {
+    font-size: 24px;
+}
+
+.left-section h4 {
+    color: rgb(170, 167, 167);
+    margin-top: -8px;
+}
+
+.left-section h4 a {
+    color: rgb(37, 184, 241);
+}
+
+.left-section p a {
+    color: rgb(37, 184, 241);
+}
+
+.left-section ul,
+.left-section ol {
+    margin: 20px 0px 25px 25px;
+}
+
+.text-block {
+    border: 1px solid lightgray;
+    padding-bottom: 15px;
+}
+
+.code-block {
+    border: 1px solid lightgray;
+}
+
+.code-block code {
+    font-family: momospace;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.left-section button {
+    background-color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin: 30px 4px 25px 0px;
+}
+
+#older-btn {
+    color: deepskyblue;
+    border: 1px solid deepskyblue;
+}
+
+#newer-btn {
+    color: gray;
+    border: 1px solid gray;
+}
+
+/* Right Aside CSS */
+.right-aside {
+    line-height: 23px;
+}
+
+.about {
+    background-color: #eee;
+    padding: 6%;
+}
+
+.about h3 {
+    margin-top: 5px;
+}
+
+.right-aside div h3 {
+    font-style: italic;
+}
+
+.archives h3,
+.elsewhere h3 {
+    margin-top: 30px;
+}
+
+.archives a,
+.elsewhere a {
+    display: block;
+    color: rgb(37, 184, 241);
+}
+
+/* Mobile-Responsive CSS */
+@media all and (max-width: 800px) {
+    .post-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 5%;
+        width: 75%;
+        margin: 20px auto;
+    }
+}
+
+/* -------------------------CSS in post.html, End-----------------------------*/
