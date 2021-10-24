@@ -13,3 +13,46 @@
 .blog-post--links {
   width: 35%;
 }
+
+/* Uniform Styles */
+
+.blog-post--container p,
+.blog-post--container a,
+.blog-post--container li {
+  font-size: 14px;
+}
+.blog-post--container h1,
+.blog-post--container h2,
+.blog-post--container h3 {
+  font-family: "Merriweather", serif;
+}
+.blog-post--container a {
+  color: rgb(8, 154, 252);
+}
+.blog-post--container h1 {
+  font-size: 30px;
+}
+.blog-post--container h3 {
+  font-size: 20px;
+}
+/* Blog-post Content Styling */
+.blog-post--content .blog-post--header {
+  margin-bottom: 30px;
+}
+
+.blog-post--content .blog-post--header p {
+  color: rgb(158, 158, 158);
+}
+.blog-post--article p {
+  margin: 10px 0 20px 0;
+}
+.blog-post--article .blog-post--subtitle {
+  border-bottom: 1px solid rgb(228, 225, 225);
+  padding-bottom: 20px;
+}
+.blog-post--article .blog-post--article__box {
+  border: 1px solid rgb(202, 202, 202);
+  padding: 0 15px 15px 1px;
+  box-shadow: 1px 1px 2px rgb(231, 231, 231);
+  border-radius: 4px;
+}
