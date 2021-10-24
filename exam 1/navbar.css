@@ -1,0 +1,16 @@
+.blog-navbar{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2em;
+}
+
+.blog-navbar > a{
+  text-decoration: none;
+  color:gray;
+}
+
+.blog-navbar > h1{
+  margin:0;
+  text-decoration: underline;
+  font-size: 2.4em;
+}
