@@ -13,6 +13,10 @@ footer {
   margin-top: 20px;
 }
 
+footer.footer--height-short {
+  height: 40px !important;
+}
+
 .footer__container {
   display: flex;
   flex-direction: column;

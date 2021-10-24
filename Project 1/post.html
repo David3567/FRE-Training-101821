@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="post.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <title>Blog Post</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header__container">
+        <a href="#" class="header__link">Subscribe</a>
+        <div class="header__title">Blog Title</div>
+        <div class="header__search">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="main__container">
+        <!-- left -->
+        <div class="main__container-left">
+          <!-- sample blog post -->
+          <article>
+            <h1 class="article__title">Sample blog post</h1>
+            <time>January 1, 2014 by <a href="#">Mark</a></time>
+            <p class="article__paragraph--border-bottom">
+              This blog post shows a few different types of content that's
+              supported and styled with Bootstrap. Basic typography, images, and
+              code are all supported.
+            </p>
+            <p>
+              Cum sociis natoque penatibus et magnis
+              <a href="#">dis parturient montes</a>, nascetur ridiculus mus.
+              Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis
+              vestibulum. Sed posuere consectrtur est ar lobortis. Cras mattis
+              consectetur purus sit amet fermentum.
+            </p>
+            <p class="article__paragraph--border-around">
+              Curabitur blandit tempus portitor.
+              <span class="bold-text">Nullam quis risus eget urna mollis</span>
+              ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut
+              id elit.
+            </p>
+            <p>
+              Etiam porta sem malesuada magna mollis euismod. Cras mattis
+              consectrtur purus sit amet fermentum. Aenean lacinia bibendum
+              nulla sed consectetur.
+            </p>
+          </article>
+
+          <!-- heading -->
+          <article>
+            <h3 class="article__title">Heading</h3>
+            <p>
+              Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
+              auctor. Duis mollis, est non commodo luctus, nisi erat porttitor
+              ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac
+              consectetur ac, vestibulum at eros.
+            </p>
+          </article>
+
+          <!-- sub-heading part 1 -->
+          <article>
+            <h4 class="article__title">Sub-heading</h4>
+            <p>
+              Cum sociis natoque penatibus et magnis dis parturient montes,
+              nascetur ridiculus mus.
+            </p>
+            <pre>
+              <code>Example code block</code>
+            </pre>
+            <p>
+              Aenean laciania bibendum nulla sed consectetur. Etiam porta sem
+              malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus
+              commodo, tortor mauris condimentum nibh, ut fermentum massa.
+            </p>
+          </article>
+
+          <!-- sub-heading part 2 -->
+          <article>
+            <h4 class="article__title">Sub-heading</h4>
+            <p>
+              Cum sociis natoque penatibus et magnis dis parturient montes,
+              nascetur ridiculus mus. Aenean laciania bibendum nulla sed
+              consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce
+              dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+              ut fermentum massa justo sit amet risus.
+            </p>
+
+            <ul>
+              <li>
+                Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                et.
+              </li>
+              <li>Donec id elit non mi porta gravida at eget metus.</li>
+              <li>Nulla vitae libero, a pharetra augue.</li>
+            </ul>
+
+            <p>
+              Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae
+              elit lebero, a pharetra augue.
+            </p>
+
+            <ol>
+              <li>Vestibulum id ligula porta felis euismod semper.</li>
+              <li>
+                Cum sociis natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus.
+              </li>
+              <li>
+                Maecenas sed diam eget risus varius blandit sit amet non magna.
+              </li>
+            </ol>
+
+            <p>
+              Cras mattis consectetur purus sit amet fermentum. Sed posuere
+              consectetur est at lobortis.
+            </p>
+          </article>
+
+          <!-- buttons -->
+          <div class="container-left__buttons-container">
+            <button class="buttons-container__button--color-blue">
+              Older Post
+            </button>
+            <button class="buttons-container__button--color-gray">
+              Newer Post
+            </button>
+          </div>
+        </div>
+
+        <!-- right -->
+        <div class="main__container-right">
+          <!-- about -->
+          <section class="about">
+            <h4 class="section__subtitle">About</h4>
+            <p>
+              Etiam porta sem malesuada magna mollis euismod. Cras mattis
+              consectrtur purus sit amet fermentum. Aenean lacinia bibendum
+              nulla sed consectetur.
+            </p>
+          </section>
+
+          <!-- archives -->
+          <section class="archives">
+            <h4 class="section__subtitle">Archives</h4>
+            <a href="#">March 2014</a>
+            <a href="#">February 2014</a>
+            <a href="#">January 2014</a>
+            <a href="#">December 2013</a>
+            <a href="#">November 2013</a>
+            <a href="#">October 2013</a>
+            <a href="#">September 2013</a>
+            <a href="#">August 2013</a>
+            <a href="#">July 2013</a>
+            <a href="#">June 2013</a>
+            <a href="#">May 2013</a>
+            <a href="#">April 2013</a>
+          </section>
+
+          <!-- elsewhere -->
+          <section class="elsewhere">
+            <h4 class="section__subtitle">Elsewhere</h4>
+            <a href="#">Github</a>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer--height-short">
+      <div class="footer__container">
+        <div class="footer__bootstrap__div">
+          Blog template built for <a href="#">Bootstrap</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
