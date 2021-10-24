@@ -1,0 +1,33 @@
+*{
+    margin: 0;  
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+header{
+    display: flex;
+    /* background: red; */
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 14%;
+    padding-right: 17%;
+}
+
+header #title{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    color: rgb(44, 42, 42);
+}
+
+header #subscribe{
+    font-size: small;
+    color: gray;
+
+}
+
+header #search_icon{
+    color: gray;
+
+}
+
+

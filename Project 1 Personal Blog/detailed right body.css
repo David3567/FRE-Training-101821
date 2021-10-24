@@ -1,0 +1,58 @@
+/* Aside */
+.aside{
+    max-width: 28%;
+    float: right;
+}
+
+.aside__about {
+    background: #f7f7f7;
+    padding: 20px 10px;
+}
+
+.aside__about > h3{
+    font-style: italic;
+}
+
+.aside__about > p{
+    color: gray;
+    line-height: 140%;
+}
+
+.aside__archives{
+    /* background-color: rgb(216, 130, 212); */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+.aside__archives > h3{
+    font-style: italic;
+}
+
+.aside__archives ul{
+    
+    line-height: 17px;
+    list-style-type: none;
+    padding-inline-start: 0;
+    font-size: 12px;
+}
+
+.aside__elsewhere{
+    padding-left: 10px;
+}
+
+.aside__elsewhere > h3{
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.aside__elsewhere > a{
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.aside a {
+    display: block;
+    color: cornflowerblue;
+    text-align: left;
+}

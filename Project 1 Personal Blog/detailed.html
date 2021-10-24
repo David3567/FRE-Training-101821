@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Blog</title>
+    <link rel="stylesheet" href="./detailed header.css">
+    <link rel="stylesheet" href="./detailed left body.css">
+    <link rel="stylesheet" href="./detailed right body.css">
+    <link rel="stylesheet" href="./detailed footer.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+</head>
+<body>
+    <header>
+        <a id="subscribe" href="#">Subscribe</a>
+        <h1 id="title">Blog Title</h1>
+        <div id="search_icon"><i class="fas fa-search"></i></div>
+    </header>
+
+    <main class="content">
+        <!-- Contents -->
+        <div class="paragraph">
+            <!-- Section -->
+            <section class="section">
+                <h1>Sample blog post</h1>
+                <div id="section__date">January 1, 2014 by <a href="#" id="section__author--cornflowerblue">Mark</a></div><br>
+                <p>
+                    This blog post shows a few different types of content that's supported and styled with Bootstrap.
+                    Basic typography, images, and code are all supported.
+                </p>
+            </section>
+
+            <hr>
+
+            <article class="article">
+
+                <!-- Beginning of article -->
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>. 
+                    Reprehenderit reiciendis nobis accusantium dolor, amet fugiat ut assumenda ea aut magni officiis iusto veniam? 
+                    Vitae sequi dolorem laboriosam a officiis? Dolore.
+                </p> <br>
+                <p class="article__box_content">
+                    Curabitur blandit tempus porttitor. Nullam quis risus eget urna moltis ornare vel eu leo. 
+                    Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </p> <br>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Et pariatur itaque eaque voluptates suscipit non voluptas eius odit ratione. 
+                    Amet eos blanditiis exercitationem dicta esse molestiae odit itaque omnis asperiores.
+                </p> <br>
+
+                <!-- Heading -->
+                <h2 class="article__heading">Heading</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Illum facilis, fuga at quam, fugiat quo est expedita tenetur, provident incidunt recusandae nobis enim quos! 
+                    Eaque cumque unde voluptatibus sint sequi.
+                </p> <br>
+
+                <!-- Sub heading 1 -->
+                <h3 class="article__subheading_above">Sub-heading</h3>
+                <p>
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </p> 
+                <pre><code>Example coding block</code></pre>
+                <p>
+                    Aenean eu leo quam. Pelientesque ornare sem lacinia quam venenatis vestibulum.
+                    Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
+                </p> <br>
+
+                <!-- Sub heading 2 -->
+                <h3 class="article__subheading_below">Sub-heading</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quibusdam iure rerum nesciunt sunt quaerat id omnis quae! Consectetur qui sed debitis 
+                    iste praesentium facere, iure labore animi, quas eaque impedit!
+                </p> <br>
+
+                <ul>
+                    <li>Praesent commondo cursus magna, vel scelerisque nisl consectetgur et.</li>
+                    <li>Donec id elit non mi porta gravida at eget metus.</li>
+                    <li>Nulla vitae elit libero, a pharetra augue.</li>
+                </ul> <br>
+
+                <p>
+                    Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
+                </p> <br>
+
+                <ol>
+                    <li>Vestibulum id ligula porta felis euismod semper.</li>
+                    <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                    <li>Maecenas sed diarn eget risus varius biandit sit amet non magna.</li>
+                </ol> <br> 
+
+                <p>
+                    Cras mattis consectetur purus sit amit fermentum. Sed posuere consectetur est at lobortis.
+                </p> <br><br>
+            </article>
+            
+            <div class="btn">
+                <button id="btn_older">Older Post</button>
+                <button id="btn_new" disabled>Newer Post</button>
+            </div>
+        </div>
+        <aside class="aside">
+            <div class="aside__about">
+                <h3>About</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui repudiandae ipsum 
+                    dolorum magnam perferendis. Fugiat suscipit quasi iusto repellendus 
+                    quia numquam sequi blanditiis veniam at debitis, voluptatibus magni eius quod.
+                </p>
+            </div>
+            
+            <div class="aside__archives">
+                <h3>Archives</h3>
+                <ul>
+                    <li><a href="#">March 2014</a></li>
+                    <li><a href="#">February 2014</a></li>
+                    <li><a href="#">January 2014</a></li>
+                    <li><a href="#">December 2013</a></li>
+                    <li><a href="#">November 2013</a></li>
+                    <li><a href="#">October 2013</a></li>
+                    <li><a href="#">September 2013</a></li>
+                    <li><a href="#">August 2013</a></li>
+                    <li><a href="#">July 2013</a></li>
+                    <li><a href="#">June 2013</a></li>
+                    <li><a href="#">May 2013</a></li>
+                    <li><a href="#">April 2013</a></li>
+                </ul>
+            </div>
+
+            <div class="aside__elsewhere">
+                <h3>Elsewhere</h3>
+                <a href="#">GitHub</a>
+                <a href="#">Twitter</a>
+                <a href="#">Facebook</a>
+            </div>
+            
+        </aside>
+
+        <!-- when using css 'clear' set to both, ANY FLOATING elements can overlap in border/text area.
+             this makes my footer margin-top NOT visible. In order to fix I need some elements like div that isn't visible -->
+        <div class="temp">c</div>
+    </main>
+
+    <footer>
+        Blog template built for <a href="#">Bootstrap</a>
+    </footer>    
+</body>
+</html>
