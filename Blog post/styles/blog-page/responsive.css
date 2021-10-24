@@ -1,0 +1,21 @@
+/* responsive styling */
+
+@media (max-width: 750px) {
+    .navbar-container {
+        padding: 80px 60px 20px 60px;
+      }
+  .navbar-container .search-field input,
+  .blog-post--container .blog-post--links {
+    display: none;
+  }
+  .blog-post--container {
+      margin-left: 60px;
+      margin-right: 60px;
+  }
+  .blog-post--container .blog-post--content {
+      width: 100%;
+      margin-right: 0;
+  }
+  
+
+}
