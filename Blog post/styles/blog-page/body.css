@@ -50,9 +50,41 @@
   border-bottom: 1px solid rgb(228, 225, 225);
   padding-bottom: 20px;
 }
-.blog-post--article .blog-post--article__box {
+.blog-post--article .blog-post--article__box,
+.blog-post--article .blog-post--article__code {
   border: 1px solid rgb(202, 202, 202);
   padding: 0 15px 15px 1px;
   box-shadow: 1px 1px 2px rgb(231, 231, 231);
   border-radius: 4px;
+}
+.blog-post--article .blog-post--article__code {
+  padding: 0;
+}
+.blog-post--article .blog-post--article__code {
+  font-size: 16px;
+  font-family: monospace;
+}
+.blog-post--article ul,
+.blog-post--article ol {
+  margin-left: 35px;
+}
+/* Button Styling */
+.blog-post--buttons {
+  margin: 55px 0;
+}
+
+.blog-post--buttons .btn {
+  font-size: 14px;
+  padding: 7px 10px;
+  border-radius: 30px;
+  background-color: white;
+  cursor: pointer;
+}
+.blog-post--buttons .btn-active {
+  border: 1px solid rgb(8, 154, 252);
+  color: rgb(8, 154, 252);
+}
+.blog-post--buttons .btn-inactive {
+  border: 1px solid rgb(184, 184, 184);
+  color: rgb(184, 184, 184);
 }
