@@ -5,7 +5,7 @@
   --gray: #e4e4e4;
   --dark-gray: rgb(124, 124, 124);
   --white: rgb(255, 255, 255);
-  --sky-blue: rgb(3, 147, 214);
+  --sky-blue: rgb(87, 188, 255);
   --blue: rgb(0, 145, 202);
 }
 
@@ -52,12 +52,12 @@ button {
 
 a {
   color: var(--sky-blue);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 span {
   color: var(--sky-blue);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   text-decoration: underline;
 }
 
@@ -68,7 +68,7 @@ span {
   height: 3rem;
 }
 
-.btn-container {
+.btn__container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -87,7 +87,6 @@ span {
   justify-content: center;
   align-items: center;
   background-color: var(--gray);
-  padding: 0 1rem;
 }
 
 .footer__info {
@@ -138,7 +137,7 @@ span {
 }
 
 @media screen and (min-width: 768px) {
-  .section-container {
+  .section__container {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     justify-content: center;
@@ -146,11 +145,10 @@ span {
     gap: 0;
   }
 
-  .card-container {
+  .card__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    align-items: center;
     row-gap: 1em;
   }
 
@@ -159,6 +157,7 @@ span {
   }
 }
 
+/*
 @media screen and (min-width: 900px) {
   main {
     width: 75%;
@@ -171,4 +170,4 @@ span {
     margin-left: auto;
     margin-right: auto;
   }
-}
+}*/
