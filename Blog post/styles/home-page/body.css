@@ -1,64 +1,135 @@
 /* main body styling */
 .blog-container {
-    display: flex;
-    margin: 0 120px 0 120px;
-    justify-content: center;
-  }
-  .blog-card {
-    width: 350px;
-    height: 200px;
-    margin-bottom: 30px;
-    padding: 20px 20px 0 20px;
-    border: 1px solid rgb(231, 231, 231);
-    border-radius: 6px;
-    box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.2);
-  }
-  .blog-card:hover {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
-  }
-  .blog-card .card-content:hover {
-    transform: scale(1.03);
-  }
-  .blog-card .blog-card--header h3 {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  .blog-card .blog-card--header a {
-    text-decoration: none;
-  }
-  .blog-card .blog-card--header h1 {
-    font-family: "Merriweather", serif;
-    font-size: 24px;
-    color: black;
-  }
-  .blog-card p,
-  .blog-card a {
-    font-size: 14px;
-  }
-  .blog-card .blog-card--header .blog-date {
-    color: grey;
-    margin-bottom: 8px;
-  }
-  .blog-card .blog-card--description a {
-    color: rgb(8, 154, 252);
-  }
-  .blog-card .blog-card--description p {
-    height: 60px;
-  }
-  .left-side-blogs,
-  .right-side-blogs {
-    display: flex;
-    flex-direction: column;
-  
-    /* justify-content: flex-start; */
-  }
-  .left-side-blogs {
-    margin-right: 40px;
-  }
-  
-  .left-side-blogs .blog-card--header h3 {
-    color: rgb(26, 124, 252);
-  }
-  .right-side-blogs .blog-card--header h3 {
-    color: rgb(1, 211, 54);
-  }
+  display: flex;
+  margin: 0 60px 0 120px;
+  justify-content: center;
+}
+.blog-card {
+  width: 350px;
+  height: 200px;
+  margin-bottom: 30px;
+  padding: 20px 20px 0 20px;
+  border: 1px solid rgb(231, 231, 231);
+  border-radius: 6px;
+  box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.blog-card:hover {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+}
+.blog-card .card-content:hover {
+  transform: scale(1.03);
+}
+.blog-card .blog-card--header h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.blog-card .blog-card--header a {
+  text-decoration: none;
+}
+.blog-card .blog-card--header h1 {
+  font-family: "Merriweather", serif;
+  font-size: 24px;
+  color: black;
+}
+.blog-card p,
+.blog-card a {
+  font-size: 14px;
+}
+.blog-card .blog-card--header .blog-date {
+  color: grey;
+  margin-bottom: 8px;
+}
+.blog-card .blog-card--description a {
+  color: rgb(8, 154, 252);
+}
+.blog-card .blog-card--description p {
+  height: 60px;
+}
+.left-side-blogs,
+.right-side-blogs {
+  display: flex;
+  flex-direction: column;
+
+  /* justify-content: flex-start; */
+}
+.left-side-blogs {
+  margin-right: 40px;
+}
+
+.left-side-blogs .blog-card--header h3 {
+  color: rgb(26, 124, 252);
+}
+.right-side-blogs .blog-card--header h3 {
+  color: rgb(1, 211, 54);
+}
+
+/* Side-bar Styling */
+
+.blog-page__side-bar {
+  width: 30%;
+  margin-left: 140px;
+  padding: 10px 10px 0 40px;
+
+  border-left: 1px solid rgb(236, 236, 236);
+
+  max-height: 655px;
+}
+.side-bar--topics__container {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.side-bar--topics p,
+.side-bar--follow__title {
+  color: rgb(43, 42, 42);
+  font-size: 18px;
+}
+
+.side-bar--topics__container a {
+  text-decoration: none;
+  color: grey;
+  font-size: 14px;
+  background-color: rgba(236, 236, 236, 0.705);
+  margin: 7px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.side-bar--topics__container a:hover {
+  color: rgb(7, 176, 255);
+  background-color: white;
+}
+.side-bar--follow {
+  margin-top: 50px;
+}
+.side-bar--follow__card {
+  margin-top: 15px;
+  display: flex;
+}
+
+.side-bar--follow__card .card-media img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.side-bar--follow__card .card-body p {
+  font-size: 11px;
+  color: rgb(141, 140, 140);
+}
+.side-bar--follow__card .card-btn {
+  margin-left: 30px;
+}
+.side-bar--follow__card .btn-follow {
+  font-size: 14px;
+  color: rgb(109, 108, 108);
+  padding: 4px 10px;
+  border-radius: 30px;
+  border: 1px solid rgb(189, 188, 188);
+  background-color: white;
+  cursor: pointer;
+}
+.side-bar--follow__card .btn-follow:hover {
+  border: 1px solid rgb(8, 154, 252);
+  color: rgb(8, 154, 252);
+}
