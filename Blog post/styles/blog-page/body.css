@@ -43,7 +43,8 @@
 .blog-post--content .blog-post--header p {
   color: rgb(158, 158, 158);
 }
-.blog-post--article p {
+.blog-post--article p,
+.blog-post--links p {
   margin: 10px 0 20px 0;
 }
 .blog-post--article .blog-post--subtitle {
@@ -87,4 +88,25 @@
 .blog-post--buttons .btn-inactive {
   border: 1px solid rgb(184, 184, 184);
   color: rgb(184, 184, 184);
+}
+
+/* Links Section Styling */
+
+.blog-post--links h3 {
+  font-style: italic;
+}
+.blog-post--links__about {
+  background-color: rgba(225, 226, 226, 0.349);
+  padding: 15px 15px 5px 15px;
+  border-radius: 3px;
+  margin-bottom: 40px;
+}
+.blog-post--links__archives h3,
+.blog-post--links__social h3 {
+  padding: 15px 15px 5px 15px;
+}
+.blog-post--links__archives ul,
+.blog-post--links__social ul {
+  padding: 8px 15px 25px 15px;
+  list-style-type: none;
 }
