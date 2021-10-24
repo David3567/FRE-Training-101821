@@ -35,6 +35,10 @@ header {
   font-family: "Times New Roman", Times, serif;
 }
 
+.header__title > a {
+  color: rgb(77, 77, 77);
+}
+
 .header__search {
   color: rgb(183, 183, 183);
   font-size: 20px;
