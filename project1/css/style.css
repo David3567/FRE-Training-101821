@@ -16,12 +16,8 @@
 .nav {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
-}
-
-.nav div {
-  padding: 0rem 3rem;
 }
 
 .nav h2 {
@@ -45,6 +41,8 @@
 
 .card {
   border: 2px solid grey;
+  width: 500px;
+  height: 250px;
   box-shadow: 1px 1px 1px grey;
   /* border-radius: 5px; */
   padding: 1rem;
@@ -56,7 +54,7 @@
 
 .topic {
   font-weight: 700;
-  font-size: 0.5rem;
+  font-size: 1rem;
 }
 
 .topic .world {
@@ -69,30 +67,30 @@
 
 .box-title {
   margin-top: 10px;
-  font-size: 1rem;
+  font-size: 2rem;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 .date {
-  font-size: 0.5rem;
+  font-size: 1rem;
   color: grey;
   padding-bottom: 0.5rem;
 }
 
 .description {
-  font-size: 12px;
+  font-size: 1.2rem;
   padding-bottom: 1rem;
 }
 
 .read-more {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 
 .footer {
   position: absolute;
   /* margin: auto; */
+  width: 50%;
   bottom: 0;
-  width: 527px;
   background-color: lightgrey;
 }
 

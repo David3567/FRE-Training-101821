@@ -1,0 +1,17 @@
+.footer {
+  position: absolute;
+  width: 100%;
+  background-color: lightgrey;
+}
+
+.footer .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.footer .links .link1 {
+  margin: 1rem;
+}
