@@ -1,9 +1,21 @@
 .header {
     display: flex;
     justify-content: space-between;
-    padding: 0 5%;
+    padding: 1% 5%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+    /* transition: all 1.5s ease; */
     /* background-color: lightblue; */
 }
+
+
+
+/* .header a {
+    color: rgb(221, 54, 3);
+
+} */
 
 
 @media (max-width: 600px) {    
@@ -14,4 +26,4 @@
         /* background-color: lightblue; */
     }
 }
- 
+

@@ -2,11 +2,14 @@
     padding: 0%;
     margin: 0;
     box-sizing: border-box;
-}
+    scroll-behavior: smooth;
 
+}
 
 .outline {
     padding: 1%;
+    width: 100vw;
+    /* position: relative; */
 }
 .main {
     display: flex;
@@ -49,6 +52,10 @@ p {
     font-weight: 100;
 }
 
+a {
+    color: rgb(221, 54, 3);
+}
+
 .blog_sectionone h3 {
     margin-bottom: 2%;
     color: blue;
@@ -64,6 +71,8 @@ p {
 .blog_sectionone a, .blog_sectiontwo a {
     position: absolute;
     bottom: 5%;
+    color: gray;
+    /* text-decoration: none; */
 }
 
 
