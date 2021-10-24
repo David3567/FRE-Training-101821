@@ -12,7 +12,7 @@ main {
 .main__container {
   display: flex;
   justify-content: center;
-  max-width: 1000px;
+  max-width: 910px;
   width: 90%;
   padding: 20px 5%;
 }
