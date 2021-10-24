@@ -58,12 +58,12 @@
   box-shadow: 1px 1px 2px rgb(231, 231, 231);
   border-radius: 4px;
 }
+
 .blog-post--article .blog-post--article__code {
   padding: 0;
-}
-.blog-post--article .blog-post--article__code {
   font-size: 16px;
   font-family: monospace;
+  cursor: text;
 }
 .blog-post--article ul,
 .blog-post--article ol {

@@ -13,9 +13,10 @@
   font-family: "Merriweather", serif;
   font-size: 28px;
   font-weight: 700;
+  color: black;
   text-decoration: underline;
 }
-.navbar-container a,
+.navbar-container .subscribe,
 .navbar-container i {
   color: grey;
 }
@@ -38,5 +39,9 @@
   outline: none;
 }
 .navbar-container .search-field input:focus {
-  box-shadow: 0 0 5px hsl(209, 93%, 89%);
+  box-shadow: 0 0 6px hsl(210, 86%, 86%);
+}
+.navbar-container .btn-search {
+  border: none;
+  background-color: white;
 }
