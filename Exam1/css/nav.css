@@ -24,3 +24,21 @@
     font-size: xx-large;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 600px){
+    .nav{ width: 100%;
+    }
+    .navTitle{
+        font-size:100%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .nav{ width: 100%;
+    }
+    .navTitle{
+        font-size:100%;
+    }
+
+}

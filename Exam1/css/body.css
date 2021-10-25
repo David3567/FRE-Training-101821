@@ -55,3 +55,65 @@ width: 350px;
     border: 2px solid rgba(197, 194, 194, 0.445);
 
 }
+
+
+@media only screen and (max-width: 600px){
+    .boxParent{
+       
+         padding-left: 0px;
+         padding-right: 300px;
+         grid-template-columns: 190px 190px;
+    }
+    h1{
+        font-size: 100%;
+    }
+    .detail{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+
+    .boxParent{
+       
+        padding-left: 0px;
+        padding-right: 300px;
+        grid-template-columns: 360px 360px;
+   }
+   h1{
+       font-size: 100%;
+   }
+   .detail{
+       width: 100%;
+       margin: 0;
+       padding: 0;
+
+   }
+   
+}
+
+
+
+@media only screen and (min-width: 992px) {
+    .boxParent{
+       
+        padding-left: 0px;
+        padding-right: 20px;
+
+        grid-template-columns: 500px 500px;
+   }
+   h1{
+       font-size: 100%;
+   }
+   .detail{
+       width: 100%;
+       margin: 0;
+       padding: 0;
+
+   }
+    
+}
