@@ -1,0 +1,35 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    max-height: 100%;
+    margin: 4% 0;
+}
+
+/* Navigation */
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > #subscribe{
+    margin-left: 29.5%;
+    font-size: small;
+
+}
+
+nav > #search_icon{
+    margin-right: 30%;
+    color: lightgray;
+
+}
+
+nav > #title{
+    font-size: 25px;
+    text-decoration: underline;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgba(0, 0, 0, 0.801);
+    font-weight: bold;
+}
