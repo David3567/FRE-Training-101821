@@ -1,0 +1,21 @@
+.wHeading{
+    color: grey;
+}
+.flexWrap{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.leftSide, .rightSide{
+    display: flex;
+    flex-direction: column;
+}
+.leftSide{
+    width: 60%;
+    margin-left: 1rem;
+}
+.rightSide{
+    width: 20%;
+    height: 10%;
+    margin-right: 1rem;
+}
