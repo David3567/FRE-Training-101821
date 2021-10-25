@@ -5,8 +5,11 @@
 
 // primative type 
 // let num =5; // number
+
 // console.log(typeof num)
 // let str = 'abc';
+// str[0] = 'x';
+// console.log(str[0])
 // console.log(typeof str)
 // let b = true;
 // console.log(typeof b)
@@ -27,6 +30,9 @@
 //     input = 7;
 //     console.log("input",input) // 7
 // }
+// foo.a =5;
+// console.log(foo.a);
+
 
 /// object data type : object | function
 // function foo(){
@@ -38,14 +44,14 @@
 // let arr = []
 // console.log(typeof arr);
 
-let obj = {name:'patrick'}
+// let obj = {name:'patrick'}
 
-foo(obj);
-console.log(obj)
-function foo(input){
-    input.name = 'changed'
-    console.log(input)
-}
+// foo(obj);
+// console.log(obj) // {name:'patrick'}
+// function foo(input){
+//     input = {name:'changed'}
+//     console.log(input) // {name:'changed'}
+// }
 
 // deepcopy, shallow copy
 // class key in ES6 and constructor function in ES5
