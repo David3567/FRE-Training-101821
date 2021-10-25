@@ -1,16 +1,18 @@
 
 .main_body {
+    display: flex;
     position: relative;
     width: 65%;
-    height: 100%;
+    height: auto;
     margin: auto;
     min-width: 600px;
 }
 
 .post_body{
-    position: absolute;
+    display: absolute;
     width: 70%;
 }
+
 .post_body h1{
     margin-bottom: 0px;;
 }
@@ -48,11 +50,8 @@
 
 .right_side{
     width: 30%;
-    float: right;
-}
-
-.float_right{
-    float:right;
+    justify-content: center;
+    margin: 10px 10px 10px 10px;
 }
 
 .about_section{
@@ -98,8 +97,5 @@
     }
     li {
         font-size: 12px;
-    }
-    .right_side {
-        width: 25%;
     }
 }
