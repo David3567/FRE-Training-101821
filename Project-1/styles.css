@@ -1,0 +1,77 @@
+header {
+  margin-bottom: 1rem;
+}
+
+.subscribe-link {
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+  margin-left: 1.5rem;
+}
+
+.blog-title-header {
+  text-decoration: underline;
+}
+
+.search-icon {
+  color: grey;
+  margin-right: 1.5rem;
+}
+
+.blog-card-left,
+.blog-card-right {
+  border: 5px solid rgba(0, 0, 0, .1);
+  padding-left: 1rem;
+  margin-bottom: 3rem;
+}
+
+.blog-card-left {
+  margin-right: 1rem;
+}
+
+.blog-card-right {
+  margin-left: 1rem;
+}
+
+.blog-world {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 140, 255);
+  margin-bottom: 0;
+}
+
+.blog-design {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(10, 170, 10);
+  margin-bottom: 0;
+}
+
+.blog-title {
+  margin-bottom: 0;
+}
+
+.blog-date {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  color: grey;
+}
+
+.blog-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9rem;
+}
+
+.blog-continue {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .9rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+  background-color: rgba(0, 0, 0, .1);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
