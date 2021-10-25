@@ -67,6 +67,10 @@ hr{
     padding-bottom: 10px;
 }
 
+#article__box_content--bold {
+    font-weight: bold;
+}
+
 .temp{
     clear: both;
     margin-top: 20px;
@@ -92,4 +96,31 @@ article ol li{
 
 article h2, h3{
     font-family: 'Times New Roman', Times, serif;
+}
+
+
+@media only screen and (max-width: 600px){
+
+    header{
+        padding: 0 10px;
+    }
+    .content{
+        margin: 5px;
+    }
+
+    .content p{
+        font-size: 12px;
+    }
+
+    .article li{
+        font-size: 12px;
+    }
+
+    .article > pre > code{
+        font-size: 12px;
+    }
+
+    #btn_older, #btn_new{
+        font-size: 10px;
+    }
 }
