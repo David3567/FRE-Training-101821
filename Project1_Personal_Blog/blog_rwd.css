@@ -1,0 +1,15 @@
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        width: 100%;
+    }
+
+    .container__title a {
+        padding: 10px;
+    }
+
+    .container__content--contentWorld, .container__content--contentDesign {
+        width: 100%;
+    }
+
+}

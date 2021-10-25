@@ -1,0 +1,23 @@
+@media screen and (max-width: 768px) {
+    .container {
+        display: block;
+        width: 100%;
+        margin: auto;
+        
+    }
+
+    .container__title a {
+        padding: 10px;
+    }
+
+    .container__content,
+    .container__about,
+    .container__archives,
+    .container__elsewhere {
+        padding: 20px;
+    }
+
+
+}
+
+

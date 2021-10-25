@@ -13,7 +13,7 @@
     justify-content: center;
 }
 
-.title {
+.container__title {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -22,21 +22,25 @@
     padding: 24px 0;
 }
 
-.title a {
+.container__title a {
     color: gray;
     font-size: 12px;
 }
 
-.content {
+h1 {
+    text-decoration: underline;
+}
+
+.container__content {
     display: flex;
     flex-wrap: wrap;
 }
 
-.content p {
+.container__content p {
     padding: 10px 0 36px 0;
 }
 
-.contentWorld, .contentDesign {
+.container__content--contentWorld, .container__content--contentDesign {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -57,16 +61,16 @@ h5 {
     padding-bottom: 10px;
 }
 
-.contentWorld h5, a {
+.container__content--contentWorld h5, a {
     color: rgb(0, 108, 248);
     padding-top: 30px;
 }
 
-.contentDesign h5 {
+.container__content--contentDesign h5 {
     color: rgb(29, 187, 29);
 }
 
-.btmNavbar {
+footer {
     background-color: #F5F5F5;
     color: gray;
     text-align: center;
