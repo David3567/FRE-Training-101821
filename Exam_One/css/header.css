@@ -1,7 +1,7 @@
 /* Header styling */
 .main-header {
 	min-height: 15vh;
-	padding-bottom: 2rem;
+	padding-bottom: 0.5rem;
 }
 
 .main-header h1 {
@@ -20,4 +20,10 @@
 	display: flex;
 	justify-content: space-between;
 	list-style: none;
+}
+
+@media screen and (max-width: 1200px) {
+	.main-header {
+		padding-bottom: 2rem;
+	}
 }

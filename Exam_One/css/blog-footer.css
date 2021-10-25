@@ -1,0 +1,12 @@
+.blog-footer {
+	min-height: 6vh;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: lightgray;
+	color: var(--gray-text);
+}

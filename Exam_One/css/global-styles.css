@@ -1,6 +1,8 @@
 @import "blog-cards.css";
 @import "footer.css";
 @import "header.css";
+@import "blog-page.css";
+@import "blog-footer.css";
 
 /* Global Styles */
 * {
@@ -12,7 +14,8 @@
 html {
 	font-size: 62.5%;
 	--header1: calc(3rem + 1vw);
-	--header2: calc(1.5rem + 1vw);
+	--header2: calc(1.4rem + 1vw);
+	--header3: calc(1.2rem + 1vw);
 	--text: calc(1rem + 0.5vw);
 	--gray-text: #7e7b7b;
 	--blue-text: rgb(68, 143, 248);
@@ -27,11 +30,19 @@ h2 {
 	font-size: var(--header2);
 }
 
+h3 {
+	font-size: var(--header3);
+}
+
 p,
 a,
 span,
 h5 {
 	font-size: var(--text);
+}
+
+a {
+	color: rgb(9, 151, 240);
 }
 
 span {
