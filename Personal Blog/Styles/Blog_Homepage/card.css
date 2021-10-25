@@ -1,0 +1,32 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 2rem;
+    width: 80%;
+    margin: 20px 10% 100px 10%;
+}
+.card {
+    padding: 20px;
+    border: 5px solid #eeeeee;
+}
+.card:hover {
+    border: 1px solid #eeeeee;
+    transform: scale(1.03);
+}
+.card__header--world, .card__header--design {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.card__header--world {
+    color: #03a9f4;
+}
+.card__header--design {
+    color: #4caf50;
+}
+.card__date--color {
+    margin: 5px auto;
+    color: #9e9e9e;
+}
+.card__text--margin {
+    margin-bottom: 30px;
+}

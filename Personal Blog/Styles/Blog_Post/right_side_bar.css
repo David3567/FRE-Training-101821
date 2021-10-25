@@ -1,0 +1,35 @@
+.right-side-bar {
+    margin: 30px 0px 100px 0px;
+}
+.about {
+    background-color: #e3f2fd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.about__header--margin {
+    margin-bottom: 15px;
+}
+.archives {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.archives__header--margin {
+    margin-bottom: 15px;
+}
+.archives__link--margin {
+    margin-bottom: 5px;
+}
+
+.elsewhere {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.elsewhere__header--margin {
+    margin-bottom: 15px;
+}
+.elsewhere__link--margin {
+    margin-bottom: 5px;
+}

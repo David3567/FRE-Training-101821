@@ -1,0 +1,10 @@
+@media screen and (max-width: 390px) {
+    .nav__title--fontsize {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 610px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    }
+}

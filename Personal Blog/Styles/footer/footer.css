@@ -1,0 +1,16 @@
+.footer {
+    background-color: #e3f2fd;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    text-align: center;
+    padding: 20px;
+    min-height: 81px;
+}
+.footer__element--margin {
+    margin-bottom: 5px;
+}
+.footer__element--margintop {
+    margin-top: 10px;
+}

@@ -5,75 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal_Blog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./Styles/main/index.css">
+    <link rel="stylesheet" href="./Styles/nav/nav.css">
+    <link rel="stylesheet" href="./Styles/Blog_Homepage/card.css">
+    <link rel="stylesheet" href="./Styles/footer/footer.css">
+    <link rel="stylesheet" href="./Styles/Blog_Homepage/media_screen.css">
 </head>
 <body>
     <div class="container">
-        <nav>
-            <a href="#">Subscribe</a>
-            <h1>Blog Title</h1>
-            <div class="img">
-                <img src="./img/search.png">
-            </div>
+        <nav class="nav">
+            <a class="nav__link nav__link--color" href="#">Subscribe</a>
+            <h1 class="nav__title nav__title--fontsize">Blog Title</h1>
+            <img class="nav__img nav__img--size" src="./img/search.png">
         </nav>
-        <main>
+        <main class="card-container">
             <div class="card">
-                <div class="inner_card">
-                    <div class="card_header_word">World</div>
-                    <h2>Example Blog Post</h2>
-                    <p class="date">Nov 12</p>
-                    <p class="card_text">This card represents an example blog post.</p>
-                    <a href="#">Continue reading</a>
-                </div>
+                <div class="card__header card__header--world">World</div>
+                <h2>Example Blog Post</h2>
+                <p class="card__date card__date--color">Nov 12</p>
+                <p class="card__text card__text--margin">This card represents an example blog post.</p>
+                <a href="./Blog_Post/Blog_Post.html">Continue reading</a>
             </div>
             <div class="card">
-                <div class="inner_card">
-                    <div class="card_header_design">Design</div>
-                    <h2>Post title</h2>
-                    <p class="date">Nov 11</p>
-                    <p class="card_text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#">Continue reading</a>
-                </div>
+                <div class="card__header card__header--design">Design</div>
+                <h2>Post title</h2>
+                <p class="card__date card__date--color">Nov 11</p>
+                <p class="card__text card__text--margin">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Blog_Post/Blog_Post.html">Continue reading</a>
             </div>
             <div class="card">
-                <div class="inner_card">
-                    <div class="card_header_word">World</div>
-                    <h2>Example Blog Post</h2>
-                    <p class="date">Nov 12</p>
-                    <p class="card_text">This card represents an example blog post.</p>
-                    <a href="#">Continue reading</a>
-                </div>
+                <div class="card__header card__header--world">World</div>
+                <h2>Example Blog Post</h2>
+                <p class="card__date card__date--color">Nov 12</p>
+                <p class="card__text card__text--margin">This card represents an example blog post.</p>
+                <a href="./Blog_Post/Blog_Post.html">Continue reading</a>
             </div>
             <div class="card">
-                <div class="inner_card">
-                    <div class="card_header_design">Design</div>
-                    <h2>Post title</h2>
-                    <p class="date">Nov 11</p>
-                    <p class="card_text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#">Continue reading</a>
-                </div>
+                <div class="card__header card__header--design">Design</div>
+                <h2>Post title</h2>
+                <p class="card__date card__date--color">Nov 11</p>
+                <p class="card__text card__text--margin">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Blog_Post/Blog_Post.html">Continue reading</a>
             </div><div class="card">
-                <div class="inner_card">
-                    <div class="card_header_word">World</div>
-                    <h2>Example Blog Post</h2>
-                    <p class="date">Nov 12</p>
-                    <p class="card_text">This card represents an example blog post.</p>
-                    <a href="#">Continue reading</a>
-                </div>
+                <div class="card__header card__header--world">World</div>
+                <h2>Example Blog Post</h2>
+                <p class="card__date card__date--color">Nov 12</p>
+                <p class="card__text card__text--margin">This card represents an example blog post.</p>
+                <a href="./Blog_Post/Blog_Post.html">Continue reading</a>
             </div>
             <div class="card">
-                <div class="inner_card">
-                    <div class="card_header_design">Design</div>
-                    <h2>Post title</h2>
-                    <p class="date">Nov 11</p>
-                    <p class="card_text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#">Continue reading</a>
-                </div>
-            </div>  
+                <div class="card__header card__header--design">Design</div>
+                <h2>Post title</h2>
+                <p class="card__date card__date--color">Nov 11</p>
+                <p class="card__text card__text--margin">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                <a href="./Blog_Post/Blog_Post.html">Continue reading</a>
+            </div>
         </main>
-        <footer>
-            <p>Blog template built for <a href="#">Boostrap</a></p>
-            <a href="#">See Design System</a>
+        <footer class="footer">
+            <p class="footer__element footer__element--margin">Blog template built for <a href="#">Boostrap</a></p>
+            <a class="footer__link" href="#">See Design System</a>
         </footer>
     </div>
 </body>

@@ -1,0 +1,26 @@
+body {
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+.nav {
+    position:relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 15px;
+}
+.nav__link--color {
+    color: lightgrey;
+}
+.nav__title--fontsize {
+    font-size: 3rem;
+    text-decoration: underline;
+
+}
+.nav__img--size {
+    width: 20px;
+    height: 20px;
+}
