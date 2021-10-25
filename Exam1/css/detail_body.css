@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+.leftContainer{
+    width: 59%;
+    height: 110vh;
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 15px;
+}
+
+.about{
+    width: 20%;
+    position: absolute;
+    right: 0%;
+    top: 6%;
+    background-color: rgba(194, 193, 193, 0.158);
+    margin-right: 60px;
+    padding: 20px;
+   
+}
+.links{
+    width: 20%;
+    position: absolute;
+    right: 0%;
+    top:28%;
+    margin-right: 60px;
+
+}
+.sampleText{
+    font-size: xx-large;
+    padding-bottom: 5px;
+}
+.date{
+    color: gray;
+    margin-top:-1px;
+
+}
+.elses{
+    width: 20%;
+    position: absolute;
+    right: 0%;
+    top:57%;
+    margin-right: 60px;
+   
+
+}
+.elses li, .links li{
+    list-style: none;
+
+}
+a{
+    color: cornflowerblue;
+}
+
+.archivesText, .elseText,.aboutText{
+    font-weight: bold;
+    font-style: italic;
+
+
+}
+section{
+    padding-top: 20px;
+}
+p{
+    margin-top: 15px;
+    color: rgb(83, 81, 81);
+}
+.oneLine{
+    border-bottom: 1px solid rgb(228, 224, 224);
+    padding-bottom: 15px;
+}
+.fullLine{
+    border: 1px solid rgb(228, 224, 224);
+}
+.boldText{
+    font-weight: bold;
+    color: rgb(31, 31, 31);
+}
+.subHeadingList{
+    color: rgb(83, 81, 81);
+    padding-left: 50px;
+    padding-top: 10px;
+    
+}
+.button{
+    padding-top: 40px;
+ 
+
+ 
+}
+.orderBtn{
+    border-radius: 10rem;
+    padding:5px;
+    border-color:rgb(50, 173, 255);
+    color: rgb(50, 173, 255);
+    background-color: white;
+}
+.newBtn{
+    border-radius: 10rem;
+    padding:5px;
+    border-color:rgb(193, 195, 196);
+    color: rgb(193, 195, 196);
+    background-color: white;
+}
+
+footer{
+    margin-bottom: 100px;
+}
+footer p{
+    color: rgb(167, 164, 164);
+    padding-top: 20px;
+}
