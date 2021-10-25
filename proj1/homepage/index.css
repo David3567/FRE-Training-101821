@@ -65,7 +65,7 @@ footer.page-footer > p {
   border-radius: 5px;
   border: solid #ddd;
   box-sizing: border-box;
-  flex: 0 1 45%;
+  flex: 1 1 45%;
   margin: 1em 1em;
 }
 
