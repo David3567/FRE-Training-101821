@@ -1,5 +1,18 @@
 /* responsive */
-
+@media (max-width: 1245px) {
+  .blog-container {
+    margin: 0 80px 0 100px;
+  }
+  .blog-page__side-bar {
+    width: 30%;
+    margin-left: 50px;
+  }
+}
+@media (max-width: 1044px) {
+  .blog-page__side-bar {
+    display: none;
+  }
+}
 @media (max-width: 745px) {
   .navbar-container {
     padding: 80px 40px 20px 40px;
