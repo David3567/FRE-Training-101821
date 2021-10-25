@@ -16,19 +16,19 @@ h4 {
   font-family: 'Times New Roman', Times, serif;
 }
 
-h1 {
+.content h1 {
   font-size: 200%;
 }
 
-h2 {
+.content h2 {
   font-size: 175%;
 }
 
-h3 {
+.content h3 {
   font-size: 150%;
 }
 
-h4 {
+.content h4 {
   font-style: italic;
   font-size: 125%;
 }
@@ -83,7 +83,7 @@ footer > p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 1rem;
+  margin: 0 2rem;
 }
 
 .blog-post,
@@ -95,11 +95,11 @@ footer > p {
 }
 
 .blog-post {
-  flex: 0 0 70%;
+  flex: 1 0 70%;
 }
 
 .side {
-  flex: 0 0 20%;
+  flex: 1 0 20%;
 }
 /* blog post layout */
 
@@ -115,8 +115,8 @@ section.blog-post p {
   margin-bottom: 1rem;
 }
 
-code {
-  border: solid 1px #888;
+code.code-block {
+  border: thin solid #888;
 }
 
 .about {
