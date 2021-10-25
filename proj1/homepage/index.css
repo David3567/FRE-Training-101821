@@ -16,36 +16,36 @@ h2 {
 /* typography */
 
 /* top navbar */
-nav {
+.page-header nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 1rem 2rem;
 }
 
-nav > a {
+.page-header nav > a {
   color: #888;
 }
 
-.nav-title {
+.page-header .nav-title {
   color: #444;
   font-size: 150%;
 }
 
-.header-nav {
+.page-header .header-nav {
   background: #fff;
 }
 /* top navbar */
 
 /* footer styling */
-footer {
+footer.page-footer {
   background: #c6bfbf;
   color: #666;
   padding: 3rem 0;
   text-align: center;
 }
 
-footer > p {
+footer.page-footer > p {
   margin-bottom: 10px;
 }
 /* footer styling */

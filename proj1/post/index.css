@@ -98,13 +98,13 @@ footer > p {
   flex: 1 0 70%;
 }
 
-.side {
+aside.side {
   flex: 1 0 20%;
 }
 /* blog post layout */
 
 /* blog post styling */
-section.blog-post p {
+article.blog-post p {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -117,6 +117,8 @@ section.blog-post p {
 
 code.code-block {
   border: thin solid #888;
+  display: inline-block;
+  width: 100%;
 }
 
 .about {
