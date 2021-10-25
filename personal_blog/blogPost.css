@@ -1,0 +1,105 @@
+
+.main_body {
+    position: relative;
+    width: 65%;
+    height: 100%;
+    margin: auto;
+    min-width: 600px;
+}
+
+.post_body{
+    position: absolute;
+    width: 70%;
+}
+.post_body h1{
+    margin-bottom: 0px;;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.border{
+    border: 1px solid #545454;
+    border-color: #bbbbbb;
+}
+
+.blogPost_buttons {
+    display: flex;
+    margin-top: 50px;
+}
+
+.blogPost_buttons button{
+    background-color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.active {
+    color:dodgerblue;
+    border-color: dodgerblue;
+}
+
+.unactive {
+    color: #bbbbbb;
+    border-color:#bbbbbb;
+}
+
+.right_side{
+    width: 30%;
+    float: right;
+}
+
+.float_right{
+    float:right;
+}
+
+.about_section{
+    width: 80%;
+    height: 220px;
+    background-color: #d3d3d3;
+    padding: 25px;
+}
+
+.italics{
+    font-style: italic;
+}
+
+.archives_section {
+    width: 80%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.elsewhere_section{
+    width: 80%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 1400px) {
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    p {
+        font-size: 12px;
+    }
+    a {
+        font-size: 12px;
+    }
+    li {
+        font-size: 12px;
+    }
+    .right_side {
+        width: 25%;
+    }
+}
