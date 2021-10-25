@@ -24,6 +24,16 @@
     box-shadow: 0 0 10px #bbbbbb;
 }
 
+.blue:hover{
+    background-color:royalblue;
+    color: white;
+}
+
+.green:hover {
+    background-color: seagreen;
+    color: white;
+}
+
 .blogStyle h1{
     margin-bottom: 0px;
 }
@@ -45,7 +55,7 @@
 }
 
 .blogTop2 {
-    color: green;
+    color:limegreen;
     font-weight: bold;
     margin-top: 10px;
 }
