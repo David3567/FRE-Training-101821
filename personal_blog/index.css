@@ -9,13 +9,19 @@
 }
 
 .blogStyle {
-    border:2px solid #bbbbbb;
+    border: 2px solid #bbbbbb;
     border-radius: 5px;
     padding: 20px;
     width: 500px;
     height: 250px;
     margin: 10px 10px 10px 10px;
     position: relative;
+    transition-property: all .5s ease-in-out;
+}
+
+.blogStyle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #bbbbbb;
 }
 
 .blogStyle h1{
