@@ -1,0 +1,84 @@
+.grid-container {
+	display: grid;
+	grid-template-areas: 'main main main main aside';
+	grid-gap: 10px;
+	padding: 10px;
+}
+
+.blogmain {
+	grid-area: main;
+	margin-bottom: 80px;
+}
+
+.aside {
+	grid-area: aside;
+}
+
+.aside__about {
+	background-color: rgb(235, 233, 233);
+	padding: 5px;
+}
+
+.aside__archives {
+	margin: 20px 0;
+	padding: 5px;
+}
+
+.aside__elsewhere {
+	margin: 20px 0;
+	padding: 5px;
+}
+
+.blogmain__header {
+	margin: 0;
+}
+
+.blogmain__date {
+	color: #ccc;
+	font-size: 13px;
+}
+
+.blogmain__hr {
+	margin: 10px 0;
+	color: #ccc;
+}
+.blogmain p {
+	margin: 6px 0;
+}
+
+.blogmain__box {
+	border: 1px solid #ccc;
+	padding: 4px 0;
+}
+
+.blogmain__ul,
+.blogmain__ol {
+	margin-left: 40px;
+	padding: 0;
+}
+
+.blogaside__ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.blogaside__header {
+	font-style: italic;
+}
+
+.button {
+	margin-top: 10px;
+	border-radius: 15px;
+	background-color: white;
+	padding: 5px;
+	font-size: 14px;
+}
+.button--color-blue {
+	color: #428bca;
+	border: 1px #428bca solid;
+}
+.button--color-grey {
+	color: #ccc;
+	border: 1px #ccc solid;
+}
