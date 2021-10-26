@@ -85,18 +85,40 @@
 //       console.log(`I am ${this.pname}`)
 //   }
 // }
+// class Employee extends Person {
+//   constructor(name, age , company) {
+//     super(name,age)
+//     this.company = company
+//   }
+//   showCompany(){
+//     console.log(`I am working at ${this.company}`)
 
-// function Person(name,age){
-//     this.pname = name;
-//     this.age = age;
-//     this.showName = function(){
-//       console.log(`I am ${this.pname}`)
+//   }
+// }
 
-//     }
+// function Person(name, age) {
+//   this.pname = name;
+//   this.age = age;
 // }
-// Person.prototype.showName = function(){
-//   console.log(`I am ${this.pname}`)
+// Person.prototype.showName = function () {
+//   console.log(`I am ${this.pname}`);
+// };
+
+
+// function Employee(name, age, company) {
+//   Person.prototype.constructor.call(this, name, age); // super in ES6
+//   this.company = company;
 // }
+// Employee.prototype = Object.create(Person.prototype)
+// console.log("Employee.prototype",Employee.prototype)
+// Employee.prototype.constructor=Employee;
+// Employee.prototype.showCompany = function () {
+//   console.log(`I am working at ${this.company}`);
+// };
+
+// const e = new Employee('patrick', 18, 'Antra Inc');
+// //e.showName()
+// console.log(e);
 
 // const p = new Person('patrick', 18);
 // const p2 = new Person('patrick', 18);
@@ -108,7 +130,6 @@
 // p.toString = 5;
 // console.log(p)
 // console.log(p.toString)
-
 
 //console.log("res",p3.showName(p2.showName()));
 // function foo(){
@@ -142,5 +163,30 @@
 
 // foo(undefined,undefined,"hello",()=>{});
 
-// let arr = [1,2,3];
-// console.log(arr instanceof Array );
+let arr = [1,2,3]; // [2 ,4 ,6]
+let arr2 = [2,4,6] // [4,8,12]
+
+
+// Array.prototype.filter
+// Array.prototype.map
+// Array.prototype.reduce
+// Array.prototype.some
+// Array.prototype.every
+
+
+
+Array.prototype.myforEach = function(  callbackFn ){
+  for(let i = 0; i<this.length;i++){
+    callbackFn(this[i],i,this)
+  }
+}
+
+function multiplyByTwo(arr){
+  let res = [];
+  arr.myforEach((item,index,array)=>{
+    console.log('item',item, 'index',index,"array",array)
+    res.push(item*2);
+  })
+  return res;
+}
+console.log(multiplyByTwo(arr2))
