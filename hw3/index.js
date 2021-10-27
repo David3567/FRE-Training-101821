@@ -26,9 +26,7 @@ Array.prototype.myMap = function (cb) {
 
 // Array.prototype.reduce
 Array.prototype.myReduce = function (cb, initial) {
-	let result
 	let prev
-	let curr
 	if (initial === undefined) {
 		prev = this[0]
 		curr_index = 1
@@ -77,7 +75,7 @@ let result2 = arr.myMap((item) => {
 console.log(result2)
 
 //test for myFmyReduceilter
-console.log([1, 2, 3].myReduce((prev, curr) => prev + curr))
+console.log(arr.myReduce((prev, curr) => prev + curr))
 
 //test for mySome
 let result3 = arr.mySome((item) => {
