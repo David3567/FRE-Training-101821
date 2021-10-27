@@ -52,7 +52,7 @@ Array.prototype.mySome = function (callback) {
 let games = ["league of legends", "starcraft", "age of empires", "last of us"];
 let someGames = games.mySome((item) => item.includes("of"));
 console.log(someGames); //true
-let someGamesFalse = games.some((item) => item.includes("party"));
+let someGamesFalse = games.mySome((item) => item.includes("party"));
 console.log(someGamesFalse); //false
 
 Array.prototype.myEvery = function (callback) {
