@@ -47,14 +47,15 @@ Array.prototype.some
 */
 Array.prototype.mySome = function(fn){
     for(let i of this){
-        if(fn(this[i])){
+        if(fn(i)){
+            console.log(`from here`)
             return true
         }
     }
     return false
 }
 console.log(`DOWN BELOW IS MY CUSTOME SOME FUNCTION`)
-const testSome = arr.mySome(num => num < -2 )
+const testSome = arr.mySome(num => num < 10 )
 console.log(testSome)
 console.log(`\n`)
 
@@ -65,21 +66,32 @@ Array.prototype.every
 */
 Array.prototype.myEvery = function(fn){
     for(let i of this){
-        if(!(fn(this[i]))){
+        if(!(fn(i))){
             return false
         }
     }
     return true
 }
 console.log(`DOWN BELOW IS MY CUSTOME SOME FUNCTION`)
-const testEvery = arr.myEvery(num => num < 200)
+const testEvery = arr.myEvery(num => num < -2)
 console.log(testEvery)
 console.log(`\n`)
 
 /* 
 Array.prototype.reduce
-    
+    The reduce() method executes a user-supplied "reducer" callback
+    function on each element of the array, passing in the return value
+    from the calculation on the preceding element. The final result of 
+    running the reducer across all elements of the array is a single value
 */
+Array.prototype.myReduce = function(fn){
+    let newArr = []
+    for(let i of this){
+        newArr.push(fn(i))
+    }
+}
+//comeback for the reduce function
+
 // Array.prototype.forEach
 // Array.prototype.keys
 // Array.prototype.entries
