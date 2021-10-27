@@ -28,14 +28,15 @@ console.log(mappedArr); //[5, 4, 6, 10]
 
 Array.prototype.myReduce = function (callback, initialValue) {
 	this.unshift(initialValue);
+	let accumulator = initialValue;
 	for (let i = 1; i < this.length; i++) {
-		let reducer = callback(initialValue, arr[i], i, arr);
+		accumulator = callback(accumulator, this[i], i, this);
 	}
-	return reducer;
+	return accumulator;
 };
 // myReduce Test
 let arr = [1, 2, 3, 4, 5];
-let result = arr.reduce((prev, curr) => prev + curr, 1);
+let result = arr.myReduce((prev, curr) => prev + curr, 1);
 console.log(result); //16
 
 Array.prototype.mySome = function (callback) {
@@ -47,10 +48,12 @@ Array.prototype.mySome = function (callback) {
 	}
 	return false;
 };
-// myReduce Test
-let arr = [1, 2, 3, 4, 5];
-let result = arr.reduce((prev, curr) => prev + curr, 1);
-console.log(result); //16
+// mySome Test
+let games = ["league of legends", "starcraft", "age of empires", "last of us"];
+let someGames = games.mySome((item) => item.includes("of"));
+console.log(someGames); //true
+let someGamesFalse = games.some((item) => item.includes("party"));
+console.log(someGamesFalse); //false
 
 Array.prototype.myEvery = function (callback) {
 	for (let i = 0; i < this.length; i++) {
@@ -63,7 +66,7 @@ Array.prototype.myEvery = function (callback) {
 };
 // myEvery Test
 let nums = [1, 2, 3, 4, 5];
-let everyNum = nums.every((num) => num < 6);
+let everyNum = nums.myEvery((num) => num < 6);
 console.log(everyNum); //true
-let everyNumFalse = nums.every((num) => num > 5);
+let everyNumFalse = nums.myEvery((num) => num > 5);
 console.log(everyNumFalse); //false
