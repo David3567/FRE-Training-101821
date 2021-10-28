@@ -1,0 +1,39 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightcoral;
+    margin: 1%;
+    /* width: 90vw; */
+    /* width: 75px; */
+}
+
+.main_header h1 {
+    text-align: center;
+}
+
+.main_header input{
+    width: 30vw;
+    padding: 1.5%;
+}
+
+
+ul {
+    background-color: lightcyan;
+    width: 20vw;
+    margin: 1%;
+}
+
+li {
+    list-style: none;
+    width: 90%;
+    margin-left: 1vw;
+    margin: 2%;
+    border-bottom: 1px solid lightgray;
+    padding: 2%;
+}
+
+span {
+    float: right;
+}
+
