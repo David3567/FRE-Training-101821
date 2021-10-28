@@ -18,10 +18,10 @@ Array.prototype.myFilter = function (callBackFn) {
             result.push(this[i])
         }
     }
-    return result;
+    return `myFilter ${result}`;
 }
 
-console.log("myFilter", arr.myFilter(x => x > 2))
+console.log(arr.myFilter(x => x > 2))
 
 
 // My Map Prototype
@@ -31,10 +31,10 @@ Array.prototype.myMap = function (callbackFn) {
         let processing = callbackFn(this[i], i, this);
         result.push(processing);
     }
-    return result;
+    return `myMap ${result}`;
 }
 
-console.log("myMap", arr.myMap(x => x*2));
+console.log(arr.myMap(x => x*2));
 
 
 // Prototype MyReducer 
@@ -44,11 +44,11 @@ Array.prototype.myReducer = function (callbackFn, currentVal) {
     for (let i = 0; i<this.length;i++){
         value = callbackFn(value, this[i], i, this);
     }
-    return value;
+    return `myReducer ${value}`;
 }
 
 const res = (previousVal, currentVal) => previousVal + currentVal;
-console.log("myReducer", arr.myReducer(res))
+console.log(arr.myReducer(res))
 
 
 // Prototype Mysome
@@ -60,7 +60,7 @@ Array.prototype.mySome = function (callbackFn) {
         // console.log("processing", processing);
         if (processing) return true;
     }
-    return false
+    return `mySome ${false}`
 }
 
 console.log("mySome", arr.mySome(x => x>2))
@@ -74,10 +74,10 @@ Array.prototype.myEvery = function (callbackFn) {
         let processing = callbackFn(this[i], i, this)
         if (!processing) return false
     }
-    return true;
+    return `myEvery ${true}`;
 }
 
-console.log("myEvery", arr.myEvery(x => x>1))
+console.log(arr.myEvery(x => x>1))
 
 
 
