@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Todo List</title>
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <!-- title -->
+        <h1 class="container__title">TO DO</h1>
+
+        <!-- list -->
+        <ul class="container__todo-items"></ul>
+
+        <!-- alert -->
+        <p class="container__alert">* YOU MUST ENTER SOMETHING</p>
+
+        <!-- input section -->
+        <div class="container__input-section">
+          <input id="todoInput" type="text" />
+        </div>
+
+        <!-- hint -->
+        <p class="container__hint">HIT ENTER TO ADD</p>
+
+        <!-- add button -->
+        <button onclick="handleAddButton()" class="container__todo-button">
+          <i class="fas fa-plus fa-2x"></i>
+        </button>
+      </div>
+
+      <!-- modal -->
+      <div class="modal">
+        <div class="modal__container">
+          <!-- modal header -->
+          <div class="modal__header">
+            EDIT
+            <span>
+              <button class="modal__close-button" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+              </button>
+            </span>
+          </div>
+
+          <!-- modal body -->
+          <div class="modal__body">
+            <!-- alert -->
+            <p class="modal__alert">* YOU MUST ENTER SOMETHING</p>
+
+            <!-- input section -->
+            <div class="modal__input-section">
+              <input
+                type="text"
+                id="modalInput"
+                placeholder="Edit your todo task."
+              />
+              <button class="modal__save-button" onclick="updateFromModal()">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

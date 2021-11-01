@@ -1,0 +1,92 @@
+@import url(./colors.css);
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container {
+  width: 400px;
+  height: 120px;
+  background-color: var(--modal-light-blue);
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__header {
+  color: var(--modal-dark-blue);
+  font-size: 30px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__header > span {
+  font-size: 20px;
+}
+
+.modal__header > span > button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modal__header > span > button:active {
+  transform: scale(0.8);
+  transition: transform 0.1s ease;
+}
+
+p.modal__alert {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin: 5px 0;
+  padding: 0 5px;
+  font-size: 10px;
+  color: red;
+  visibility: hidden;
+}
+
+.modal__input-section {
+  display: flex;
+  height: 50px;
+  border-radius: 15px;
+  background-color: var(--modal-blue);
+}
+
+.modal__input-section > input {
+  color: var(--todo-content-color);
+  flex-grow: 1;
+  padding: 10px 12px;
+  font-size: 20px;
+  border-radius: 15px 0 0 15px;
+  border: none;
+}
+
+.modal__input-section > input:focus {
+  outline: none;
+}
+
+.modal__input-section > button {
+  background-color: var(--modal-blue);
+  color: var(--modal-light-blue);
+  border: none;
+  width: 50px;
+  border-radius: 15px;
+  cursor: pointer;
+  padding-right: 8px;
+}
+
+.modal__input-section > button:hover {
+  background-color: var(--modal-dark-blue);
+  border-radius: 0 15px 15px 0;
+}
