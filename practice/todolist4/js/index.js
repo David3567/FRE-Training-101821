@@ -25,12 +25,28 @@ const Model = (() => {
 		}).then((response) => {
 			console.log(response.ok)
 			if (!response.ok) {
+				console.log(response)
 				throw new Error('HTTP status ' + response.status)
 			}
 			return response.json()
 		}) //return a promise
 	}
-	return { fetchTodos, addTodo, deleteTodo } //same as { fetchTodos: fetchTodos }
+
+	const editTodo = (id, obj) => {
+		console.log(id, obj)
+		return fetch(`http://localhost:8000/api/todo/${id}/update`, {
+			method: 'PUT',
+			body: JSON.stringify(obj),
+		}).then((response) => {
+			console.log(response.ok)
+			if (!response.ok) {
+				throw new Error('HTTP status ' + response.status)
+			}
+			return response.json()
+		}) //return a promise
+	}
+
+	return { fetchTodos, addTodo, deleteTodo, editTodo } //same as { fetchTodos: fetchTodos }
 })()
 
 const View = (() => {
@@ -40,6 +56,7 @@ const View = (() => {
 		todoListAdd: '.btn-add',
 		todoListInput: '.todolist__header-input',
 		todoListDelete: '.btn-delete',
+		todoListEdit: '.btn-edit',
 	}
 	const render = (template, element) => {
 		element.innerHTML = template
@@ -84,7 +101,8 @@ const AppController = ((model, view) => {
 		//console.log('todoListTemple,', todoListTemple)
 		const todoListElement = document.querySelector(view.domString.todoListContent)
 		view.render(todoListTemple, todoListElement)
-		setUpDeleteEvent_initialLoad() //after we render todolist items, then we setup delete event
+		setUpDeleteEvent_initialLoad() //after we render todolist items for the first time, then we setup delete event
+		setUpEditEvent_initialLoad() //after we render todolist items for the first time, then we setup edit event
 	}
 
 	const fetchData = () => {
@@ -106,6 +124,25 @@ const AppController = ((model, view) => {
 					.then((data) => {
 						console.log('data:', data)
 						document.getElementById(btnDelete.parentElement.id).style.display = 'none'
+					})
+					.catch((err) => {
+						console.log('error occurred:', err)
+					})
+			})
+		})
+	}
+
+	const setUpEditEvent_initialLoad = () => {
+		const btnEditList = document.querySelectorAll(view.domString.todoListEdit)
+		console.log(btnEditList)
+		btnEditList.forEach((btnEdit) => {
+			btnEdit.addEventListener('click', () => {
+				console.log(btnEdit.parentElement.id)
+				let newTitle = prompt('Enter new title')
+				model
+					.editTodo(btnEdit.parentElement.id, { task: newTitle })
+					.then((data) => {
+						console.log('data:', data)
 					})
 					.catch((err) => {
 						console.log('error occurred:', err)
@@ -136,7 +173,7 @@ const AppController = ((model, view) => {
 					parentElement.insertBefore(element, parentElement.firstChild)
 
 					//setup delete event listener for this new item
-					let button = element.querySelector('button')
+					let button = element.querySelector('.btn-delete') //select the newly added li element's delete button
 					button.addEventListener('click', () => {
 						console.log(button.parentElement.id)
 						model
@@ -144,6 +181,21 @@ const AppController = ((model, view) => {
 							.then((data) => {
 								console.log('data:', data)
 								document.getElementById(button.parentElement.id).style.display = 'none'
+							})
+							.catch((err) => {
+								console.log('error occurred:', err)
+							})
+					})
+
+					//setup edit event listener for this new item
+					let buttonEdit = element.querySelector('.btn-edit') //select the newly added li element's delete button
+					buttonEdit.addEventListener('click', () => {
+						console.log(buttonEdit.parentElement.id)
+						let newTitle = prompt('Enter new title')
+						model
+							.editTodo(buttonEdit.parentElement.id, { task, newTitle })
+							.then((data) => {
+								console.log('data:', data)
 							})
 							.catch((err) => {
 								console.log('error occurred:', err)
