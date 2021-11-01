@@ -4,6 +4,8 @@ let selectedIndex;
 // Invoke on load
 setDefaultItems();
 enterToAddNewItem();
+enterToUpdateItem();
+parseDataToList();
 
 // Set default todo items
 function setDefaultItems() {
@@ -110,7 +112,10 @@ function deleteItem() {
       let listItemSection = this.parentElement; // section element
       let listItemDiv = listItemSection.parentElement; // div element
       let listItem = listItemDiv.parentElement; // li element
-      listItem.style.display = "none";
+      // listItem.style.display = "none";
+
+      let todoList = document.querySelector("ul.container__todo-items");
+      todoList.removeChild(listItem);
     };
   }
 }
@@ -176,6 +181,17 @@ function enterToAddNewItem() {
   });
 }
 
+// Using ENTER to update selected item
+function enterToUpdateItem() {
+  let modalInput = document.querySelector("input#modalInput");
+
+  modalInput.addEventListener("keydown", (event) => {
+    if (event.code === "Enter") {
+      updateFromModal();
+    }
+  });
+}
+
 // Create a new list item
 function newTodoItem() {
   // get todo item info from input
@@ -193,6 +209,14 @@ function newTodoItem() {
 
   // reset text field
   document.querySelector("input#todoInput").value = "";
+
+  scrollToBottom(document.querySelector("ul"));
+}
+
+// scroll to bottom
+function scrollToBottom(div) {
+  // console.log(div);
+  div.scrollTo(0, div.scrollHeight);
 }
 
 // ============================ modal ============================
@@ -232,4 +256,20 @@ function updateFromModal() {
     alertText.style.visibility = "hidden";
     closeModal();
   }
+}
+
+// ============================ fetch data from api ============================
+async function getDataArray() {
+  const data = await fetch("https://jsonplaceholder.typicode.com/todos").then(
+    (res) => res.json()
+  );
+  return data;
+}
+
+async function parseDataToList() {
+  const dataArray = await getDataArray();
+
+  dataArray.forEach((todoObj) => {
+    setItem(todoObj.title);
+  });
 }

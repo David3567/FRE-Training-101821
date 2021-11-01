@@ -9,10 +9,12 @@ main {
 }
 
 .container {
-  max-width: 800px;
+  /* max-width: 800px;
   max-height: 680px;
   min-width: 600px;
-  min-height: 600px;
+  min-height: 600px; */
+  width: 600px;
+  height: 600px;
   background-color: var(--todo-light-orange);
   border-radius: 25px;
   padding: 30px;
@@ -52,7 +54,16 @@ li > div.container__todo-item {
 }
 
 section.todo-item__text {
-  flex-grow: 1;
+  flex: 85%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+section.todo-item__function {
+  flex: 5%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 li:hover {
@@ -61,6 +72,7 @@ li:hover {
 
 .complete {
   text-decoration: line-through;
+  text-decoration-color: red;
   opacity: 0.6;
 }
 
