@@ -1,5 +1,5 @@
-// index indicator
-let selectedIndex;
+// selected item
+let selectedListItemDiv;
 
 // Invoke on load
 setDefaultItems();
@@ -98,7 +98,10 @@ function editItem() {
   for (let i = 0; i < edit.length; i++) {
     edit[i].onclick = function () {
       openModal();
-      selectedIndex = i;
+
+      let listItemSection = this.parentElement; // section element
+      let listItemDiv = listItemSection.parentElement; // div element
+      selectedListItemDiv = listItemDiv;
     };
   }
 }
@@ -204,13 +207,12 @@ function newTodoItem() {
     alertText.style.visibility = "visible";
   } else {
     setItem(todoInputVal);
+    scrollToBottom(document.querySelector("ul"));
     alertText.style.visibility = "hidden";
   }
 
   // reset text field
   document.querySelector("input#todoInput").value = "";
-
-  scrollToBottom(document.querySelector("ul"));
 }
 
 // scroll to bottom
@@ -250,8 +252,7 @@ function updateFromModal() {
   if (modalInput === "") {
     alertText.style.visibility = "visible";
   } else {
-    let listItemText = document.getElementsByClassName("todo-item__text");
-    listItemText[selectedIndex].innerHTML = modalInput;
+    selectedListItemDiv.childNodes[0].innerHTML = modalInput;
 
     alertText.style.visibility = "hidden";
     closeModal();
