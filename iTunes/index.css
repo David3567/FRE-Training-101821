@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.iTunes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: rgb(3, 135, 168);
+
+}
+
+.iTunes__header {
+    display: flex;
+    justify-content: center;
+    padding: 1.5%;
+    width: 100%;
+    margin: auto;
+}
+
+.iTunes__input {
+    width: 40%;
+    padding: .5%;
+    border-radius: 25px;
+    border: none;
+}
+
+.artist__search {
+    padding: .5%;
+    margin-left: .5%;
+    border-radius: 25px;
+    border: none;
+}
+
+
+.collection__list {
+    display: flex;
+}
+
+.albums__found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+li {
+    list-style: none;
+}
+
+.collection__song {
+    width: 100px;
+    height: 150px;
+    border: 1px solid lightgray;
+    margin: .5%;
+    padding: .5%;
+}
+
