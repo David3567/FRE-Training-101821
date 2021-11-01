@@ -2,11 +2,28 @@ const Model = (() => {
 	const fetchTodos = () => {
 		return fetch('https://jsonplaceholder.typicode.com/todos').then((response) => response.json())
 	}
+
+	const createTodos = (todo) => {
+		fetch('https://jsonplaceholder.typicode.com/posts', {
+			method: 'POST',
+			body: JSON.stringify({
+				title: 'foo',
+				body: 'bar',
+				userId: 1,
+			}),
+			headers: {
+				'Content-type': 'application/json; charset=UTF-8',
+			},
+		})
+			.then((response) => response.json())
+			.then((json) => console.log(json))
+	}
+
 	return { fetchTodos } //same as { fetchTodos: fetchTodos }
 })()
 
 const View = (() => {
-	const domString = { todoListContainer: '.todolist-wrapper', todoListContent: '.todolist__content' }
+	const domString = { todoListContainer: '.todolist-wrapper', todoListContent: '.todolist__content', todoListAdd: '.btn-add', todoListInput: '.todolist__header-input' }
 	const render = (template, element) => {
 		element.innerHTML = template
 	}
@@ -20,7 +37,7 @@ const View = (() => {
 		<header class='todolist__header'> 
 			<h1 class='todolist__header-title'>To Do List</h1>
 			<div class='todolist__row todolist__input-wrapper'> 
-				<input class='todolist__header-input' placeholder="Todo..."/> <button class='btn'> Add</button>
+				<input class='todolist__header-input' placeholder="Todo..."/> <button class='btn btn-add'> Add</button>
 			</div>
 			
 		</button>
@@ -38,6 +55,7 @@ const AppController = ((model, view) => {
 		const initElement = document.querySelector(view.domString.todoListContainer)
 		view.render(initTemplate, initElement)
 		fetchData() //we call fetch data inside init
+		setUpevent()
 	}
 
 	const updateTodoListItems = (data) => {
@@ -59,6 +77,14 @@ const AppController = ((model, view) => {
 			updateTodoListItems(todolistdata)
 		})
 	}
+	const setUpevent = () => {
+		const btnAdd = document.querySelector(view.domString.todoListAdd)
+		const todolistInput = document.querySelector(view.domString.todoListInput)
+		btnAdd.addEventListener('click', () => {
+			alert(todolistInput.value)
+		})
+	}
+
 	return { init }
 })(Model, View)
 
