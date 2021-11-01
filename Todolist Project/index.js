@@ -5,7 +5,8 @@ let selectedListItemDiv;
 setDefaultItems();
 enterToAddNewItem();
 enterToUpdateItem();
-parseDataToList();
+// parseDataToList()
+checkIfEmpty();
 
 // Set default todo items
 function setDefaultItems() {
@@ -102,6 +103,10 @@ function editItem() {
       let listItemSection = this.parentElement; // section element
       let listItemDiv = listItemSection.parentElement; // div element
       selectedListItemDiv = listItemDiv;
+
+      // show current task
+      let currentTask = document.querySelector("p.modal__current-task");
+      currentTask.innerHTML = selectedListItemDiv.childNodes[0].innerHTML;
     };
   }
 }
@@ -119,6 +124,8 @@ function deleteItem() {
 
       let todoList = document.querySelector("ul.container__todo-items");
       todoList.removeChild(listItem);
+
+      checkIfEmpty();
     };
   }
 }
@@ -207,6 +214,7 @@ function newTodoItem() {
     alertText.style.visibility = "visible";
   } else {
     setItem(todoInputVal);
+    checkIfEmpty();
     scrollToBottom(document.querySelector("ul"));
     alertText.style.visibility = "hidden";
   }
@@ -219,6 +227,23 @@ function newTodoItem() {
 function scrollToBottom(div) {
   // console.log(div);
   div.scrollTo(0, div.scrollHeight);
+}
+
+// check if empty
+function checkIfEmpty() {
+  // targeting ul element
+  let todoList = document.querySelector("ul.container__todo-items");
+
+  // target the no task wrapper
+  let noTaskWrapper = document.querySelector("div.container__no-task-wrapper");
+
+  if (todoList.childNodes.length === 0) {
+    todoList.style.display = "none";
+    noTaskWrapper.style.display = "flex";
+  } else {
+    todoList.style.display = "block";
+    noTaskWrapper.style.display = "none";
+  }
 }
 
 // ============================ modal ============================
