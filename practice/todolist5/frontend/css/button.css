@@ -1,0 +1,18 @@
+.btn {
+	width: 80px;
+	font-size: 15px;
+	border: none;
+	padding: 5px 15px;
+	background-color: #ccc;
+	color: white;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.btn-add {
+	background-color: blue;
+}
+
+.btn-delete {
+	background-color: red;
+}
