@@ -83,7 +83,7 @@ const AppController = ((model, view) => {
 	const fetchData = () => {
 		model.fetchTodos().then((data) => {
 			//model.fetchTodos() return promise
-			console.log(data) //array
+			console.log('data:', data) //array
 			todolistdata = data
 			updateTodoListItems(todolistdata)
 		})
@@ -98,8 +98,8 @@ const AppController = ((model, view) => {
 					task: todolistInput.value,
 				})
 				.then((data) => {
-					console.log(data)
-					todolistdata.push(data.task)
+					console.log('data:', data)
+					todolistdata.unshift(data.task)
 					updateTodoListItems(todolistdata)
 				})
 		})
@@ -114,7 +114,7 @@ const AppController = ((model, view) => {
 				model
 					.deleteTodo(btnDelete.parentElement.id)
 					.then((data) => {
-						console.log(data)
+						console.log('data:', data)
 						document.getElementById(btnDelete.parentElement.id).style.display = 'none'
 					})
 					.catch((err) => {
