@@ -1,10 +1,10 @@
 const Model = (() => {
 	const fetchTodos = () => {
-		return fetch('https://jsonplaceholder.typicode.com/todos').then((response) => response.json()) //return a promise
+		return fetch('http://localhost:8000/api/todos').then((response) => response.json()) //return a promise
 	}
 
 	const addTodo = (todo) => {
-		return fetch('https://jsonplaceholder.typicode.com/todos', {
+		return fetch('http://localhost:8000/api/todo/create', {
 			method: 'POST',
 			body: JSON.stringify(todo), //todo is an object
 			headers: {
@@ -13,18 +13,34 @@ const Model = (() => {
 		}).then((response) => response.json()) //return a promise
 	}
 
-	return { fetchTodos, addTodo } //same as { fetchTodos: fetchTodos }
+	const deleteTodo = (id) => {
+		return fetch(`http://localhost:8000/api/todo/${id}/delete`, {
+			method: 'DELETE',
+		}).then((response) => {
+			if (!response.ok) {
+				throw new Error('HTTP status ' + response.status)
+			}
+			response.json()
+		}) //return a promise
+	}
+	return { fetchTodos, addTodo, deleteTodo } //same as { fetchTodos: fetchTodos }
 })()
 
 const View = (() => {
-	const domString = { todoListContainer: '.todolist-wrapper', todoListContent: '.todolist__content', todoListAdd: '.btn-add', todoListInput: '.todolist__header-input' }
+	const domString = {
+		todoListContainer: '.todolist-wrapper',
+		todoListContent: '.todolist__content',
+		todoListAdd: '.btn-add',
+		todoListInput: '.todolist__header-input',
+		todoListDelete: '.btn-delete',
+	}
 	const render = (template, element) => {
 		element.innerHTML = template
 	}
 
 	const generateTodoItem = (todo) => {
-		const title = todo.title.length > 30 ? todo.title.substring(0, 30) + '...' : todo.title
-		return `<li class="todolist__row todolist__content-item"><span class="todolist__content-item-title">${title}</span> <button class="btn">Delete</button></li>`
+		const title = todo.task.length > 30 ? todo.task.substring(0, 30) + '...' : todo.task
+		return `<li id="${todo._id}" class="todolist__row todolist__content-item"><span class="todolist__content-item-title">${title}</span> <button class="btn btn-delete">Delete</button></li>`
 	}
 	const initTodoListTemplate = () => {
 		return `<section class='todolist'>
@@ -49,7 +65,7 @@ const AppController = ((model, view) => {
 		const initElement = document.querySelector(view.domString.todoListContainer)
 		view.render(initTemplate, initElement)
 		fetchData() //we call fetch data inside init
-		setUpevent()
+		setUpAddEvent()
 	}
 
 	const updateTodoListItems = (data) => {
@@ -61,6 +77,7 @@ const AppController = ((model, view) => {
 		//console.log('todoListTemple,', todoListTemple)
 		const todoListElement = document.querySelector(view.domString.todoListContent)
 		view.render(todoListTemple, todoListElement)
+		setUpDeleteEvent() //after we render todolist items, then we setup delete event
 	}
 
 	const fetchData = () => {
@@ -71,21 +88,39 @@ const AppController = ((model, view) => {
 			updateTodoListItems(todolistdata)
 		})
 	}
-	const setUpevent = () => {
+	const setUpAddEvent = () => {
+		//for add
 		const btnAdd = document.querySelector(view.domString.todoListAdd)
 		const todolistInput = document.querySelector(view.domString.todoListInput)
 		btnAdd.addEventListener('click', () => {
 			model
 				.addTodo({
-					userId: 1,
-					completed: false,
-					title: todolistInput.value,
+					task: todolistInput.value,
 				})
 				.then((data) => {
 					console.log(data)
-					todolistdata.push(data)
+					todolistdata.push(data.task)
 					updateTodoListItems(todolistdata)
 				})
+		})
+	}
+
+	const setUpDeleteEvent = () => {
+		const btnDeleteList = document.querySelectorAll(view.domString.todoListDelete)
+
+		btnDeleteList.forEach((btnDelete) => {
+			btnDelete.addEventListener('click', () => {
+				console.log(btnDelete.parentElement.id)
+				model
+					.deleteTodo(btnDelete.parentElement.id)
+					.then((data) => {
+						console.log(data)
+						document.getElementById(btnDelete.parentElement.id).style.display = 'none'
+					})
+					.catch((err) => {
+						console.log('error occurred:', err)
+					})
+			})
 		})
 	}
 

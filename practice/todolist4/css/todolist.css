@@ -1,0 +1,52 @@
+.todolist-wrapper {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.todolist {
+	width: 500px;
+	height: 500px;
+	padding: 20px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.todolist__header {
+	text-align: center;
+}
+
+.todolist__header-title {
+	line-height: 50px;
+}
+.todolist__row {
+	height: 50px;
+	margin: 3px;
+	padding: 5px;
+	line-height: 50px;
+}
+.todolist__input-wrapper {
+	display: flex;
+}
+.todolist__header-input {
+	flex-grow: 1;
+	margin-right: 10px;
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+.todolist__content {
+	height: 360px;
+	overflow: auto;
+}
+.todolist__content-item {
+	font-size: 20px;
+	display: flex;
+	line-height: 40px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.todolist__content-item-title {
+	flex-grow: 1;
+	margin-right: 10px;
+}
