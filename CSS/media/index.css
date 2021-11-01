@@ -11,7 +11,7 @@
 }
 
 [class^="col-"] {
-    background-color: antiquewhite;
+    background-color: rgb(226, 248, 175);
     border: 1px solid rgba(53, 47, 47, 0.322);
 }
 
@@ -52,7 +52,7 @@
     width: calc(100% / 12 * 1);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 300px) {
     .col-md-12 {
         width: calc(100%);
     }
