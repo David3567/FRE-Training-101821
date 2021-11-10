@@ -101,8 +101,8 @@ const AppController = ((model, view) => {
 		//console.log('todoListTemple,', todoListTemple)
 		const todoListElement = document.querySelector(view.domString.todoListContent)
 		view.render(todoListTemple, todoListElement)
-		setUpDeleteEvent()
-		setUpEditEvent()
+		setUpDeleteEvent() //update delete event handler to include the newly added li's delete button
+		setUpEditEvent() //update edit event handler to include the newly added li's edit button
 	}
 
 	const fetchData = () => {
@@ -144,12 +144,12 @@ const AppController = ((model, view) => {
 
 	const setUpEditEvent = () => {
 		let ulElemenet = document.querySelector(view.domString.todoListContent)
-		ulElemenet.addEventListener('click', (event) => {
+		ulElemenet.onclick = (event) => {
 			if (event.target.classList.contains('btn-edit')) {
 				console.log(event.target)
 				let newTitle = prompt('Enter new title')
 			}
-		})
+		}
 		// const btnEditList = document.querySelectorAll(view.domString.todoListEdit)
 		// console.log(btnEditList)
 		// btnEditList.forEach((btnEdit) => {

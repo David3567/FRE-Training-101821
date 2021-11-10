@@ -17,3 +17,6 @@ A PUT method puts a file or resource at a specific URI, and precisely at that UR
 If a file or a resource already exists at that URI, PUT replaces that file or resource.
 If no file or resource is there, PUT creates one.
 In addition to the above, Responses to this method are not cacheable.
+
+
+https://www.toolsqa.com/rest-assured/put-request-using-rest-assured/

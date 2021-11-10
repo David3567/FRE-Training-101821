@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+		<title>JQuery</title>
+	</head>
+	<body>
+		<h1>JQuery Training</h1>
+		<button class="test">TEST</button>
+		<button class="continue">MyButton</button>
+		<script>
+			class PQuery {
+				constructor(selector) {
+					this.element = document.querySelector(selector)
+				}
+				html(template) {
+					this.element.innerHTML = template
+				}
+			}
+
+			const $$ = (selector) => {
+				//const targetElment = document.querySelector(selector);
+
+				return new PQuery(selector)
+
+				// return {
+				//   html: (template) => {
+				//     targetElment.innerHTML = template;
+				//   },
+				// };
+			}
+			//$$('button.test').html('hello');
+			const obj1 = $('button.test')
+			const obj2 = $('button.continue')
+			console.log(obj1.html === obj2.html)
+
+			//$$('button.continue').html('<h1>Next Step.!!!.</h1>');
+
+			const obj3 = new PQuery('button.test')
+			const obj4 = new PQuery('button.continue')
+			console.log(obj3.html === obj4.html)
+		</script>
+	</body>
+</html>
