@@ -9,39 +9,73 @@
 	</head>
 	<body>
 		<h1>JQuery Training</h1>
-		<button class="test">TEST</button>
+		<button class="continue">TEST</button>
 		<button class="continue">MyButton</button>
+
+		<h1 id="banner-message">Hidden</h1>
+		<section id="button-container">
+			<button>Show</button>
+		</section>
 		<script>
 			class PQuery {
 				constructor(selector) {
-					this.element = document.querySelector(selector)
+					this.targetElements = document.querySelectorAll(selector)
 				}
 				html(template) {
-					this.element.innerHTML = template
+					this.targetElements.forEach((element) => {
+						element.innerHTML = template
+					})
+				}
+
+				on(event, cbFn) {
+					this.targetElements.forEach((element) => {
+						element.addEventListener(event, (e) => {
+							cbFn(e)
+						})
+					})
+				}
+				show() {
+					this.targetElements.forEach((element) => {
+						element.style.display = 'block'
+					})
+				}
+				hide() {
+					this.targetElements.forEach((element) => {
+						element.style.display = 'none'
+					})
 				}
 			}
 
 			const $$ = (selector) => {
-				//const targetElment = document.querySelector(selector);
-
 				return new PQuery(selector)
-
-				// return {
-				//   html: (template) => {
-				//     targetElment.innerHTML = template;
-				//   },
-				// };
 			}
-			//$$('button.test').html('hello');
-			const obj1 = $('button.test')
-			const obj2 = $('button.continue')
-			console.log(obj1.html === obj2.html)
 
-			//$$('button.continue').html('<h1>Next Step.!!!.</h1>');
+			$$.ajax = (obj) => {
+				fetch(obj.url)
+					.then((data) => data.json())
+					.then((data) => {
+						obj.success(data)
+					})
+			}
 
-			const obj3 = new PQuery('button.test')
-			const obj4 = new PQuery('button.continue')
-			console.log(obj3.html === obj4.html)
+			//   const obj1 = $$('button.test');
+			//   const obj2 = $$('button.continue');
+			//   console.log(obj1.html === obj2.html);
+			$$('button.test').html('hello')
+			$$('button.continue').html('<h1>Next Step.!!!.</h1>')
+
+			var hiddenBox = $$('#banner-message')
+			hiddenBox.hide()
+			$$('#button-container button').on('click', function (event) {
+				hiddenBox.show()
+			})
+
+			$$.ajax({
+				url: 'https://jsonplaceholder.typicode.com/todos',
+				success: function (result) {
+					console.log('success', result)
+				},
+			})
 		</script>
 	</body>
 </html>
