@@ -75,17 +75,31 @@
           }
         }
 
-        ajax({url, settings}){
-
-        }
+      
 
       }
+
 
       //self-defined JQuery $$
       const $$ = (selector) => {
         return new PQuery(selector);
       };
       
+
+      //maybe a better way to do it?
+      $$.ajax = function(arg){
+
+      console.log('ajax called');
+        //
+      fetch(arg.url)
+      .then(res => {console.log(res);  return res.json()})
+      .then(data => arg.success(data))
+      .catch(e => console.log(e))
+
+
+    }
+
+    
       const obj2 = $$('button.continue').html('hello');
       
 
@@ -104,6 +118,17 @@
         
       });
     
+      //console.log($.ajax);
+
+      console.log($$.ajax);
+
+      
+      $$.ajax({
+        url: 'https://jsonplaceholder.typicode.com/todos',
+        success: function (result) {
+          console.log('success', result);
+        },
+      });
      
       
 
