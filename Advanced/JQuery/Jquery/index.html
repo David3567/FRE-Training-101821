@@ -57,6 +57,14 @@
     return new PQuery(selector);
     };
 
+    $$.ajax = (info) => {
+      fetch(info.url, {
+        method: 'GET',
+        headers: {'Content-Type' : 'application/json'},
+      })
+      .then(res => res.json())
+      .then(resData => console.log(resData))
+    }
     
 
       //   const obj1 = $$('button.test');
