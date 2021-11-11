@@ -62,21 +62,23 @@
         on(eventType,eventHandler){
           if(eventType === 'click' )
           {
-            console.log('after comparing click');
+            
             this.targetElment.forEach((e) => {
-              if ( e.clicked === true)
-              {
-                eventHandler(event);
-                return this;
-              }
+              e.addEventListener('click', eventHandler);
             })
             
+            return this;
           }
           else
           {
             console.log("error: wrong event type")
           }
         }
+
+        ajax({url, settings}){
+
+        }
+
       }
 
       //self-defined JQuery $$
@@ -99,6 +101,7 @@
       
       $$('#button-container button').on('click', function (event) {
         hiddenBox.show();
+        
       });
     
      
