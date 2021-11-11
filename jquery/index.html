@@ -37,6 +37,18 @@
             element.addEventListener(event, callback);
           });
         }
+
+        show() {
+          this.targetElements.forEach((element) => {
+            element.style.display = '';
+          });
+        }
+
+        hide() {
+          this.targetElements.forEach((element) => {
+            element.style.display = 'none';
+          });
+        }
       }
 
       const $$ = (selector) => {
@@ -52,6 +64,7 @@
 
       var hiddenBox = $('#banner-message');
       hiddenBox.hide();
+      console.log(new PQuery());
 
       // Toggle hiddenBox content
       $$('#button-container button').on('click', function (event) {
