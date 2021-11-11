@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>JQuery</title>
+  </head>
+  <body>
+    <h1>JQuery Training</h1>
+    <button class="continue">TEST</button>
+    <button class="continue">MyButton</button>
+
+    <h1 id="banner-message">Hidden</h1>
+    <section id="button-container">
+      <button>Show</button>
+    </section>
+    <script>
+      class PQuery {
+        constructor(selector) {
+          this.targetElements = document.querySelectorAll(selector);
+        }
+
+        html(template) {
+          this.targetElements.forEach((element) => {
+            element.innerHTML = template;
+          });
+        }
+
+        on(e, cb) {
+            this.targetElements.forEach((element) => {
+                element.addEventListener(e, cb);
+            })
+        }
+
+        hide() {
+            this.targetElements.forEach((element) => {
+                element.style.visibility = "hidden";
+            })
+        }
+
+        show() {
+            this.targetElements.forEach((element) => {
+                element.style.visibility = "visible";
+            })
+        }
+
+        
+      }
+
+    const $$ = (selector) => {
+    return new PQuery(selector);
+    };
+
+    
+
+      //   const obj1 = $$('button.test');
+      //   const obj2 = $$('button.continue');
+      //   console.log(obj1.html === obj2.html);
+      $$('button.test').html('hello');
+      $$('button.continue').html('<h1>Next Step.!!!.</h1>');
+
+      var hiddenBox = $$('#banner-message');
+      hiddenBox.hide();
+      $$('#button-container button').on('click', function (event) {
+        hiddenBox.show();
+      });
+    //   hiddenBox.show();
+
+      $$.ajax({
+        url: 'https://jsonplaceholder.typicode.com/todos',
+        success: function (result) {
+          console.log('success', result);
+        },
+      });
+    </script>
+  </body>
+</html>
