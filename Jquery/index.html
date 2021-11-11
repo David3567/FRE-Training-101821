@@ -13,21 +13,47 @@
   </head>
   <body>
     <h1>JQuery Training</h1>
-    <button class="continue">TEST</button>
+    <button class="continue">TEST!!</button>
     <button class="continue">MyButton</button>
 
-    <h1 id="banner-message">Hidden</h1>
+    <div id="banner-message">Hidden</div>
     <section id="button-container">
       <button>Show</button>
     </section>
+
     <script>
       class PQuery {
         constructor(selector) {
           this.targetElements = document.querySelectorAll(selector);
+          this.preDisplayList = [];
         }
+
         html(template) {
           this.targetElements.forEach((element) => {
             element.innerHTML = template;
+          });
+        }
+
+        on(event, callbackFn) {
+          this.targetElements.forEach((element) => {
+            element.addEventListener(event, (e) => {
+              callbackFn(e);
+            });
+          });
+        }
+
+        hide() {
+          this.targetElements.forEach((element) => {
+            this.preDisplayList.push(element.style.display);
+            element.style.display = 'none';
+            //element.style.visibility = 'hidden';
+            //element.style.opacity = 0;
+          });
+        }
+
+        show() {
+          this.targetElements.forEach((element, index) => {
+            element.style.display = this.preDisplayList[index];
           });
         }
       }
@@ -36,24 +62,37 @@
         return new PQuery(selector);
       };
 
+      $$.ajax = function (options) {
+        fetch(options.url, {
+          method: options.method ? options.method : 'GET',
+        })
+          .then((res) => {
+            console.log(res.headers.get('content-type'));
+            return res.json();
+          })
+          .then((data) => {
+            options.success(data);
+          });
+      };
+
       //   const obj1 = $$('button.test');
       //   const obj2 = $$('button.continue');
       //   console.log(obj1.html === obj2.html);
       $$('button.test').html('hello');
       $$('button.continue').html('<h1>Next Step.!!!.</h1>');
 
-      var hiddenBox = $('#banner-message');
+      var hiddenBox = $$('#banner-message');
       hiddenBox.hide();
-      $('#button-container button').on('click', function (event) {
+      $$('#button-container button').on('click', function (event) {
         hiddenBox.show();
       });
 
-      $.ajax({
+      $$.ajax({
         url: 'https://jsonplaceholder.typicode.com/todos',
         success: function (result) {
           console.log('success', result);
         },
       });
-    </script>
+    </scrip>
   </body>
 </html>
