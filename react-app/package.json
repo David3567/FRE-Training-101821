@@ -1,0 +1,26 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "react app without cra",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David3567/FRE-Training-101821.git"
+  },
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "author": "weiqi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/David3567/FRE-Training-101821/issues"
+  },
+  "homepage": "https://github.com/David3567/FRE-Training-101821#readme",
+  "dependencies": {
+    "webpack": "^5.64.0"
+  }
+}
