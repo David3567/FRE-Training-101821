@@ -1,15 +1,15 @@
 import React from 'react';
+import Hello from './Hello';
 
-// const App = () => <h1>Hello, JSX!</h1>;
+// const App = () => <Hello />;
 
-// export default App;
 
 class App extends React.Component {
     render() {
         return (
-            <h1>
-                Hello, JSX!
-            </h1>
+            <div>
+                <Hello />
+            </div>
         )
     }
 }
