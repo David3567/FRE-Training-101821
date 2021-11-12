@@ -20,6 +20,7 @@
 			class PQuery {
 				constructor(selector) {
 					this.targetElements = document.querySelectorAll(selector)
+					this.preDisplayList = []
 				}
 				html(template) {
 					this.targetElements.forEach((element) => {
@@ -34,14 +35,15 @@
 						})
 					})
 				}
-				show() {
-					this.targetElements.forEach((element) => {
-						element.style.display = 'block'
-					})
-				}
 				hide() {
 					this.targetElements.forEach((element) => {
+						this.preDisplayList.push(element.style.display)
 						element.style.display = 'none'
+					})
+				}
+				show() {
+					this.targetElements.forEach((element, index) => {
+						element.style.display = this.preDisplayList[index]
 					})
 				}
 			}
