@@ -1,0 +1,11 @@
+{
+  "name": "reactapp",
+  "version": "1.0.0",
+  "description": "create a react app without CRA",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "hongchengMao\u001b[D\u001b[D\u001b[D",
+  "license": "ISC"
+}
