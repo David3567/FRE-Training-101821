@@ -41,12 +41,14 @@
         hide() {
             this.targetElements.forEach((element) => {
                 element.style.visibility = "hidden";
+                // element.style.display = 'none';
             })
         }
 
         show() {
             this.targetElements.forEach((element) => {
                 element.style.visibility = "visible";
+                // element.style.display = 'block'
             })
         }
 
@@ -73,9 +75,9 @@
       $$('button.test').html('hello');
       $$('button.continue').html('<h1>Next Step.!!!.</h1>');
 
-      var hiddenBox = $$('#banner-message');
+      var hiddenBox = $('#banner-message');
       hiddenBox.hide();
-      $$('#button-container button').on('click', function (event) {
+      $('#button-container button').on('click', function (event) {
         hiddenBox.show();
       });
     //   hiddenBox.show();
