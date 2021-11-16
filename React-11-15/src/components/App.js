@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/style.scss";
 
-const App = () => {
+export default () => {
     return (
         <div class="content">
             Hello Word
@@ -9,4 +9,3 @@ const App = () => {
     )
 }
 
-export default App;
