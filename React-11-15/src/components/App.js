@@ -1,8 +1,9 @@
 import React from "react";
+import "../../css/style.scss";
 
 const App = () => {
     return (
-        <div>
+        <div class="content">
             Hello Word
         </div>
     )
