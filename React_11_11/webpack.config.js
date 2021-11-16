@@ -1,24 +1,51 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    context: __dirname,
-    entry: "./src/index.jsx",
+    entry: './src/index.js',
+    mode: 'production',
     output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: "bundle.js"
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
     },
     module: {
         rules: [{
-            test: /\.jsx?$/,
+            test: /\.m?js$/,
             exclude: /(node_modules|bower_components)/,
             use: {
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env', '@babel/preset-react'],
+                },
             },
-        }]
+        }, 
+        {
+            test: /\.(scss|sass|css)$/,
+            exclude: /node_modules/,
+            use: [
+                MiniCssExtractPlugin.loader,
+                {
+                    loader: "css-loader",
+                    options: {
+                        modules: true,
+                        sourceMap: true,
+                        importLoaders: 1,
+                    },
+                },
+                "sass-loader",
+            ],
+        },
+    ],
     },
-    devtool: 'source-map',
-    mode: 'development',
-    resolve: {
-        extensions: [".js", ".jsx", "*"]
-    }
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'public', 'index.html'),
+        }),
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[id].css",
+            ignoreOrder: false,
+        }),
+    ],
 };
