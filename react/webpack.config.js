@@ -1,24 +1,41 @@
-config = {
-	entry: './src/main.js',
-	mode: 'development',
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+module.exports = {
+	entry: './src/index.js',
+	mode: 'production',
 	output: {
-		path: '/target',
-		filename: 'index.js',
+		filename: 'bundle.js',
+		path: path.resolve(__dirname, 'dist'),
 	},
-
-	devServer: {
-		port: 8090,
-	},
-
 	module: {
 		rules: [
 			{
-				test: /\.jsx?$/,
-				exclude: /node_modules/,
-				loader: 'babel-loader',
+				test: /\.m?js$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env', '@babel/preset-react'],
+					},
+				},
+			},
+			{
+				test: /\.s[ac]ss$/i,
+				use: [
+					// Creates `style` nodes from JS strings
+					'style-loader',
+					// Translates CSS into CommonJS
+					'css-loader',
+					// Compiles Sass to CSS
+					'sass-loader',
+				],
 			},
 		],
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, 'public', 'index.html'),
+		}),
+	],
 }
-
-module.exports = config

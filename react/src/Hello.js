@@ -1,9 +1,9 @@
 import React from 'react'
-
+import './style.scss'
 class Hello extends React.Component {
 	render() {
 		const element = (
-			<div>
+			<div className='red'>
 				<h1>Hello World from ReactJS</h1>
 				<hr />
 				Yo Yo ! Welcome!
