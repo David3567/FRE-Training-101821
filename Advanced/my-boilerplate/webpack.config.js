@@ -44,6 +44,8 @@ module.exports = {
         minimizer: [
             // highly useful for debugging compressed JS. 
             // minimizes javascript -- what is it mean to minize it?
+            // main purpose of JavaScript minification - speed up downloading/transferring of JS code from server hosting website's JavaScript
+            // it reduces amount of data that needs to be downloaded.
             new TerserPlugin(),
         ]
     }
