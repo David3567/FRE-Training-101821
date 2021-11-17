@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { default: StylelintWebpackPlugin } = require('stylelint-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, './src/index.js'),
@@ -35,6 +36,7 @@ module.exports = {
         new HtmlWebpackPlugin(),
         new DuplicatePackageCheckerPlugin(),
         new MiniCssExtractPlugin(),
+        new StylelintWebpackPlugin(options),
     ],
     optimization: {
         minimize: true,
