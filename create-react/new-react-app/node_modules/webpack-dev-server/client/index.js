@@ -157,8 +157,6 @@ var onSocketMessage = {
     if (needShowOverlayForWarnings) {
       show("warning", _warnings);
     }
-
-    reloadApp(options, status);
   },
   errors: function errors(_errors) {
     log.error("Errors while compiling. Reload prevented.");
