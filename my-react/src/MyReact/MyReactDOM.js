@@ -1,3 +1,5 @@
+import MyReact from './MyReact';
+
 const PROPS_KEY = {
   EVENT_KEY_START_WITH: 'on',
   CHILDREN: 'children',
@@ -55,8 +57,42 @@ function isChildren(keyStr) {
   return keyStr === PROPS_KEY.CHILDREN;
 }
 
+function isClassComponent(component) {
+  const result = component.prototype instanceof MyReact.Component;
+  console.log('isClass', result);
+  return result;
+}
+
+function isFunctionComponent(component) {
+  const result = !(component.prototype instanceof MyReact.Component);
+  console.log('isFunction', result);
+  return result;
+}
+
 function render(currentElement, parentElement) {
+  if (typeof currentElement !== 'object') {
+    const textNode = document.createTextNode(currentElement);
+    parentElement.appendChild(textNode);
+    return;
+  }
+
   const { type, props } = currentElement;
+  if (typeof type === 'function') {
+    if (isFunctionComponent(type)) {
+      const vdom = type(props);
+      render(vdom, parentElement);
+      return;
+    }
+
+    if (isClassComponent(type)) {
+      const currentInstance = new type(props);
+      const vdom = currentInstance.render();
+      render(vdom, parentElement);
+      return;
+    }
+
+    return;
+  }
 
   // create DOM element based on type
   const currentDOM = document.createElement(type);
@@ -74,7 +110,7 @@ function render(currentElement, parentElement) {
     }
 
     if (isChildren(key)) {
-      if (typeof value === 'string') {
+      if (typeof value === 'string' || typeof value === 'number') {
         const textNode = document.createTextNode(value);
         currentDOM.appendChild(textNode);
         return;
