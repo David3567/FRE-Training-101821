@@ -43,7 +43,7 @@ module.exports = {
         minimize: true,
         minimizer: [
             // highly useful for debugging compressed JS. 
-            // minimizes javascript.
+            // minimizes javascript -- what is it mean to minize it?
             new TerserPlugin(),
         ]
     }
