@@ -33,7 +33,11 @@ module.exports = {
     plugins: [
         // simplifies creationg of HTML files to serve webpack bundles
         // useful for webpack bundles that include a hash in the filename which changes eveyr compilation.
-        new HtmlWebpackPlugin(),
+        new HtmlWebpackPlugin(
+            {
+                template: path.resolve(__dirname, './dist', 'index.html')
+            }
+        ),
         // warns when your bundle contains multiple versions of the same package. 
         // possible that some modules mayh depend on same package but different versions.
         // helps in removing unnecessary modules.
