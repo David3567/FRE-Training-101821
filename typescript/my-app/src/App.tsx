@@ -3,14 +3,6 @@ import Header from './components/header/Header'
 import MainWrapper from './components/main_wrapper/MainWrapper'
 import './App.css'
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <Header />
-
-//     </div>
-//   );
-// }
 interface State {
 	name: string
 }

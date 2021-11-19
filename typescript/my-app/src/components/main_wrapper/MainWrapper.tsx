@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 //import PubSub from 'pubsub-js'
 import './MainWrapper.css'
-import fetchTenAlbumList from '../../utility/fetchTenAlbumList'
+import fetchTenAlbumList from '../../apis/fetchTenAlbumList'
 import Album from './album/Album'
 interface State {
 	name: string
@@ -20,7 +20,8 @@ export default class MainWrapper extends Component<Props, State> {
 	}
 
 	handleClick = () => {
-		fetchTenAlbumList(this.props.name, this.state.offset + 10).then((data) => {
+		fetchTenAlbumList(this.props.name, this.state.offset + 10)
+		.then((data) => {
 			if (data) {
 				this.setState({ offset: this.state.offset + 10 })
 				this.setState({ albumArr: this.state.albumArr.concat(data.results), albumCount: this.state.albumCount + data.resultCount })

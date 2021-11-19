@@ -17,7 +17,6 @@ export default class Header extends Component<Props, State> {
 	timer: any
 	handleOnKeyUp = (event: React.KeyboardEvent) => {
 		if (this.timer) {
-			console.log('timer', this.timer)
 			clearTimeout(this.timer)
 		}
 		this.timer = setTimeout(() => {
