@@ -1,0 +1,57 @@
+.app__counter {
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.3em;
+    border-bottom: 1px solid rgb(215, 197, 218);
+    width: 90%;
+  }
+  
+  .app__page-selector {
+    text-align: center;
+  }
+  
+  .a-next {
+    background-color: #fff;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin: 20px;
+  }
+  
+  .a-round {
+    border-radius: 8%;
+  }
+  
+  .loader {
+    display: inline-block;
+    border: 6px solid #d8cccc;
+    border-radius: 50%;
+    border-top: 6px solid #2d7ce4;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

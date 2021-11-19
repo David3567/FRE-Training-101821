@@ -5,7 +5,9 @@ import './Header.css'
 interface State {
 	input: string
 }
-interface Props {}
+interface Props {
+	handleSearch: Function
+}
 export default class Header extends Component<Props, State> {
 	constructor(props: Props) {
 		super(props)
@@ -15,6 +17,7 @@ export default class Header extends Component<Props, State> {
 	handleOnKeyUp = (event: React.KeyboardEvent) => {
 		const element = event.currentTarget as HTMLInputElement
 		this.setState({ input: element.value.trim() })
+		this.props.handleSearch(element.value.trim())
 	}
 	//   const [input, setInput] = useState();
 	//   useEffect(() => {
