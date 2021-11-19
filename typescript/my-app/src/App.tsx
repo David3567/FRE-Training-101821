@@ -29,7 +29,7 @@ class App extends Component<Props, State> {
 
 	render() {
 		return (
-			<div>
+			<div className='App'>
 				<Header handleSearch={this.handleSearch} />
 				<MainWrapper name={this.state.name} />
 			</div>
