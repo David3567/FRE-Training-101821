@@ -14,16 +14,19 @@ export default class Header extends Component<Props, State> {
 		this.state = { input: '' }
 	}
 
+	timer: any
 	handleOnKeyUp = (event: React.KeyboardEvent) => {
-		const element = event.currentTarget as HTMLInputElement
-		this.setState({ input: element.value.trim() })
-		this.props.handleSearch(element.value.trim())
-		
+		if (this.timer) {
+			clearTimeout(this.timer)
+		}
+		this.timer = setTimeout(() => {
+			const element = event.target as HTMLInputElement
+			console.log(element)
+			this.setState({ input: element.value.trim() })
+			this.props.handleSearch(element.value.trim())
+			this.timer = null
+		}, 1000)
 	}
-	//   const [input, setInput] = useState();
-	//   useEffect(() => {
-	//     PubSub.publishSync("input1", input);
-	//   }, [input]);
 
 	render() {
 		return (
