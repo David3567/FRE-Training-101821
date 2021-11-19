@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 900px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  background-color: rgb(243, 237, 237);
+}
+
+@media screen and (max-width: 700px) {
+  .app__header-input-wrapper {
+    padding: 8px 20px;
+  }
+
+  .svg-icon {
+    right: 48px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .app__header-input-wrapper {
+    padding: 8px 15px;
+  }
+
+  .svg-icon {
+    right: 28px;
+  }
+}
+

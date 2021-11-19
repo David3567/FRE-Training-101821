@@ -1,0 +1,33 @@
+.app__header-wrapper {
+	height: 60px;
+}
+.app__header {
+	position: fixed;
+	top: 0;
+	max-width: 900px;
+	min-width: 320px;
+	height: 60px;
+	width: 100%;
+	background-color: rgb(131, 178, 231);
+	color: white;
+}
+
+.app__header-input-wrapper {
+	height: 100%;
+	display: flex;
+	padding: 8px 100px;
+}
+
+.app__header-input {
+	flex-grow: 1;
+	border-radius: 20px;
+	padding: 0 20px;
+	outline: none;
+	border: 1px solid grey;
+}
+
+.svg-icon {
+	position: absolute;
+	top: 19px;
+	right: 120px;
+}
