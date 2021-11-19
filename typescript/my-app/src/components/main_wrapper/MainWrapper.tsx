@@ -31,7 +31,7 @@ export default class MainWrapper extends Component<Props, State> {
 	componentDidUpdate(prevProps: Props) {
 		// Typical usage (don't forget to compare props):
 		if (this.props.name !== prevProps.name) {
-			this.setState({ name: this.props.name })
+			this.setState({ name: this.props.name, albumArr: [], albumCount: -1, offset: 1 })
 			fetchTenAlbumList(this.props.name, this.state.offset).then((data) => {
 				console.log('data', data)
 				if (data) {
