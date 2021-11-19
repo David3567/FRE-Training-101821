@@ -32,10 +32,10 @@ export default class MainWrapper extends Component<Props, State> {
 		// Typical usage (don't forget to compare props):
 		if (this.props.name !== prevProps.name) {
 			this.setState({ name: this.props.name, albumArr: [], albumCount: -1, offset: 1 })
-			fetchTenAlbumList(this.props.name, this.state.offset).then((data) => {
+			fetchTenAlbumList(this.props.name, 1).then((data) => {
 				console.log('data', data)
 				if (data) {
-					this.setState({ offset: this.state.offset + 10, albumArr: this.state.albumArr.concat(data.results), albumCount: data.resultCount })
+					this.setState({ offset: 1, albumArr: this.state.albumArr.concat(data.results), albumCount: data.resultCount })
 				}
 			})
 		}
