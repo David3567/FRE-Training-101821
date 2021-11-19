@@ -18,6 +18,7 @@ export default class Header extends Component<Props, State> {
 		const element = event.currentTarget as HTMLInputElement
 		this.setState({ input: element.value.trim() })
 		this.props.handleSearch(element.value.trim())
+		
 	}
 	//   const [input, setInput] = useState();
 	//   useEffect(() => {

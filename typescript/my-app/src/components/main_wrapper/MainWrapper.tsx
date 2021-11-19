@@ -15,18 +15,20 @@ interface Props {
 export default class MainWrapper extends Component<Props, State> {
 	constructor(props: Props) {
 		super(props)
-		this.state = { name: props.name, albumArr: [], albumCount: -1, offset: 1 }
+		this.state = { name: this.props.name, albumArr: [], albumCount: -1, offset: 1 }
 	}
 
-	//   const [input, setInput] = useState();
-	//   useEffect(() => {
-	//     PubSub.publishSync("input1", input);
-	//   }, [input]);
+	componentDidUpdate(prevProps: Props) {
+		// Typical usage (don't forget to compare props):
+		if (this.props.name !== prevProps.name) {
+			this.setState({ name: this.props.name })
+			fetchTenAlbumList(this.props.name, this.state.offset).then((data) => {
+				console.log('data', data)
+				this.setState({ offset: this.state.offset + 10, albumArr: this.state.albumArr.concat(data.results || []), albumCount: data.resultCount })
+			})
+		}
+	}
 
-	// handleClick = (event: React.MouseEvent) => {
-	// 	const element = event.currentTarget as HTMLInputElement
-	// 	this.setState({ input: element.value.trim() })
-	// }
 	render() {
 		return (
 			<main className='app__main'>
