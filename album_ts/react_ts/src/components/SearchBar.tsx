@@ -2,19 +2,31 @@ import React, { Component } from "react";
 import Message from "./Message";
 import Album from "./Album";
 
+interface AlbumObj {
+  artworkUrl100: string;
+  collectionName: string;
+  collectionId: string;
+};
 
-
-type mystate = {
+interface MyState {
     userInput:string, 
     timerID: number,
     count: number,
-    albumArray: []};
+    albumArray: AlbumObj[]
+};
 
-class SearchBar extends Component {
-  constructor(props:any) {
+interface MyProps {
+
+}
+
+
+class SearchBar extends Component<MyProps,MyState> {
+  
+
+  constructor(props:MyProps) {
     super(props);
 
-    this.state: mystate = {
+    this.state = {
       userInput: "",
       timerID: 0,
       count: 0,
@@ -22,61 +34,50 @@ class SearchBar extends Component {
     };
   }
 
-  getData(artist) {
+  getData() {
+    const artist = this.state.userInput;
     //if user input nothing
     if (artist.length === 0) {
       return;
     }
 
-    const url = `https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=10 `;
+    const url = `https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=10&offset=${this.state.count}`;
 
-    //need to check the this.setState, do I need the previous state
-    fetch(url)
+    fetch(url,{ method: "GET", mode: 'cors', headers: { 'Content-Type': 'application/json',}})
       .then((res) => res.json())
       .then((data) => {
-        this.setState({
-          count: this.state.count + data.resultCount,
-          albumArray: data.results
-        });
+        if (this.state.count === 0) {
+          this.setState({
+            count: this.state.count + data.resultCount,
+            albumArray: data.results
+          });
+        } else {
+          this.setState({
+            count: this.state.count + data.resultCount,
+            albumArray: [...this.state.albumArray, ...data.results]
+          });
+        }
       })
       .catch((e) => console.log(e));
   }
 
-  getMore() {
-    const url = `https://itunes.apple.com/search?term=${
-      this.state.userInput
-    }&media=music&entity=album&attribute=artistTerm&limit=10&offset=${
-      this.state.count + 1
-    }`;
-
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        this.setState({
-          count: this.state.count + data.resultCount,
-          albumArray: [...this.state.albumArray, ...data.results]
-        });
-      })
-      .catch((e) => console.log(e));
-  }
-
-  search(event) {
+  search(event:React.ChangeEvent<HTMLInputElement>) {
     //clear the previous timer ??
     //so every time will check if there is a previous timer need to be cleared?
     //is there a better way to do it???
     if (this.state.timerID) {
       clearTimeout(this.state.timerID);
-      console.log("clear timerId: ", this.state.timerID);
+      
     }
 
     const currentInput = event.target.value;
 
     if (currentInput.length !== 0) {
-      const timerid = setTimeout(() => {
+      const timerid = window.setTimeout(() => {
         alert("you finished typing");
-        this.getData(currentInput);
+        this.getData();
       }, 2000);
-      console.log("create timeid: ", timerid);
+      
       this.setState({
         userInput: currentInput,
         count: 0,
@@ -88,7 +89,7 @@ class SearchBar extends Component {
         userInput: currentInput,
         count: 0,
         albumArray: [],
-        timeID: 0
+        timerID: 0
       });
     }
   }
@@ -103,16 +104,16 @@ class SearchBar extends Component {
             id="seach_input"
             placeholder="Search..."
             autoComplete="off"
-            onKeyPress={(e) => this.search(e)}
+            onChange={(e) => this.search(e)}
           ></input>
           <Message
             artist={this.state.userInput}
             result_count={this.state.count}
           />
           <div className="album-container">
-            <Album albumArray={this.state.albumArray} className="album-wrap" />
+            <Album albumArray={this.state.albumArray} />
           </div>
-          <button onClick={() => this.getMore()}>See more</button>
+          <button onClick={() => this.getData()}>See more</button>
         </div>
       );
     } else {
