@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Button from '../Button/Button';
 import React, { useState } from 'react';
 
@@ -29,10 +29,9 @@ function Counter (){
   }
     return (
       <section>
-        {this.props.children}
         <header>Counter:{counter}</header>
 
-        {!this.state.hideBtnAdd ? (
+        {!hideBtnAdd ? (
           <Button
             className="btn"
             onClick={() => {
