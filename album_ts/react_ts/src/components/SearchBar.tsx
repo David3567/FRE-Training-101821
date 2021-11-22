@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Message from "./Message";
 import Album from "./Album";
 
+import "../styles/search.css";
+
 interface AlbumObj {
   artworkUrl100: string;
   collectionName: string;
@@ -97,36 +99,41 @@ class SearchBar extends Component<MyProps,MyState> {
   render() {
     if (this.state.count !== 0) {
       return (
+        <div>
         <div className="search-wrap">
           <input
             type="text"
-            className="search_input"
+            className="search-input"
             id="seach_input"
             placeholder="Search..."
             autoComplete="off"
             onChange={(e) => this.search(e)}
           ></input>
+          </div>
           <Message
             artist={this.state.userInput}
             result_count={this.state.count}
           />
-          <div className="album-container">
+          <ul className="album-container">
             <Album albumArray={this.state.albumArray} />
-          </div>
+          </ul>
           <button onClick={() => this.getData()}>See more</button>
+        
         </div>
       );
     } else {
       return (
+        <div>
         <div className="search-wrap">
           <input
             type="text"
-            className="search_input"
+            className="search-input"
             id="seach_input"
             placeholder="Search..."
             autoComplete="off"
             onChange={(e) => this.search(e)}
           ></input>
+        </div>
         </div>
       );
     }
