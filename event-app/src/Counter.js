@@ -33,10 +33,14 @@ const Counter = () => {
 export default Counter;
 
 /*
+    HW 1 - Explain setState()
+    
     State can be updated in response to event handlers, server reponse, or prop changes.
     This is done using the setState(). It enqueues all of the updates made to the component state
     and calls render() on the component and its children with the updated state.
 
     By enqueueing `this.setState({ counter: this.state.counter + 1})` 3 times to be processed later,
-    react may batch the update requests together into a single update for better performance. 
+    react may batch the update requests together into a single update for better performance.
+    React merges setState() calls into one final merged object using Object.assign() so that it uses setState
+    only once. So we need to be careful when changing state using current state.
 */
