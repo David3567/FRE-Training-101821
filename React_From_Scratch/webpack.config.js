@@ -1,5 +1,5 @@
 const path = require("path");
-const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
 	entry: "./src/index.js",
@@ -7,28 +7,23 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(js|jsx)$/,
-				exclude: /(node_modules|bower_components)/,
+				test: /\.m?js$/,
+				exclude: /node_modules/,
 				loader: "babel-loader",
-				options: { presets: ["@babel/env"] },
-			},
-			{
-				test: /\.css$/,
-				use: ["style-loader", "css-loader"],
+				options: {
+					presets: ["@babel/preset-react", "@babel/preset-env"],
+				},
 			},
 		],
 	},
-	resolve: { extensions: ["*", ".js", ".jsx"] },
 	output: {
-		path: path.resolve(__dirname, "dist/"),
-		publicPath: "/dist/",
-		filename: "bundle.js",
+		filename: "main.js",
+		path: path.resolve(__dirname, "dist"),
 	},
-	devServer: {
-		contentBase: path.join(__dirname, "public/"),
-		port: 3000,
-		publicPath: "http://localhost:3000/dist/",
-		hotOnly: true,
-	},
-	plugins: [new webpack.HotModuleReplacementPlugin()],
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: path.resolve(__dirname, "public/index.html"),
+			filename: "index.html",
+		}),
+	],
 };
