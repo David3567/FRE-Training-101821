@@ -3,6 +3,7 @@
 Use the script to get started:
 
 ```bash
+npm build
 npm start
 ```
 
