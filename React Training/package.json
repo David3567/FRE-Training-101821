@@ -1,7 +1,7 @@
 {
-  "name": "React Training",
+  "name": "react-training",
   "version": "1.0.0",
-  "description": "",
+  "description": "react boilerplate",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -13,7 +13,8 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "sass": "^1.43.4"
+    "sass": "^1.43.4",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
