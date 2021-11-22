@@ -15,9 +15,7 @@ function App() {
   }
 
   const alarm = () => {
-
     setTimeout (() => {
-
       alert(counter)
     }, 5000)
   }
