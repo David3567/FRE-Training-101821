@@ -34,16 +34,24 @@ class Counter extends React.Component {
     return (
       <section>
         {this.props.children}
-        <header>Counter:{this.state.counter}</header>
+        <header>
+          {this.state.title}:{this.state.counter}
+        </header>
 
         {!this.state.hideBtnAdd ? (
           <Button
             className="btn"
             onClick={() => {
               //HW1  why
-              this.setState({ counter: this.state.counter + 1 });
-              this.setState({ counter: this.state.counter + 1 });
-              this.setState({ counter: this.state.counter + 1 });
+              this.setState((preState) => ({
+                counter: preState.counter + 1,
+              }));
+              this.setState((preState) => ({
+                counter: preState.counter + 1,
+              }));
+              this.setState((preState) => ({
+                counter: preState.counter + 1,
+              }));
             }}
           >
             <h1>ADD</h1>
@@ -59,8 +67,9 @@ class Counter extends React.Component {
         </Button>
         <Button
           onClick={() => {
+            let currentCouter = this.state.counter;
             setTimeout(() => {
-              alert(this.state.counter); // HW2 alert the recent value using function component
+              alert(currentCouter); // HW2 alert the recent value using function component
             }, 5000);
           }}
         >
@@ -74,5 +83,76 @@ class Counter extends React.Component {
     console.log('Counter componentDidMount');
   }
 }
+
+let alertCounter;
+export const CounterFn = (props) => {
+  const [counter, setCounter] = React.useState(10);
+  const [hideBtnAdd, setHideBtnAdd] = React.useState(false);
+  const [showAlert, setShowAlert] = React.useState(false);
+  const counterRef = React.useRef(counter);
+  counterRef.current = counter;
+
+  React.useEffect(() => {
+    if (showAlert === true) {
+      alert(counter);
+      setShowAlert(false);
+    }
+  }, [showAlert]);
+
+  // ComponentDidMount
+  // React.useEffect(() => {
+  //   console.log('useEffect invoked');
+  // }, []);
+
+  // ComponentDidUpdate + ComponentDidMount
+  // React.useEffect(() => {
+  //   console.log('useEffect invoked');
+  // });
+
+  // React.useEffect(() => {
+  //   return () => {
+  //     // ComponentWillUnmount
+  //   };
+  // }, [XXX]);
+
+  return (
+    <section>
+      {props.children}
+      <header>
+        {props.title}:{counter}
+      </header>
+
+      {!hideBtnAdd ? (
+        <Button
+          className="btn"
+          onClick={() => {
+            setCounter(counter + 1);
+            setCounter(counter + 1);
+            setCounter(counter + 1);
+          }}
+        >
+          <h1>ADD</h1>
+        </Button>
+      ) : null}
+
+      <Button
+        onClick={() => {
+          setHideBtnAdd(!hideBtnAdd);
+        }}
+      >
+        Remove/Show Btn Add
+      </Button>
+      <Button
+        onClick={() => {
+          setTimeout(() => {
+            setShowAlert(true); // HW2 alert the recent value using function component
+          }, 5000);
+        }}
+      >
+        Alert After 5s
+      </Button>
+    </section>
+  );
+};
 
 export default Counter;

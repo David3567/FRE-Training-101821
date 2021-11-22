@@ -1,8 +1,13 @@
 import './App.css';
-import Counter from './components/Counter/Counter';
+import Counter, { CounterFn } from './components/Counter/Counter';
 
 function App() {
-  return <Counter></Counter>;
+  return (
+    <>
+      <Counter title="Counter"></Counter>
+      <CounterFn title="CounterFn" />
+    </>
+  );
 }
 
 export default App;
