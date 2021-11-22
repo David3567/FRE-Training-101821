@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Button from '../Button/Button';
 
 let data = {
@@ -15,12 +15,17 @@ const Counter = (props) => {
   })
 
   const [keep, setKeep] = useState(false);
+  const firstRun = useRef(true);
 
   useEffect(() => {
     console.log('Counter componentDidMount');
   }, [])
 
   useEffect(() => {
+    if (firstRun.current) {
+      firstRun.current = false;
+      return; //skip the first useEffect
+    }
     const temp = appInfo.counter;
     setTimeout(() => {
       alert(temp); // HW2 alert the recent value using function component
