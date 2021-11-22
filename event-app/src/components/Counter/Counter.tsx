@@ -32,7 +32,7 @@ const Counter = () => {
           className="button"
           onClick={() => {
             // HW1: Explain setState()
-            // React batches state updates in event handlers and will only re-render after event handlers have finished. setState() is also an async function and will merge the parameter object into the current state. The current state will then be overridden by the setState() to exit the update queue.
+            // React batches state updates in event handlers and will only re-render after event handlers have finished. setState() is also an async function and will merge the parameter object into the current state. The current state will then be overridden by the last setState() to exit the update queue.
             addCounter(1);
             addCounter(1);
             addCounter(1);
