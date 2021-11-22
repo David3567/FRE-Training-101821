@@ -1,6 +1,7 @@
 import React, {useState } from 'react'
 import $ from 'jquery';
 
+// HW 2 - Rebuild Counter
 const Counter = () => {
 
     let [counter, setCounter] = useState(0);
@@ -30,3 +31,12 @@ const Counter = () => {
 }
 
 export default Counter;
+
+/*
+    State can be updated in response to event handlers, server reponse, or prop changes.
+    This is done using the setState(). It enqueues all of the updates made to the component state
+    and calls render() on the component and its children with the updated state.
+
+    By enqueueing `this.setState({ counter: this.state.counter + 1})` 3 times to be processed later,
+    react may batch the update requests together into a single update for better performance. 
+*/
