@@ -33,7 +33,7 @@ class StockApp extends React.Component {
             StockCalCulator
           </a>
         </header>
-        {this.state.BuyStock ? <BuyStock /> : null}
+        {this.state.BuyStock ? <BuyStock title="BuyStock" /> : null}
         {this.state.StockCalCulator ? <StockCalCulator /> : null}
       </div>
     );
