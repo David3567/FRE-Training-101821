@@ -28,11 +28,11 @@ export default function Counter(props) {
             className="btn"
             onClick={() => {
               //HW1  why
-              // state updates within one event call will only produce a single re-render at the end of the event.
+              //changes to state happen only once at end of event
               setState({ ...state , counter: state.counter + 1});
               setState({ ...state , counter: state.counter + 1});
               setState({ ...state , counter: state.counter + 1});
-
+              
             }}
           >
             <h1>ADD</h1>
