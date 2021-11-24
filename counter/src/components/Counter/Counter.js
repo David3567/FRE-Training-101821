@@ -39,7 +39,7 @@ const Counter = (props) => {
     <section>
       {props.children}
       <header>Counter:{appInfo.counter}</header>
-
+      <nav>{appInfo.title}</nav>
       {!appInfo.hideBtnAdd ? (
         <Button
           className="btn"
