@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { withBuyStockData } from '../hoc/withBuyStock'
 //MVC vs  MVVM
 //Data binding:
@@ -6,35 +6,31 @@ import { withBuyStockData } from '../hoc/withBuyStock'
 //from view to model : event binding
 //Controlled Component | UnControlled Component
 
-class StockCalCulator extends React.Component {
-	state = {
-		currentStock: 11,
-	}
+function StockCalCulator(props) {
+	const [currentStock, setCurrentStock] = useState(0)
 
-	render() {
-		return (
-			<section>
-				<header>StockCalCulator</header>
-				<h1
-					onClick={(e) => {
-						e.target.innerHTML = 'Changed'
-						e.target.style.color = 'red'
-					}}
-				>
-					How Many Stock do you have?
-				</h1>
-				<input type='number' onChange={(e) => this.setState({ currentStock: +e.target.value })} value={this.state.currentStock} />
+	return (
+		<section>
+			<header>StockCalCulator</header>
+			<h1
+				onClick={(e) => {
+					e.target.innerHTML = 'Changed'
+					e.target.style.color = 'red'
+				}}
+			>
+				How Many Stock do you have?
+			</h1>
+			<input type='number' onChange={(e) => setCurrentStock( +e.target.value)} value={currentStock} />
 
-				<h1>
-					How Many Stock you want to buy
-					<button onClick={this.props.handleAdd}>+</button>
-					<span>{this.props.stockNum}</span>
-					<button onClick={this.props.handleSub}> -</button>
-				</h1>
-				<p>You have {this.state.currentStock + this.props.stockNum} stock </p>
-			</section>
-		)
-	}
+			<h1>
+				How Many Stock you want to buy
+				<button onClick={props.handleAdd}>+</button>
+				<span>{props.stockNum}</span>
+				<button onClick={props.handleSub}> -</button>
+			</h1>
+			<p>You have {currentStock + props.stockNum} stock </p>
+		</section>
+	)
 }
 
 const StockCalCulatorContainer = withBuyStockData(StockCalCulator)
