@@ -2,6 +2,51 @@ import React from 'react';
 import BuyStock from './BuyStock/BuyStock';
 import StockCalCulator from './StockCalCulator/StockCalCulator';
 
+/*
+
+export const StockApp = () => {
+const [BuyStock, setBuyStock] = React.useState(false);
+const [StockCalCulator, setStockCalculator] = React.useState(false);
+
+const hanldeBuyStockPage = (e) => {
+  e.preventDefault();
+  setBuyStock(true);
+  setStockCalculator(false);
+};
+const hanldeStockCalCulatorPage = (e) => {
+  e.preventDefault();
+  setBuyStock(false);
+  setStockCalculator(true);
+
+  
+};
+
+
+
+  return (
+    <div>
+      <header>
+        <a
+          href="#"
+          onClick={hanldeBuyStockPage}
+          style={{ marginRight: '20px' }}
+        >
+          BuyStock
+        </a>
+        <a href="#" onClick={hanldeStockCalCulatorPage}>
+          StockCalCulator
+        </a>
+      </header>
+      {BuyStock ? <BuyStock /> : null}
+      {StockCalCulator ? <StockCalCulator /> : null}
+    </div>
+  );
+}
+
+*/
+
+
+
 class StockApp extends React.Component {
   state = {
     BuyStock: false,
@@ -39,5 +84,8 @@ class StockApp extends React.Component {
     );
   }
 }
+
+
+
 
 export default StockApp;
