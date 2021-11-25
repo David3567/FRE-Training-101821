@@ -1,12 +1,12 @@
-import store from '../Redux/StockAppRedux'
-
+import React from 'react';
+import { useSelector } from 'react-redux';
 const MyStock = () => {
 
-    const myStock = store.getState();
-
+    const states = useSelector((state)=>state);
+    console.log(states.myStocks)
     return (
         <section>
-            <h1>This is my stock page{myStock}</h1>
+            <h1>You currently own {states.myStocks} stocks</h1>
         </section>
     )
 }
