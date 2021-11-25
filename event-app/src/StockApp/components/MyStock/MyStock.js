@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 const MyStock = () => {
 
     const states = useSelector((state)=>state);
-    console.log(states.myStocks)
     return (
         <section>
             <h1>You currently own {states.myStocks} stocks</h1>
