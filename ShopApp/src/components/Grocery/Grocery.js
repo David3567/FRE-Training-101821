@@ -1,6 +1,6 @@
 import React from "react";
 import dummyData from "./data";
-import withShopFeature from "../../hoc/withShopFeature";
+import { withShopFeature } from "../../hoc/withShopFeature";
 import Item from "../Item";
 
 

@@ -2,12 +2,17 @@ import React from "react";
 import { connect } from "react-redux";
 import { addToTotal, removeFromTotal } from "../action/";
 
-const withShopFeature = (WrapperComponent) => {
-    return class NewComponent extends React.Component {
+export const withShopFeature = (WrapperComponent) => connect((state) => {
+    return {
+        total: state.totalItems,
+    }
+}, { addToTotal, removeFromTotal })
+    (class NewComponent extends React.Component {
         state = {
             cart: [],
         }
         addToCart = (item) => {
+            console.log(this.props.total);
             this.setState({ cart: [...this.state.cart, item] })
             this.props.addToTotal();
 
@@ -27,10 +32,4 @@ const withShopFeature = (WrapperComponent) => {
                 </WrapperComponent>
             )
         }
-    }
-}
-export default connect((state) => {
-    return {
-        total: state.totalItems,
-    }
-}, { addToTotal, removeFromTotal })(withShopFeature);
+    })

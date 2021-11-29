@@ -1,6 +1,6 @@
 import React from "react";
 import dummyData from "./data";
-import withShopFeature from "../../hoc/withShopFeature";
+import { withShopFeature } from "../../hoc/withShopFeature";
 import Item from "../Item";
 
 class Supreme extends React.Component {
@@ -13,8 +13,7 @@ class Supreme extends React.Component {
     render() {
         return (
             <div>
-                <h1>{`${this.props.total} items total`}</h1>
-                <h1>Total Items</h1>
+                {this.props.children}
                 <section className="tems">
                     <h1>Available Items</h1>
                     <ul>
