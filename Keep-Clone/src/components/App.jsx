@@ -3,8 +3,8 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Note from "./Note";
 import CreatNote from "./CreateNote";
-import RenderAddNote from "./RenderProps/RenderAddNote";
-import CreatNote2 from "./RenderProps/CreateNote2";
+import RenderAddNote from "../RenderProps/RenderAddNote";
+import CreatNote2 from "../RenderProps/CreateNote2";
 
 /* 
 1.using index as id cause error while deleting!!!

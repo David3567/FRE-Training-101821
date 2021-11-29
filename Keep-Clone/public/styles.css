@@ -10,7 +10,11 @@ body {
   background: #eee;
   padding: 0 16px;
 }
-
+.NoteCount-msg {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+}
 header {
   background-color: #f5ba13;
   margin: auto -16px;
@@ -55,7 +59,6 @@ footer p {
   word-wrap: break-word;
 }
 
-
 /*
 style for delete button in note
 */
@@ -70,7 +73,6 @@ style for delete button in note
   cursor: pointer;
   outline: none;
 }
-
 
 /*
 style for createnote
