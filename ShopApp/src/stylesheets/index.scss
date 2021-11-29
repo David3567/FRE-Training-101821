@@ -1,0 +1,22 @@
+.app {
+  section {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  a {
+    text-decoration: none;
+    margin: 2rem;
+    border-radius: 10px;
+    border: 2px solid silver;
+    padding: 1rem 2rem;
+  }
+}
+
+.item-info {
+  display: flex;
+  span {
+    margin-right: 1rem;
+  }
+}

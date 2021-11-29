@@ -1,0 +1,36 @@
+import React from "react";
+import { connect } from "react-redux";
+import { addToTotal, removeFromTotal } from "../action/";
+
+const withShopFeature = (WrapperComponent) => {
+    return class NewComponent extends React.Component {
+        state = {
+            cart: [],
+        }
+        addToCart = (item) => {
+            this.setState({ cart: [...this.state.cart, item] })
+            this.props.addToTotal();
+
+        }
+        removeFromCart = (id) => {
+            this.setState({ cart: this.state.cart.filter(item => item.id !== id) })
+            this.props.removeFromTotal();
+        }
+        render() {
+            return (
+                <WrapperComponent
+                    cart={this.state.cart}
+                    addToCart={this.addToCart}
+                    removeFromCart={this.removeFromCart}
+                >
+                    <h1>{`${this.props.total} items total`}</h1>
+                </WrapperComponent>
+            )
+        }
+    }
+}
+export default connect((state) => {
+    return {
+        total: state.totalItems,
+    }
+}, { addToTotal, removeFromTotal })(withShopFeature);
