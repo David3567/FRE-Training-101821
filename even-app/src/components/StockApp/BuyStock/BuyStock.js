@@ -2,6 +2,7 @@ import React from 'react';
 import { withBuyStockData } from '../../../hoc/withBuyStock';
 import WithBuyStock from '../../../renderProps/WithBuyStock.js';
 import { useBuyStock } from '../../../hooks/useBuyStock';
+import { BuyStockContext } from '../../../context/BuyStock.context';
 // let state;
 // function setData(data) {
 //   state = data;
@@ -11,8 +12,16 @@ import { useBuyStock } from '../../../hooks/useBuyStock';
 //   setData(1);
 // };
 
+// export const useBuyStock = (initStock) => {
+//   const [stockNum, setStockNum] = React.useState(initStock);
+//   const hanldeAdd = () => setStockNum(stockNum + 1);
+//   const hanldeSub = () => setStockNum(stockNum - 1);
+//   return [stockNum, hanldeAdd, hanldeSub];
+// };
+
 const BuyStockFn = (props) => {
-  const [stockNum, hanldeAdd, hanldeSub] = useBuyStock(10);
+  const [stockNum, hanldeAdd, hanldeSub] = React.useContext(BuyStockContext);
+
   return (
     <section>
       <header>{props.title}</header>

@@ -1,6 +1,9 @@
 import React from 'react';
 import BuyStock from './BuyStock/BuyStock';
 import StockCalCulator from './StockCalCulator/StockCalCulator';
+import '../../context/BuyStock.context';
+import { BuyStockPrvider } from '../../context/BuyStock.context';
+import Button from '../Button/Button';
 
 class StockApp extends React.Component {
   state = {
@@ -20,7 +23,7 @@ class StockApp extends React.Component {
 
   render() {
     return (
-      <div>
+      <BuyStockPrvider>
         <header>
           <a
             href="#"
@@ -32,10 +35,11 @@ class StockApp extends React.Component {
           <a href="#" onClick={this.hanldeStockCalCulatorPage}>
             StockCalCulator
           </a>
+          <Button>Test</Button>
         </header>
         {this.state.BuyStock ? <BuyStock title="BuyStock" /> : null}
         {this.state.StockCalCulator ? <StockCalCulator /> : null}
-      </div>
+      </BuyStockPrvider>
     );
   }
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import Button from '../Button/Button';
+import { mystore } from '../../MyRedux/MyRedux';
+import { useForceUpdate } from '../../hooks/useForceUpdate';
 
 let data = {
   counter: 1000,
@@ -11,9 +13,9 @@ class Counter extends React.Component {
     super(props);
     this.state = {
       title: 'counter',
-      counter: 0,
       hideBtnAdd: false,
     };
+    //this.forceUpdateTest = this.forceUpdateTest.bind(this);
 
     console.log('Counter constructor');
   }
@@ -35,7 +37,7 @@ class Counter extends React.Component {
       <section>
         {this.props.children}
         <header>
-          {this.state.title}:{this.state.counter}
+          {this.state.title}:{mystore.getState().value}
         </header>
 
         {!this.state.hideBtnAdd ? (
@@ -43,20 +45,20 @@ class Counter extends React.Component {
             className="btn"
             onClick={() => {
               //HW1  why
-              this.setState((preState) => ({
-                counter: preState.counter + 1,
-              }));
-              this.setState((preState) => ({
-                counter: preState.counter + 1,
-              }));
-              this.setState((preState) => ({
-                counter: preState.counter + 1,
-              }));
+              mystore.dispatch({ type: 'counter/incremented' });
             }}
           >
-            <h1>ADD</h1>
+            Add
           </Button>
         ) : null}
+        <Button
+          className="btn"
+          onClick={() => {
+            mystore.dispatch({ type: 'counter/decremented' });
+          }}
+        >
+          Sub
+        </Button>
 
         <Button
           onClick={() => {
@@ -80,21 +82,19 @@ class Counter extends React.Component {
   }
 
   componentDidMount() {
-    console.log('Counter componentDidMount');
+    mystore.subscribe(() => this.forceUpdate());
   }
 }
 
 let alertCounter;
 export const CounterFn = (props) => {
-  const [counter, setCounter] = React.useState(10);
+  const forceUpdate = useForceUpdate();
   const [hideBtnAdd, setHideBtnAdd] = React.useState(false);
   const [showAlert, setShowAlert] = React.useState(false);
-  const counterRef = React.useRef(counter);
-  counterRef.current = counter;
 
   React.useEffect(() => {
     if (showAlert === true) {
-      alert(counter);
+      alert('counter');
       setShowAlert(false);
     }
   }, [showAlert]);
@@ -115,20 +115,25 @@ export const CounterFn = (props) => {
   //   };
   // }, [XXX]);
 
+  React.useEffect(() => {
+    mystore.subscribe(() => {
+      forceUpdate();
+    });
+  }, []);
+
   return (
     <section>
       {props.children}
       <header>
-        {props.title}:{counter}
+        {props.title}:{mystore.getState().value}
       </header>
 
       {!hideBtnAdd ? (
         <Button
           className="btn"
           onClick={() => {
-            setCounter(counter + 1);
-            setCounter(counter + 1);
-            setCounter(counter + 1);
+            mystore.dispatch({ type: 'counter/incremented' });
+            console.log(mystore.getState());
           }}
         >
           <h1>ADD</h1>

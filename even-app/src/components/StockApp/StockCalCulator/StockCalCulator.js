@@ -2,6 +2,7 @@ import React from 'react';
 import { withBuyStockData } from '../../../hoc/withBuyStock';
 import WithBuyStock from '../../../renderProps/WithBuyStock';
 import { useBuyStock } from '../../../hooks/useBuyStock';
+import { BuyStockContext } from '../../../context/BuyStock.context';
 //MVC vs  MVVM
 //Data binding:
 //from model to view : attrbute Or children JSX binding
@@ -14,7 +15,7 @@ import { useBuyStock } from '../../../hooks/useBuyStock';
 const StockCalCulatorFn = () => {
   const [currentStock, setCurrentStock] = React.useState(0);
   const hanldeCurrentStock = (e) => setCurrentStock(+e.target.value);
-  const [stockNum, hanldeAdd, hanldeSub] = useBuyStock(10);
+  const [stockNum, hanldeAdd, hanldeSub] = React.useContext(BuyStockContext);
 
   return (
     <section>
