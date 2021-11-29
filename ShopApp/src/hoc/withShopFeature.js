@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addToTotal, removeFromTotal } from "../action/";
+import { Link } from "react-router-dom";
 
 export const withShopFeature = (WrapperComponent) => connect((state) => {
     return {
@@ -28,7 +29,10 @@ export const withShopFeature = (WrapperComponent) => connect((state) => {
                     addToCart={this.addToCart}
                     removeFromCart={this.removeFromCart}
                 >
-                    <h1>{`${this.props.total} items total`}</h1>
+                    <>
+                        <h1>{`${this.props.total} items total`}</h1>
+                        <Link to="/homepage" alt="go to homepage">Home Page</Link>
+                    </>
                 </WrapperComponent>
             )
         }
