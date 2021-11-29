@@ -20,7 +20,7 @@ function StockCalCulator(props) {
 			>
 				How Many Stock do you have?
 			</h1>
-			<input type='number' onChange={(e) => setCurrentStock( +e.target.value)} value={currentStock} />
+			<input type='number' onChange={(e) => setCurrentStock(+e.target.value)} value={currentStock} />
 
 			<h1>
 				How Many Stock you want to buy
