@@ -1,10 +1,21 @@
 import React from "react";
 // import { withBuyStockData } from "../hoc/withBuyStock";
-import { useBuyStock } from "../hooks/useBuyStock";
+// import { useBuyStock } from "../hooks/useBuyStock";
+import store from "../redux/store";
 
-const StockCalCulator = (props) => {
+const StockCalCulator = () => {
   const [currentStock, setCurrentStock] = React.useState(11);
-  const [stockNum, handleAdd, handleSub] = useBuyStock(0);
+  const [storeStock, setStoreStock] = React.useState(0);
+
+  React.useEffect(() => {
+    const unsubscribe = store.subscribe(() => {
+      setStoreStock(store.getState());
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   return (
     <section>
@@ -14,7 +25,7 @@ const StockCalCulator = (props) => {
         onChange={(e) => setCurrentStock(+e.target.value)}
         value={currentStock}
       />
-      <p>You have {currentStock + stockNum} stocks </p>
+      <p>You have {currentStock + storeStock} stocks </p>
     </section>
   );
 };
