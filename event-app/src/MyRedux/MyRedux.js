@@ -13,17 +13,6 @@ function counterReducer( state = { value: 100 }, action) {
     }
 }
 
-// Example
-let mystore = mycreateStore(counterReducer);
-mystore.dispatch({ type: INCREMENT });
-const unsubscribe = mystore.subscribe(() => {
-    console.log(mystore.getState());
-})
-mystore.dispatch({ type: INCREMENT });
-unsubscribe();
-mystore.dispatch({ type: DECREMENT });
-
-
 function mycreateStore(reducer) {
     let subscriberFnList = [];
     let state;
@@ -54,3 +43,13 @@ function mycreateStore(reducer) {
         subscriberFnList,
     };
 }
+
+/* ---------------Example---------------- */
+let mystore = mycreateStore(counterReducer);
+mystore.dispatch({ type: INCREMENT });
+const unsubscribe = mystore.subscribe(() => {
+    console.log(mystore.getState());
+})
+mystore.dispatch({ type: INCREMENT });
+unsubscribe();
+mystore.dispatch({ type: DECREMENT });
