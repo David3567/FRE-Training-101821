@@ -2,6 +2,30 @@ import React from 'react';
 import Button from '../Button/Button';
 import { mystore } from '../../MyRedux/MyRedux';
 import { useForceUpdate } from '../../hooks/useForceUpdate';
+// import { withSubscribe } from '../../hoc/withSubscribe';
+import { myconnect } from '../../MyReactRedux/MyReactRedux';
+import { connect } from 'react-redux';
+
+// const ConnectedComponent = connect(
+//   mapState,
+//   mapDispatch
+// )(MyComponent)
+// const sth = connect(
+//      mapState,
+//    mapDispatch
+//  )
+// sth(MyComponent)
+
+// const ConnectedComponent = connect(
+//   mapState,
+//   mapDispatch
+// )(MyComponent)
+
+// // Later, pass the custom context as a prop to the connected component
+// <ConnectedComponent context={MyContext} />
+
+// Patrick = foo(5)(8);
+// <Patrick/>
 
 let data = {
   counter: 1000,
@@ -32,12 +56,11 @@ class Counter extends React.Component {
   }
   render() {
     console.log('Counter render');
-
     return (
       <section>
         {this.props.children}
         <header>
-          {this.state.title}:{mystore.getState().value}
+          {this.state.title}:{this.props.counterValue}
         </header>
 
         {!this.state.hideBtnAdd ? (
@@ -45,7 +68,7 @@ class Counter extends React.Component {
             className="btn"
             onClick={() => {
               //HW1  why
-              mystore.dispatch({ type: 'counter/incremented' });
+              this.props.hanldeAdd();
             }}
           >
             Add
@@ -54,7 +77,7 @@ class Counter extends React.Component {
         <Button
           className="btn"
           onClick={() => {
-            mystore.dispatch({ type: 'counter/decremented' });
+            this.props.hanldeSub();
           }}
         >
           Sub
@@ -69,7 +92,7 @@ class Counter extends React.Component {
         </Button>
         <Button
           onClick={() => {
-            let currentCouter = this.state.counter;
+            let currentCouter = this.props.counterValue;
             setTimeout(() => {
               alert(currentCouter); // HW2 alert the recent value using function component
             }, 5000);
@@ -79,10 +102,6 @@ class Counter extends React.Component {
         </Button>
       </section>
     );
-  }
-
-  componentDidMount() {
-    mystore.subscribe(() => this.forceUpdate());
   }
 }
 
@@ -160,4 +179,17 @@ export const CounterFn = (props) => {
   );
 };
 
-export default Counter;
+const mapStateToProps = (state) => {
+  return {
+    counterValue: state.value,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    hanldeAdd: () => dispatch({ type: 'COUNTER_ADD' }),
+    hanldeSub: () => alert('test'),
+  };
+};
+
+export default myconnect(mapStateToProps, mapDispatchToProps)(Counter);
