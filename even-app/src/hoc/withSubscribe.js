@@ -7,6 +7,9 @@ export const withSubscribe = (WrappedComponent) => {
     componentDidMount() {
       mystore.subscribe(() => this.forceUpdate());
     }
+    componentWillUnmount() {
+      mystore.unsubscribe(() => this.forceUpdate());
+    }
     render() {
       return <WrappedComponent {...this.props}></WrappedComponent>;
     }

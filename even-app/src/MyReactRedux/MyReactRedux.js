@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { mystore } from '../MyRedux/MyRedux';
+
 const MyReduxContext = React.createContext(null);
 
 export const MyProvider = ({ store, children }) => {
@@ -27,10 +29,17 @@ export const myconnect = (mapStateToProps, mapDispatchToProps) => {
   return (WrapperComponent) => {
     return class NewComponent extends React.Component {
       static contextType = MyReduxContext;
+
       componentDidMount() {
         const { subscribe } = this.context;
         subscribe(() => this.forceUpdate());
       }
+
+      componentWillUnmount() {
+        const { unsubscribe } = this.context;
+        unsubscribe(() => this.forceUpdate());
+      }
+
       render() {
         console.log('MyReduxContext', this.context);
         const { getState, dispatch } = this.context;

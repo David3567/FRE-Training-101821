@@ -74,8 +74,16 @@ export function mycreateStore(reducer) {
     subscriberFnList.push(subscriberFn);
   }
 
+  function unsubscribe(subscriberFn) {
+    const index = subscriberFnList.indexOf(subscriberFn);
+    if (index > -1) {
+      subscriberFnList.splice(index, 1);
+    }
+  }
+
   return {
     subscribe,
+    unsubscribe,
     dispatch,
     getState
   };

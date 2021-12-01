@@ -28,7 +28,7 @@ import { connect } from 'react-redux';
 // <Patrick/>
 
 let data = {
-  counter: 1000,
+  counter: 1000
 };
 // UI = React (state)
 
@@ -37,7 +37,7 @@ class Counter extends React.Component {
     super(props);
     this.state = {
       title: 'counter',
-      hideBtnAdd: false,
+      hideBtnAdd: false
     };
     //this.forceUpdateTest = this.forceUpdateTest.bind(this);
 
@@ -49,7 +49,7 @@ class Counter extends React.Component {
     if (props.title !== state.title) {
       //Change in props
       return {
-        title: props.title,
+        title: props.title
       };
     }
     return null; // No change to state
@@ -105,7 +105,7 @@ class Counter extends React.Component {
   }
 }
 
-let alertCounter;
+// let alertCounter;
 export const CounterFn = (props) => {
   const forceUpdate = useForceUpdate();
   const [hideBtnAdd, setHideBtnAdd] = React.useState(false);
@@ -135,9 +135,16 @@ export const CounterFn = (props) => {
   // }, [XXX]);
 
   React.useEffect(() => {
+    // will fire on component mount
     mystore.subscribe(() => {
       forceUpdate();
     });
+    // will fire on component unmount
+    return () => {
+      mystore.unsubscribe(() => {
+        forceUpdate();
+      });
+    };
   }, []);
 
   return (
@@ -181,14 +188,14 @@ export const CounterFn = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    counterValue: state.value,
+    counterValue: state.value
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     hanldeAdd: () => dispatch({ type: 'COUNTER_ADD' }),
-    hanldeSub: () => alert('test'),
+    hanldeSub: () => alert('test')
   };
 };
 
