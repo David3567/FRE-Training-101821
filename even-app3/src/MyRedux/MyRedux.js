@@ -1,5 +1,5 @@
 //import { createStore } from 'redux';
-//const { createStore } = require('redux');
+const { createStore } = require('redux');
 
 /**
  * This is a reducer - a function that takes a current state value and an
@@ -46,21 +46,16 @@ function counterReducer(state = { value: 100 }, action) {
 // store.dispatch({ type: 'counter/decremented' });
 // // {value: 1}
 
-let mystore = mycreateStore(counterReducer);
+export let mystore = mycreateStore(counterReducer);
 
-mystore.dispatch({ type: 'counter/incremented' });
-unsubscribe2 =mystore.subscribe(() => {
-  console.log(mystore.getState());
-});
-unsubscribe2();
-unsubscribe = mystore.subscribe(() => {console.log('subscribe run')});
+// mystore.dispatch({ type: 'counter/incremented' });
+// mystore.subscribe(() => {
+//   console.log(mystore.getState());
+// });
+// mystore.dispatch({ type: 'counter/incremented' });
+// mystore.dispatch({ type: 'counter/decremented' });
 
-
-mystore.dispatch({ type: 'counter/incremented' });
-unsubscribe();
-mystore.dispatch({ type: 'counter/decremented' });
-
-function mycreateStore(reducer) {
+export function mycreateStore(reducer) {
   let subscriberFnList = [];
   let state;
   state = reducer(state, { type: '_______INIT_______' });
@@ -70,21 +65,15 @@ function mycreateStore(reducer) {
   function dispatch(action) {
     state = reducer(state, action);
     subscriberFnList.forEach((subscriberFn) => {
+      console.log('call subscriber');
       subscriberFn();
     });
   }
 
   function subscribe(subscriberFn) {
     subscriberFnList.push(subscriberFn);
-
-    /*
-    return(() => { subscriberFnList = subscriberFnList.filter((item) => item !== subscriberFn)})
-    */
-
     return( () => {subscriberFnList.splice(subscriberFnList.findIndex(fn => fn === subscriberFn),1)})
   }
-
-
 
   return {
     subscribe,
