@@ -77,6 +77,6 @@ function mycreateStore(reducer) {
   return {
     subscribe,
     dispatch,
-    getState,
+    getState
   };
 }
