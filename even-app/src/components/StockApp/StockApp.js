@@ -22,8 +22,8 @@ class StockApp extends React.Component {
 
     this.setState({ BuyStock: false, StockCalCulator: true });
   };
-
   render() {
+    console.log('StockApp update');
     return (
       <BuyStockPrvider>
         <header>
@@ -31,12 +31,10 @@ class StockApp extends React.Component {
           <MyLink to="/calculator">StockCalCulator</MyLink>
           <Button>Test</Button>
         </header>
-        <Route exact path="/buy">
-          <BuyStock />
-        </Route>
-        <Route exact path="/calculator">
+        <MyRoute exact path="/buy" component={BuyStock}></MyRoute>
+        <MyRoute exact path="/calculator">
           <StockCalCulator />
-        </Route>
+        </MyRoute>
       </BuyStockPrvider>
     );
   }

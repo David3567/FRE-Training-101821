@@ -11,15 +11,15 @@ class Button extends React.Component {
   render() {
     // console.log('Button render');
     // console.log(this.props);
-    console.log('Button Context', this.context);
+
     const { children, ...rest } = this.props;
     return <button {...rest}>{children}</button>;
   }
   componentDidMount() {
-    console.log('Button componentDidMount');
+    //console.log('Button componentDidMount');
   }
   componentWillUnmount() {
-    console.log('Button componentWillUnmount');
+    //  console.log('Button componentWillUnmount');
   }
 }
 
