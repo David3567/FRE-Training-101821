@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import store from './StockApp/components/Redux/StockAppRedux'
 import { Provider } from 'react-redux'
 
+// const context = createContext();
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
