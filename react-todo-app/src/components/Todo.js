@@ -1,11 +1,11 @@
 import React from "react";
 
-const Todo = (text, todo, todos, setTodoFn) => {
+const Todo = ({ text, todo, todos, setTodos }) => {
 	const deleteHandler = () => {
-		setTodoFn(todos.filter((item) => item.id !== todo.id));
+		setTodos(todos.filter((item) => item.id !== todo.id));
 	};
 	const completeHandler = () => {
-		setTodoFn(
+		setTodos(
 			todos.map((item) => {
 				if (item.id === todo.id) {
 					return {

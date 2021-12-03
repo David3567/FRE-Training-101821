@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Form from "./components/Form";
-import TodoHOC from "./components/TodoHOC";
+import TodoList from "./components/TodoList";
 
 function App() {
 	const [inputText, setInputText] = useState("");
@@ -38,7 +38,7 @@ function App() {
 				setTodos={setTodos}
 				todos={todos}
 			/>
-			<TodoHOC filteredTodos={filteredTodos} setTodos={setTodos} todos={todos} />
+			<TodoList filteredTodos={filteredTodos} setTodos={setTodos} todos={todos} />
 		</div>
 	);
 }
