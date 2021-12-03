@@ -4,6 +4,8 @@ import StockCalCulator from './StockCalCulator/StockCalCulator';
 import '../../context/BuyStock.context';
 import { BuyStockPrvider } from '../../context/BuyStock.context';
 import Button from '../Button/Button';
+import { Route, Link } from 'react-router-dom';
+import { MyRoute, MyLink } from '../../MyReactRouter/MyReactRouter';
 
 class StockApp extends React.Component {
   state = {
@@ -25,20 +27,16 @@ class StockApp extends React.Component {
     return (
       <BuyStockPrvider>
         <header>
-          <a
-            href="#"
-            onClick={this.hanldeBuyStockPage}
-            style={{ marginRight: '20px' }}
-          >
-            BuyStock
-          </a>
-          <a href="#" onClick={this.hanldeStockCalCulatorPage}>
-            StockCalCulator
-          </a>
+          <MyLink to="/buy">BuyStock</MyLink>
+          <MyLink to="/calculator">StockCalCulator</MyLink>
           <Button>Test</Button>
         </header>
-        {this.state.BuyStock ? <BuyStock title="BuyStock" /> : null}
-        {this.state.StockCalCulator ? <StockCalCulator /> : null}
+        <Route exact path="/buy">
+          <BuyStock />
+        </Route>
+        <Route exact path="/calculator">
+          <StockCalCulator />
+        </Route>
       </BuyStockPrvider>
     );
   }

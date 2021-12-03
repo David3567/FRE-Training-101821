@@ -10,6 +10,8 @@ import { Provider } from 'react-redux';
 import { mycreateStore } from './MyRedux/MyRedux';
 import { createStore } from 'redux';
 
+import { BrowserRouter } from 'react-router-dom';
+
 // action type
 
 const COUNTER_ADD = 'COUNTER_ADD';
@@ -43,7 +45,9 @@ const store = mycreateStore(reducer);
 
 ReactDOM.render(
   <MyProvider store={store}>
-    <App />
+    <BrowserRouter>
+      <StockApp />
+    </BrowserRouter>
   </MyProvider>,
   document.getElementById('root')
 );
