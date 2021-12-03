@@ -29,8 +29,13 @@ export const myconnect = (mapStateToProps, mapDispatchToProps) => {
       static contextType = MyReduxContext;
       componentDidMount() {
         const { subscribe } = this.context;
-        subscribe(() => this.forceUpdate());
+        this.unsub = subscribe(() => this.forceUpdate());
       }
+
+      componentWillUnmount() {
+        this.unsub();
+      }
+
       render() {
         console.log('MyReduxContext', this.context);
         const { getState, dispatch } = this.context;
@@ -48,4 +53,35 @@ export const myconnect = (mapStateToProps, mapDispatchToProps) => {
       }
     };
   };
+};
+
+//  const value = useMySelector((state) => state.value);
+
+const useForceUpdate = () => {
+  const [_, update] = React.useState(false);
+  return () => update((preState) => !preState);
+};
+
+export const useMySelector = (mapStateToNeeded) => {
+  const { getState, subscribe } = React.useContext(MyReduxContext);
+  const forceUpdate = useForceUpdate();
+  const neededState = mapStateToNeeded(getState());
+
+  React.useEffect(() => {
+    const unsub = subscribe(() => forceUpdate());
+    return () => {
+      unsub();
+    };
+  }, []);
+
+  return neededState;
+};
+
+export const useMyDispatch = () => {
+  const { dispatch, subscribe } = React.useContext(MyReduxContext);
+  const forceUpdate = useForceUpdate();
+  React.useEffect(() => {
+    subscribe(() => forceUpdate());
+  }, []);
+  return dispatch;
 };

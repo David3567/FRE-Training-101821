@@ -72,6 +72,13 @@ export function mycreateStore(reducer) {
 
   function subscribe(subscriberFn) {
     subscriberFnList.push(subscriberFn);
+    console.log('subsucribe', subscriberFnList);
+    return () => {
+      console.log('unsubsucribe');
+      subscriberFnList = subscriberFnList.filter((subscriber) => {
+        return subscriber !== subscriberFn;
+      });
+    };
   }
 
   return {

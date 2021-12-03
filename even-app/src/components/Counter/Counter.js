@@ -3,7 +3,11 @@ import Button from '../Button/Button';
 import { mystore } from '../../MyRedux/MyRedux';
 import { useForceUpdate } from '../../hooks/useForceUpdate';
 // import { withSubscribe } from '../../hoc/withSubscribe';
-import { myconnect } from '../../MyReactRedux/MyReactRedux';
+import {
+  myconnect,
+  useMySelector,
+  useMyDispatch,
+} from '../../MyReactRedux/MyReactRedux';
 import { connect } from 'react-redux';
 
 // const ConnectedComponent = connect(
@@ -107,6 +111,10 @@ class Counter extends React.Component {
 
 let alertCounter;
 export const CounterFn = (props) => {
+  const testA = 'testA';
+  const value = useMySelector((state) => state.value);
+  const dispatch = useMyDispatch();
+
   const forceUpdate = useForceUpdate();
   const [hideBtnAdd, setHideBtnAdd] = React.useState(false);
   const [showAlert, setShowAlert] = React.useState(false);
@@ -144,29 +152,30 @@ export const CounterFn = (props) => {
     <section>
       {props.children}
       <header>
-        {props.title}:{mystore.getState().value}
+        {props.title}:{value}
       </header>
 
       {!hideBtnAdd ? (
-        <Button
+        <button
           className="btn"
           onClick={() => {
-            mystore.dispatch({ type: 'counter/incremented' });
-            console.log(mystore.getState());
+            dispatch({ type: 'COUNTER_ADD' });
+            // mystore.dispatch({ type: 'counter/incremented' });
+            // console.log(mystore.getState());
           }}
         >
           <h1>ADD</h1>
-        </Button>
+        </button>
       ) : null}
 
-      <Button
+      <button
         onClick={() => {
           setHideBtnAdd(!hideBtnAdd);
         }}
       >
         Remove/Show Btn Add
-      </Button>
-      <Button
+      </button>
+      <button
         onClick={() => {
           setTimeout(() => {
             setShowAlert(true); // HW2 alert the recent value using function component
@@ -174,7 +183,7 @@ export const CounterFn = (props) => {
         }}
       >
         Alert After 5s
-      </Button>
+      </button>
     </section>
   );
 };
@@ -192,4 +201,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default myconnect(mapStateToProps, mapDispatchToProps)(Counter);
+const HelloPatrick = myconnect(mapStateToProps, mapDispatchToProps);
+
+export default HelloPatrick(Counter);
