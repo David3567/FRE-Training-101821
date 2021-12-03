@@ -1,6 +1,9 @@
+import facebook from "../../images/facebook.svg";
+import linkedin from "../../images/linkedin.svg";
+import pinterest from "../../images/pinterest.svg";
+import email from "../../images/email.svg";
 
-
-export const PortfolioFooter = () => {
+const Footer = () => {
 
     return(
 		<div class = "footer">
@@ -9,25 +12,25 @@ export const PortfolioFooter = () => {
 					<div class = "media-links">
 						<div class = "col-sm-1 col-md-1 col-sm-offset-4 col-md-offset-4">
 							<div class = "facebook">
-								<a href = "#"><img class = "img-responsive" src = "../../images/facebook.svg" /></a>
+								<a href = "#"><img class = "img-responsive" src = {facebook} /></a>
 							</div>
 						</div>
 
 						<div class = "col-sm-1 col-md-1">
 							<div class = "linkedin">
-								<a href = "#"><img class = "img-responsive" src = "../../images/linkedin.svg" /></a>
+								<a href = "#"><img class = "img-responsive" src = {linkedin} /></a>
 							</div>
 						</div>
 
 						<div class = "col-sm-1 col-md-1">
 							<div class = "pinterest">
-								<a href = "#"><img class = "img-responsive" src = "../../images/pinterest.svg" /></a>
+								<a href = "#"><img class = "img-responsive" src = {pinterest} /></a>
 							</div>
 						</div>
 
 						<div class = "col-sm-1 col-md-1">
 							<div class = "email-icon">
-								<a href = "#"><img class = "img-responsive" src = "../../images/email.svg" /></a>
+								<a href = "#"><img class = "img-responsive" src = {email} /></a>
 							</div>
 						</div>
 					</div>
@@ -93,3 +96,5 @@ export const PortfolioFooter = () => {
 		</div>
     )
 }
+
+export default Footer;

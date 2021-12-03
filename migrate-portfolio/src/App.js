@@ -1,11 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import { Portfolio } from './components/Portfolio';
+import PortfolioPage from './components/PortfolioPage';
+import ContactPage from './components/ContactPage';
+import HomePage from './components/HomePage';
 
 function App() {
   return (
     <div className="App">
-      <Portfolio />
+      {/* <HomePage /> */}
+      {/* <ContactPage /> */}
+      {/* <PortfolioPage /> */}
     </div>
   );
 }
