@@ -1,9 +1,9 @@
 
 
-export const Projects = () => {
+const Projects = () => {
 
     return(
-		<div class = "projects">
+		<div class = "projects" id='projects'>
 			<div class = "container-fluid">
 				<div class = "row">
 					<div class = "col-sm-12 col-md-12 text-center">
@@ -76,3 +76,5 @@ export const Projects = () => {
 		</div>
     )
 }
+
+export default Projects;
