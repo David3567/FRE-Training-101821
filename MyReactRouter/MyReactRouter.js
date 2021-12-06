@@ -37,18 +37,18 @@ const MyBrowserRoute = ({ children }) => {
 }
 
 const MySwitch = ({ children }) => {
-    const pathName = window.location.pathname
-    for (let i = 0; i < children.length; i++) {
-        if(children[i].props.exact===true) {
-            if(pathName===children[i].props.path){
-                return children[i]
-            }
-        }else{
-            if(pathName.startsWith(children[i].props.path)){
-                return children[i]
-            }
-        }
-    }
+	const pathName = window.location.pathname
+	for (let i = 0; i < children.length; i++) {
+		if (children[i].props.exact === true) {
+			if (pathName === children[i].props.path) {
+				return children[i]
+			}
+		} else {
+			if (pathName.split('/')[0] === children[i].props.path) {
+				return children[i]
+			}
+		}
+	}
 	return null
 }
 
