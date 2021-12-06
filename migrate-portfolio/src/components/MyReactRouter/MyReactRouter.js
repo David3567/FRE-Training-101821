@@ -10,6 +10,7 @@ export const useForceUpdate = () => {
 const MyBrowserRouter = ({ children }) => {
   console.log("update");
   const forceupdate = useForceUpdate();
+
   const pushState = (state, title, url) => {
     window.history.pushState(state, title, url);
     forceupdate();
@@ -85,7 +86,7 @@ class MySwitch extends React.Component {
     const { children } = this.props;
     const pathname = window.location.pathname;
 
-    children.forEach((child) => {
+    React.Children.forEach(children, child => {
       const { path } = child;
 
       if (pathname.startsWith(path)) return child;
@@ -105,10 +106,10 @@ class MyRedirect extends React.Component {
     static contextType = MyReactRouterContext;
     render() {
         this.context.replaceState({}, "", this.props.to);
-      return;
+        return;
     }
 
-        
+
 
     componentDidMount() {
         console.log('MyRedirect update');
