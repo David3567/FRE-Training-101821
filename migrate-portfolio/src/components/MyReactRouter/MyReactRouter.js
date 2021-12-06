@@ -17,9 +17,9 @@ const MyBrowserRouter = ({ children }) => {
   };
 
   const replaceState = (state, title, url) => {
-      window.history.replaceState(state, title, url);
-      forceupdate();
-  }
+    window.history.replaceState(state, title, url);
+    forceupdate();
+  };
 
   React.useEffect(() => {
     window.addEventListener("popstate", (event) => {
@@ -39,7 +39,6 @@ const MyBrowserRouter = ({ children }) => {
 };
 
 class MyLink extends React.Component {
-    
   static contextType = MyReactRouterContext;
   handleClick = (e) => {
     e.preventDefault();
@@ -86,7 +85,7 @@ class MySwitch extends React.Component {
     const { children } = this.props;
     const pathname = window.location.pathname;
 
-    React.Children.forEach(children, child => {
+    React.Children.forEach(children, (child) => {
       const { path } = child;
 
       if (pathname.startsWith(path)) return child;
@@ -97,21 +96,21 @@ class MySwitch extends React.Component {
     return;
   }
 
-  componentDidMount(){
-      console.log('MySwitch update')
+  componentDidMount() {
+    console.log("MySwitch update");
   }
 }
 
 class MyRedirect extends React.Component {
-    static contextType = MyReactRouterContext;
-    render() {
-        this.context.replaceState({}, "", this.props.to);
-        return;
-    }
+  static contextType = MyReactRouterContext;
+  render() {
+    this.context.replaceState({}, "", this.props.to);
+    return;
+  }
 
-    componentDidMount() {
-        console.log('MyRedirect update');
-    }
+  componentDidMount() {
+    console.log("MyRedirect update");
+  }
 }
 
 export { MyBrowserRouter, MyRoute, MyLink, MySwitch, MyRedirect };
