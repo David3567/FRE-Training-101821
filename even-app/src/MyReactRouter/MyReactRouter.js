@@ -80,22 +80,23 @@ class MyRoute extends React.Component {
 
 class MyRedirect extends React.Component {
   static contextType = MyReactRouterContext;
-  render() {
+
+  componentDidUpdate() {
+    console.log('MyRedirect update');
     const { to, push, from, sensitive } = this.props;
 
     if (sensitive) {
       // if case sensitive
       if (to !== from) console.log(`route doesn't match`);
-      return;
     } else if (push) {
       this.context.pushState(from, '', to);
-      return;
+    } else {
+      this.context.replaceState(from, '', to);
     }
-    this.context.replaceState(from, '', to);
   }
 
-  componentDidUpdate() {
-    console.log('MyRedirect update');
+  render() {
+    return null;
   }
 }
 
