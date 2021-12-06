@@ -4,8 +4,8 @@ import StockCalCulator from './StockCalCulator/StockCalCulator';
 import '../../context/BuyStock.context';
 import { BuyStockPrvider } from '../../context/BuyStock.context';
 import Button from '../Button/Button';
-//import { Route, Link } from 'react-router-dom';
-import { MyRoute, MyLink } from '../../MyReactRouter/MyReactRouter';
+import { Route, Link } from 'react-router-dom';
+import { MyRoute, MyLink, MySwitch } from '../../MyReactRouter/MyReactRouter';
 
 class StockApp extends React.Component {
   state = {
@@ -22,8 +22,8 @@ class StockApp extends React.Component {
 
     this.setState({ BuyStock: false, StockCalCulator: true });
   };
-
   render() {
+    console.log('StockApp update');
     return (
       <BuyStockPrvider>
         <header>
@@ -31,12 +31,12 @@ class StockApp extends React.Component {
           <MyLink to="/calculator">StockCalCulator</MyLink>
           <Button>Test</Button>
         </header>
-        <MyRoute exact path="/buy">
-          <BuyStock />
-        </MyRoute>
+        <MySwitch>
+        <MyRoute exact path="/buy" component={BuyStock}></MyRoute>
         <MyRoute exact path="/calculator">
           <StockCalCulator />
         </MyRoute>
+        </MySwitch>
       </BuyStockPrvider>
     );
   }

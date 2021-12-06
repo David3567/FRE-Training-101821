@@ -11,6 +11,7 @@ import { mycreateStore } from './MyRedux/MyRedux';
 import { createStore } from 'redux';
 
 import { BrowserRouter } from 'react-router-dom';
+import { MyBrowserRoute } from './MyReactRouter/MyReactRouter';
 
 // action type
 
@@ -45,9 +46,9 @@ const store = mycreateStore(reducer);
 
 ReactDOM.render(
   <MyProvider store={store}>
-    <BrowserRouter>
+    <MyBrowserRoute>
       <StockApp />
-    </BrowserRouter>
+    </MyBrowserRoute>
   </MyProvider>,
   document.getElementById('root')
 );
