@@ -105,7 +105,7 @@ class MyRedirect extends React.Component {
   static contextType = MyReactRouterContext;
   render() {
     this.context.replaceState({}, "", this.props.to);
-    return;
+    return null;
   }
 
   componentDidMount() {
