@@ -81,22 +81,17 @@ class MyRoute extends React.Component {
 class MyRedirect extends React.Component {
   static contextType = MyReactRouterContext;
   render() {
-    const { to, push, from, exact, sensitive } = this.props;
+    const { to, push, from, sensitive } = this.props;
 
     if (sensitive) {
       // if case sensitive
-      if (to === from) this.context.replaceState(from, '', to);
+      if (to !== from) console.log(`route doesn't match`);
+      return;
     } else if (push) {
       this.context.pushState(from, '', to);
+      return;
     }
-
-    const isMatch = exact && window.location.pathname === to;
-    if (isMatch) {
-      if (typeof component === 'function') {
-        return React.createElement(component, null, {});
-      }
-    }
-    return isMatch ? children : null;
+    this.context.replaceState(from, '', to);
   }
 
   componentDidUpdate() {
@@ -106,7 +101,7 @@ class MyRedirect extends React.Component {
 
 class MySwitch extends React.Component {
   render() {
-    const { path, children } = this.props;
+    const { children } = this.props;
 
     let element, match;
 
@@ -118,14 +113,17 @@ class MySwitch extends React.Component {
       if (match == null && React.isValidElement(child)) {
         element = child;
 
-        match = path
-          ? matchPath(path, { ...child.props, path })
-          : context.match;
+        const path = child.props.path || child.props.from;
+
+        match = path ? window.location.pathname === path : context.match;
       }
     });
 
     return match
-      ? React.cloneElement(element, { path, computedMatch: match })
+      ? React.cloneElement(element, {
+          location: window.location.pathname,
+          computedMatch: match
+        })
       : null;
   }
 
