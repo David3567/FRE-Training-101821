@@ -7,17 +7,21 @@ import reportWebVitals from './reportWebVitals';
 import HomePage from './components/HomePage';
 import ContactPage from './components/ContactPage';
 import PortfolioPage from './components/PortfolioPage';
+import {MyBrowserRouter, MySwitch, MyRedirect} from './components/MyReactRouter/MyReactRouter';
+import {MyRoute} from './components/MyReactRouter/MyReactRouter';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </BrowserRouter>
+    <MyBrowserRouter>
+      {/* <Routes> */}
+      <MySwitch>
+        <MyRoute path="/home" component={HomePage} />
+        <MyRoute path="/portfolio" component={PortfolioPage} />
+        <MyRoute path="/contact" component={ContactPage} />
+        <MyRedirect to="/home" />
+      {/* </Routes> */}
+      </MySwitch>
+    </MyBrowserRouter>
     <App />
   </React.StrictMode>,
   document.getElementById('root')

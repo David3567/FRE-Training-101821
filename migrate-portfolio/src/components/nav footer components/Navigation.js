@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import './Navigation.css';
+import {MyLink} from '../MyReactRouter/MyReactRouter';
 
 const Navigation = () => {
 
@@ -21,9 +22,9 @@ const Navigation = () => {
                             {/* <li><a href = "index.html">Home</a></li>
                             <li><a href = "portfolio.html">Portfolio</a></li>
                             <li><a href = "contact.html">Contact</a></li> */}
-                            <li><Link to='/home'>Home</Link></li>
-                            <li><Link to='/portfolio'>Portfolio</Link></li>
-                            <li><Link to='/contact'>Contact</Link></li>
+                            <li><MyLink to='/home'>Home</MyLink></li>
+                            <li><MyLink to='/portfolio'>Portfolio</MyLink></li>
+                            <li><MyLink to='/contact'>Contact</MyLink></li>
                         </ul>
                     </div>
                 </div>
