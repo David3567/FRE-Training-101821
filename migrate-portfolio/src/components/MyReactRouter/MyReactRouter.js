@@ -109,8 +109,6 @@ class MyRedirect extends React.Component {
         return;
     }
 
-
-
     componentDidMount() {
         console.log('MyRedirect update');
     }
