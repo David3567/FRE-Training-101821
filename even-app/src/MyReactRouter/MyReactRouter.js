@@ -81,7 +81,7 @@ class MyRoute extends React.Component {
 class MyRedirect extends React.Component {
   static contextType = MyReactRouterContext;
 
-  componentDidUpdate() {
+  componentDidMount() {
     console.log('MyRedirect update');
     const { to, push, from, sensitive } = this.props;
 
@@ -93,6 +93,10 @@ class MyRedirect extends React.Component {
     } else {
       this.context.replaceState(from, '', to);
     }
+  }
+
+  componentDidUpdate() {
+    console.log('MyRedirect updated');
   }
 
   render() {
