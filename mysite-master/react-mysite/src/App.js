@@ -17,13 +17,13 @@ function App() {
 
       <div className="content">
       <Switch>
-      <Route exact path="/index.html">
+      <Route exact path="/index">
         <Home />
       </Route>
-      <Route exact path="/portfolio.html">
+      <Route exact path="/portfolio">
         <Portfolio />
       </Route>
-      <Route exact path="/contact.html">
+      <Route exact path="/contact">
         <Contact />
       </Route>
      </Switch>

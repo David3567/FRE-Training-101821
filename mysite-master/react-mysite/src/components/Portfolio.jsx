@@ -2,6 +2,7 @@ import React from "react";
 
 
 export default function Profile(){
+	console.log("portfolio render")
     return(
         <div className="profile-wrapper">
 		

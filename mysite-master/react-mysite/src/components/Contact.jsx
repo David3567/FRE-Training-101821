@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Contact(){
+    console.log("contact render")
     return(
         <div className="contact-wrapper">
 		

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Navigation(){
+    console.log("navigation render");
     return(
         <div class = "navigation">
 			<div class = "container-fluid">
@@ -16,9 +17,9 @@ export default function Navigation(){
 					<div class = "col-xs-11 col-sm-11 col-md-11 col-lg-11 text-right">
 						<div class = "primary-nav">
 							<ul>
-                                <li><Link to="/index.html">Home</Link></li>
-                                <li><Link to="/portfolio.html">Portfolio</Link></li>
-                                <li><Link to="/contact.html">Contact</Link></li>
+                                <li><Link to="/index">Home</Link></li>
+                                <li><Link to="/portfolio">Portfolio</Link></li>
+                                <li><Link to="/contact">Contact</Link></li>
                                 {/*
 								<li><a href = "index.html">Home</a></li>
 								<li><a href = "portfolio.html">Portfolio</a></li>
