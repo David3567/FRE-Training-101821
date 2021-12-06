@@ -106,18 +106,27 @@ class MyRedirect extends React.Component {
 
 class MySwitch extends React.Component {
   render() {
-    const { exact, path, children, component } = this.props;
-    // console.log(exact, path, children);
-    // console.log(window.location);
+    const { path, children } = this.props;
 
-    const isMatch = exact && window.location.pathname === path;
-    if (isMatch) {
-      if (typeof component === 'function') {
-        return React.createElement(component, null, {});
+    let element, match;
+
+    // We use React.Children.forEach instead of React.Children.toArray().find()
+    // here because toArray adds keys to all child elements and we do not want
+    // to trigger an unmount/remount for two <Route>s that render the same
+    // component at different URLs.
+    React.Children.forEach(children, (child) => {
+      if (match == null && React.isValidElement(child)) {
+        element = child;
+
+        match = path
+          ? matchPath(path, { ...child.props, path })
+          : context.match;
       }
-    }
+    });
 
-    return isMatch ? children : null;
+    return match
+      ? React.cloneElement(element, { path, computedMatch: match })
+      : null;
   }
 
   componentDidUpdate() {
