@@ -14,7 +14,10 @@ const MyBrowserRoute = ({ children }) => {
         window.history.pushState(state, title, url);
         forceupdate();
     };
-
+    const replaceState = (state, title, url) => {
+        window.history.replaceState(state, title, url);
+        forceupdate();
+    }
     React.useEffect(() => {
         window.addEventListener("popstate", (event) => {
             forceupdate();
@@ -25,7 +28,7 @@ const MyBrowserRoute = ({ children }) => {
     }, []);
 
     return (
-        <MyReactRouterContext.Provider value={{ pushState }}>
+        <MyReactRouterContext.Provider value={{ pushState, replaceState }}>
             {/* {children} */}
             {React.cloneElement(children, {})}
         </MyReactRouterContext.Provider>
@@ -100,7 +103,7 @@ class MySwitch extends React.Component {
 class MyRedirect extends React.Component {
     static contextType = MyReactRouterContext;
     componentDidMount() {
-        this.context.pushState({}, "", this.props.to);
+        this.context.replaceState({}, "", this.props.to);
     }
     render() {
         return <></>;

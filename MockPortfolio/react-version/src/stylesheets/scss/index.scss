@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Slabo+27px|Roboto|Source+Sans+Pro");
-
 html {
   scroll-behavior: smooth;
 }
@@ -43,7 +41,7 @@ html {
 /* Main banner */
 .main {
   background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)),
-    url(../../images/apple-1838564_1920-main.jpg); /* Browser prefixes*/
+    url(public/icons/applemain.jpg); /* Browser prefixes*/
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;

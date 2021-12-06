@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes as Switch, Route, Navigate as Redirect } from "react-router-dom";
 import "./stylesheets/scss/index.scss";
-// import "./stylesheets/boostrap/css/bootstrap.min.css";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
