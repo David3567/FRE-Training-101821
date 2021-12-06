@@ -1,31 +1,30 @@
 .luvtalk-project, .personal-website-project, .strike-zone-project {
-    height: 570px;
+    height: 700px;
 }
 
 .luvtalk-project h3 {
-    padding-top: 200px;;
+    padding-top: 250px;;
+    font-size: 25px;
 }
 
 .luvtalk-project p {
-    padding-top: 50px;;
-}
-
-.project-more-info {
-    margin-top: 250px;
+    font-size: 18px;
 }
 
 .personal-website-project h3 {
-    padding-top: 200px;;
+    padding-top: 250px;;
+    font-size: 25px;
 }
 
 .personal-website-project p {
-    padding-top: 50px;;
+    font-size: 18px;
 }
 
 .strike-zone-project h3 {
-    padding-top: 200px;;
+    padding-top: 250px;;
+    font-size: 25px;
 }
 
 .strike-zone-project p {
-    padding-top: 50px;;
+    font-size: 18px;
 }
