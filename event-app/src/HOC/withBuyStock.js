@@ -18,6 +18,7 @@ export const withBuyStockData = (WrappedComponent) => {
 		render() {
 			return (
 				<WrappedComponent
+					{...this.props}
 					stockNum={this.state.stockNum}
 					handleAdd={this.handleAdd}
 					handleSub={this.handleSub}

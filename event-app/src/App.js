@@ -1,13 +1,15 @@
+import Counter, { CounterFn } from "./components/Counter/Counter";
 import React from "react";
-import "./styles/app.scss";
-// import Counter from "./components/Counter";
-import StockApp from "./components/StockApp/StockApp";
 
 function App() {
+	const [showCounter, setShowCounter] = React.useState(true);
+
 	return (
-		<div className="App">
-			<StockApp />
-		</div>
+		<>
+			{showCounter ? <Counter title="Counter"></Counter> : null}
+			{/* <CounterFn title="CounterFn" /> */}
+			<button onClick={() => setShowCounter(false)}> Hide Counter</button>
+		</>
 	);
 }
 

@@ -1,45 +1,55 @@
-import React, { useState } from "react";
-import BuyStock from "./BuyStock";
-import StockCalculator from "./StockCalculator";
+import React from "react";
+import BuyStock from "./BuyStock/BuyStock";
+import StockCalCulator from "./StockCalCulator/StockCalCulator";
+import "../../context/BuyStock.context";
+import { BuyStockPrvider } from "../../context/BuyStock.context";
+import Button from "../Button/Button";
+import { Route, Link } from "react-router-dom";
+import {
+	MyRoute,
+	MyLink,
+	MySwitch,
+	MyRedirect,
+} from "../../MyReactRouter/MyReactRouter";
 
-const StockApp = () => {
-	// state = {
-	// 	BuyStock: false,
-	// 	StockCalCulator: false,
-	// };
-	const [activePage, setActivePage] = useState({
+class StockApp extends React.Component {
+	state = {
 		BuyStock: false,
-		StockCalculator: false,
-	});
-
-	const hanldeBuyStockPage = (e) => {
-		e.preventDefault();
-		setActivePage({ BuyStock: true, StockCalculator: false });
-	};
-	const hanldeStockCalCulatorPage = (e) => {
-		e.preventDefault();
-
-		setActivePage({ BuyStock: false, StockCalculator: true });
+		StockCalCulator: false,
 	};
 
-	return (
-		<div>
-			<header>
-				<a
-					href="#"
-					onClick={hanldeBuyStockPage}
-					style={{ marginRight: "20px" }}
-				>
-					BuyStock
-				</a>
-				<a href="#" onClick={hanldeStockCalCulatorPage}>
-					StockCalCulator
-				</a>
-			</header>
-			{activePage.BuyStock ? <BuyStock /> : null}
-			{activePage.StockCalculator ? <StockCalculator /> : null}
-		</div>
-	);
-};
+	hanldeBuyStockPage = (e) => {
+		e.preventDefault();
+		this.setState({ BuyStock: true, StockCalCulator: false });
+	};
+	hanldeStockCalCulatorPage = (e) => {
+		e.preventDefault();
+
+		this.setState({ BuyStock: false, StockCalCulator: true });
+	};
+	render() {
+		console.log("StockApp update");
+		return (
+			<BuyStockPrvider>
+				<header>
+					<MyLink to="/buy">BuyStock</MyLink>
+					<MyLink to="/calculator">StockCalCulator</MyLink>
+					<Button>Test</Button>
+				</header>
+				<div>
+					<MyRedirect to="/buy" />
+					<MyRedirect to="/calculator" />
+				</div>
+				<MySwitch>
+					<MyRoute path="/" component={() => <h1>Home</h1>}></MyRoute>
+					<MyRoute path="/buy" component={BuyStock}></MyRoute>
+					<MyRoute path="/calculator">
+						<StockCalCulator />
+					</MyRoute>
+				</MySwitch>
+			</BuyStockPrvider>
+		);
+	}
+}
 
 export default StockApp;
