@@ -5,7 +5,7 @@ import '../../context/BuyStock.context';
 import { BuyStockPrvider } from '../../context/BuyStock.context';
 import Button from '../Button/Button';
 import { Route, Link } from 'react-router-dom';
-import { MyRoute, MyLink, MySwitch } from '../../MyReactRouter/MyReactRouter';
+import { MyRoute, MyLink, MySwitch, MyRedirect } from '../../MyReactRouter/MyReactRouter';
 
 class StockApp extends React.Component {
   state = {

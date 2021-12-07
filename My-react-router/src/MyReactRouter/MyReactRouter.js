@@ -10,10 +10,16 @@ export const useForceUpdate = () => {
 const MyBrowserRoute = ({ children }) => {
   console.log('update');
   const forceupdate = useForceUpdate();
+
   const pushState = (state, title, url) => {
     window.history.pushState(state, title, url);
     forceupdate();
   };
+
+  const replaceState = (state, title, url) => {
+    window.history.replaceState(state, title, url);
+    forceupdate();
+  }
 
   React.useEffect(() => {
     window.addEventListener('popstate', (event) => {
@@ -43,6 +49,7 @@ class MyLink extends React.Component {
     const { to, children } = this.props;
 
     return (
+      //here 
       <a href={to} onClick={this.hanldeClick}>
         {children}
       </a>
@@ -59,7 +66,7 @@ class MyRoute extends React.Component {
     // console.log(exact, path, children);
     // console.log(window.location);
 
-    const isMatch = exact && window.location.pathname === path;
+    const isMatch = window.location.pathname.includes(path);
     if (isMatch) {
       if (typeof component === 'function') {
         
@@ -77,21 +84,39 @@ class MyRoute extends React.Component {
 }
 
 
+/* 
+- should use React.Children to access the collection of React component
+-React.Children.forEach could work(just can't break out the loop)
+*/
+
 class MySwitch extends React.Component {
   render(){
   const path = window.location.pathname;
-  const componentArray = [...this.props.children]
+  const componentArray = this.props.children;
  
-  //console.log("the pass the component array: ", componentArray)
   
+  const found = componentArray.find(item => item.props.path === path);
+  console.log("the return componet from MysSwitch: ", found);
   
-  const found = componentArray.find(item => item.props.path === path)
-  
-  
-  console.log(found)
- return found;
-}
+  return found;
+  }
+
 
 }
 
-export { MyBrowserRoute, MyRoute, MyLink, MySwitch };
+class MyRedirect extends React.Component{
+
+  static contextType = MyReactRouterContext;
+
+  render(){   
+    return (null);
+  }
+
+  componentDidMount() {
+    this.context.replaceState({}, "", this.props.to);
+  }
+
+
+}
+
+export { MyBrowserRoute, MyRoute, MyLink, MySwitch, MyRedirect};
