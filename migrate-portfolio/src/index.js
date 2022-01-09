@@ -16,16 +16,6 @@ import { MyRoute } from "./components/MyReactRouter/MyReactRouter";
 
 ReactDOM.render(
   <React.StrictMode>
-    <MyBrowserRouter>
-      {/* <Routes> */}
-      <MySwitch>
-        <MyRoute path="/home" component={HomePage} />
-        <MyRoute path="/portfolio" component={PortfolioPage} />
-        <MyRoute path="/contact" component={ContactPage} />
-        <MyRedirect to="/home" />
-        {/* </Routes> */}
-      </MySwitch>
-    </MyBrowserRouter>
     <App />
   </React.StrictMode>,
   document.getElementById("root")
