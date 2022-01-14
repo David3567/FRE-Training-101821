@@ -5,6 +5,7 @@ import Note from "./Note";
 import CreatNote from "./CreateNote";
 import RenderAddNote from "../RenderProps/RenderAddNote";
 import CreatNote2 from "../RenderProps/CreateNote2";
+import { AlbumCard } from "@hmao1/template-react-component-libraryy";
 
 /* 
 1.using index as id cause error while deleting!!!
@@ -68,6 +69,9 @@ class App extends React.Component {
     return (
       <>
         <Header />
+
+        <AlbumCard imgSrc="https://via.placeholder.com/100"
+          albumName="album name" />
         <RenderAddNote onAdd={this.addNote}>
           {(note, handleChange, handleSubmit) => (
             <CreatNote2
